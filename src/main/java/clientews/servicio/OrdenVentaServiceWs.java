@@ -199,4 +199,79 @@ public interface OrdenVentaServiceWs {
         @WebParam(name = "arg0", targetNamespace = "")
         OrdenVenta arg0);
 
+    /**
+     * 
+     * @param arg0
+     */
+    @WebMethod
+    @RequestWrapper(localName = "eliminarOrdenVenta", targetNamespace = "http://servicio.sga.gm.com.mx/", className = "clientews.servicio.EliminarOrdenVenta")
+    @ResponseWrapper(localName = "eliminarOrdenVentaResponse", targetNamespace = "http://servicio.sga.gm.com.mx/", className = "clientews.servicio.EliminarOrdenVentaResponse")
+    @Action(input = "http://servicio.sga.gm.com.mx/OrdenVentaServiceWs/eliminarOrdenVentaRequest", output = "http://servicio.sga.gm.com.mx/OrdenVentaServiceWs/eliminarOrdenVentaResponse")
+    public void eliminarOrdenVenta(
+        @WebParam(name = "arg0", targetNamespace = "")
+        OrdenVenta arg0);
+
+    /**
+     * 
+     * @param arg0
+     * @return
+     *     returns java.util.List<clientews.servicio.OrdenVenta>
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "obtenerOrdenVentaConfirmadasPagadasEnFecha", targetNamespace = "http://servicio.sga.gm.com.mx/", className = "clientews.servicio.ObtenerOrdenVentaConfirmadasPagadasEnFecha")
+    @ResponseWrapper(localName = "obtenerOrdenVentaConfirmadasPagadasEnFechaResponse", targetNamespace = "http://servicio.sga.gm.com.mx/", className = "clientews.servicio.ObtenerOrdenVentaConfirmadasPagadasEnFechaResponse")
+    @Action(input = "http://servicio.sga.gm.com.mx/OrdenVentaServiceWs/obtenerOrdenVentaConfirmadasPagadasEnFechaRequest", output = "http://servicio.sga.gm.com.mx/OrdenVentaServiceWs/obtenerOrdenVentaConfirmadasPagadasEnFechaResponse")
+    public List<OrdenVenta> obtenerOrdenVentaConfirmadasPagadasEnFecha(
+        @WebParam(name = "arg0", targetNamespace = "")
+        String arg0);
+
+    /**
+     * 
+     * @param arg1
+     * @param arg0
+     * @return
+     *     returns java.util.List<clientews.servicio.OrdenVenta>
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "obtenerOrdenVentaConfirmadasPagadasFechaPaciente", targetNamespace = "http://servicio.sga.gm.com.mx/", className = "clientews.servicio.ObtenerOrdenVentaConfirmadasPagadasFechaPaciente")
+    @ResponseWrapper(localName = "obtenerOrdenVentaConfirmadasPagadasFechaPacienteResponse", targetNamespace = "http://servicio.sga.gm.com.mx/", className = "clientews.servicio.ObtenerOrdenVentaConfirmadasPagadasFechaPacienteResponse")
+    @Action(input = "http://servicio.sga.gm.com.mx/OrdenVentaServiceWs/obtenerOrdenVentaConfirmadasPagadasFechaPacienteRequest", output = "http://servicio.sga.gm.com.mx/OrdenVentaServiceWs/obtenerOrdenVentaConfirmadasPagadasFechaPacienteResponse")
+    public List<OrdenVenta> obtenerOrdenVentaConfirmadasPagadasFechaPaciente(
+        @WebParam(name = "arg0", targetNamespace = "")
+        String arg0,
+        @WebParam(name = "arg1", targetNamespace = "")
+        Long arg1);
+
+    /**
+     * 
+     * @param arg0
+     * @return
+     *     returns java.util.List<clientews.servicio.OrdenVenta>
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "obtenerOrdenVentaConfirmadasPagadasPaciente", targetNamespace = "http://servicio.sga.gm.com.mx/", className = "clientews.servicio.ObtenerOrdenVentaConfirmadasPagadasPaciente")
+    @ResponseWrapper(localName = "obtenerOrdenVentaConfirmadasPagadasPacienteResponse", targetNamespace = "http://servicio.sga.gm.com.mx/", className = "clientews.servicio.ObtenerOrdenVentaConfirmadasPagadasPacienteResponse")
+    @Action(input = "http://servicio.sga.gm.com.mx/OrdenVentaServiceWs/obtenerOrdenVentaConfirmadasPagadasPacienteRequest", output = "http://servicio.sga.gm.com.mx/OrdenVentaServiceWs/obtenerOrdenVentaConfirmadasPagadasPacienteResponse")
+    public List<OrdenVenta> obtenerOrdenVentaConfirmadasPagadasPaciente(
+        @WebParam(name = "arg0", targetNamespace = "")
+        Long arg0);
+
+    /**
+     * 
+     * @param arg0
+     * @return
+     *     returns java.lang.Long
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "obtenerTotalOrdenesEnUnDia", targetNamespace = "http://servicio.sga.gm.com.mx/", className = "clientews.servicio.ObtenerTotalOrdenesEnUnDia")
+    @ResponseWrapper(localName = "obtenerTotalOrdenesEnUnDiaResponse", targetNamespace = "http://servicio.sga.gm.com.mx/", className = "clientews.servicio.ObtenerTotalOrdenesEnUnDiaResponse")
+    @Action(input = "http://servicio.sga.gm.com.mx/OrdenVentaServiceWs/obtenerTotalOrdenesEnUnDiaRequest", output = "http://servicio.sga.gm.com.mx/OrdenVentaServiceWs/obtenerTotalOrdenesEnUnDiaResponse")
+    public Long obtenerTotalOrdenesEnUnDia(
+        @WebParam(name = "arg0", targetNamespace = "")
+        String arg0);
+
 }

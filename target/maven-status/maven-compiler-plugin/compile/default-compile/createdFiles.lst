@@ -2,6 +2,7 @@ clientews\servicio\RegistrarEnWorklist.class
 clientews\servicio\ConceptosInstitucionServiceImplService.class
 clientews\servicio\PacienteServiceWs.class
 clientews\servicio\EncontrarEquipoDicomPorIdAreaResponse.class
+clientews\servicio\EliminarOrdenVentaResponse.class
 clientews\servicio\EncontrarFormaPagoPorId.class
 clientews\servicio\ConceptosInstitucion.class
 clientews\servicio\ActualizarTotalOrdenVenta.class
@@ -20,6 +21,8 @@ clientews\servicio\ObtenerLimiteInstitucionResponse.class
 clientews\servicio\FindAgendadosByFechaResponse.class
 clientews\servicio\EncontrarEstadosDeMexicoResponse.class
 clientews\servicio\EncontrarInstitucionPorIdResponse.class
+clientews\servicio\ObtenerOrdenVentaConfirmadasPagadasFechaPacienteResponse.class
+clientews\servicio\EliminarVentaConceptosPorIdOrdenVentaResponse.class
 clientews\servicio\EncontrarVentaConceptosPorIdPacsResponse.class
 clientews\servicio\MexicoServiceWs.class
 clientews\servicio\EncontrarAgendadosPorAreaEquipoDicomFecha.class
@@ -30,10 +33,12 @@ clientews\servicio\PagoOrdenVenta.class
 clientews\servicio\ObtenerOrdenVentaConfirmadasPacienteResponse.class
 clientews\servicio\PagoOrdenVentaServiceImplService.class
 clientews\servicio\EncontrarEquipoDicomPorArea.class
+clientews\servicio\ObtenerOrdenVentaConfirmadasPagadasEnFechaResponse.class
 clientews\servicio\ObtenerOrdenVentaConfirmadasEnFechaResponse.class
 clientews\servicio\ObtenerUltimaOrdenVentaRegistrada.class
 Vistas\Estudios$1.class
 clientews\servicio\EncontrarConceptosPorIdVentaConceptosResponse.class
+clientews\servicio\ObtenerOrdenVentaConfirmadasPagadasFechaPaciente.class
 clientews\servicio\EncontrarPacienteLikeCurpResponse.class
 clientews\servicio\ActualizarIdOrdenVentaResponse.class
 clientews\servicio\ActualizarPacienteResponse.class
@@ -52,6 +57,7 @@ clientews\servicio\ObtenerTotalDeVentaResponse.class
 clientews\servicio\ObtenerAreasPorInstitucionResponse.class
 clientews\servicio\CatalogoFormaPago.class
 clientews\servicio\EncontrarVentaConceptoPorOrdenVentaConceptoHoraAsignado.class
+clientews\servicio\EncontrarEstadoPorNombreResponse.class
 clientews\servicio\ListarTodasFormasPagoResponse.class
 clientews\servicio\EquipoDicomServiceWs.class
 clientews\servicio\ObtenerAreaPorNombreResponse.class
@@ -61,6 +67,7 @@ clientews\servicio\ObtenerCantidadDeEstudiosHechosEnInstitucionFecha.class
 Vistas\Menu$2.class
 clientews\servicio\EquipoDicom.class
 DAO\AreasDao.class
+clientews\servicio\EliminarVentaConceptosPorIdOrdenVenta.class
 clientews\servicio\EsCorrectoLoginResponse.class
 Vistas\Cortes$1.class
 Vistas\Menu$5.class
@@ -81,6 +88,7 @@ clientews\servicio\AunEsPosibleAgendarEnInstitucion.class
 clientews\servicio\ConceptosServiceImplService.class
 clientews\servicio\EquipoDicomServiceImplService.class
 Vistas\AreasVista$1.class
+clientews\servicio\ObtenerTotalOrdenesEnUnDiaResponse.class
 clientews\servicio\EncontrarPacienteLikeNombreResponse.class
 clientews\servicio\RegistrarPacienteResponse.class
 clientews\servicio\EncontrarInstitucionPorNombreResponse.class
@@ -99,6 +107,7 @@ clientews\servicio\ObtenerOrdenVentaNoPagadosEnFecha.class
 clientews\servicio\ListarTodosVentaConceptosResponse.class
 clientews\servicio\EncontrarEquipoDicomPorAreaResponse.class
 clientews\servicio\CatalogoFormaPagoServiceImplService.class
+clientews\servicio\EliminarPagoOrdenVentaPorIdOrdenVenta.class
 clientews\servicio\RegistrarVentaConceptosResponse.class
 clientews\servicio\EncontrarConceptosPorIdVentaConceptos.class
 Vistas\Menu$4.class
@@ -112,6 +121,7 @@ clientews\servicio\ListarTodosPacientes.class
 Vistas\Instituciones.class
 clientews\servicio\EncontrarPacientePorIdResponse.class
 Utilidades\AleatoriosUtil.class
+clientews\servicio\EliminarOrdenVenta.class
 clientews\servicio\MovimientoCorteServiceWs.class
 clientews\servicio\VentaConceptosServiceImplService.class
 clientews\servicio\Pacientes.class
@@ -121,6 +131,7 @@ clientews\servicio\ListarTodosPacientesResponse.class
 clientews\servicio\ObtenerMovimientosDeCorteVespertinoResponse.class
 clientews\servicio\EncontrarEquipoDicomPorNombreResponse.class
 clientews\servicio\RegistrarMovimientoCorteResponse.class
+clientews\servicio\EsCandidatoParaEliminarConceptosDeOrden.class
 clientews\servicio\EncontrarAgendadosPorAreaEquipoDicomFechaInstitucion.class
 clientews\servicio\EncontrarInstitucionPorId.class
 clientews\servicio\EncontrarConceptosPorIdAreaResponse.class
@@ -144,6 +155,7 @@ clientews\servicio\EncontrarPacienteLikeCurp.class
 clientews\servicio\EncontrarVentaConceptoPorOrdenVentaConceptoHoraAsignadoResponse.class
 clientews\servicio\ObtenerOrdenVentaNoPagadosEnFechaResponse.class
 clientews\servicio\RegistrarOrdenVentaResponse.class
+clientews\servicio\EncontrarEstadoPorNombre.class
 clientews\servicio\ObtenerOrdenVentaPorIdResponse.class
 clientews\servicio\AunEsPosibleAgendarEnInstitucionResponse.class
 clientews\servicio\InstitucionServiceWs.class
@@ -152,9 +164,11 @@ clientews\servicio\EncontarVentaConceptosPorIdOrdenVentaResponse.class
 clientews\servicio\ActualizarVentaConceptos.class
 clientews\servicio\MovimientoCorte.class
 clientews\servicio\ObtenerAreaPorNombre.class
+clientews\servicio\EliminarPagoOrdenVentaPorIdOrdenVentaResponse.class
 clientews\servicio\ActualizarVentaConceptosResponse.class
 clientews\servicio\EncontrarConceptosPorIdArea.class
 clientews\servicio\EncontrarNumeroVentaConceptosPorEquipoFechaHora.class
+clientews\servicio\ObtenerTotalOrdenesEnUnDia.class
 clientews\servicio\ObtenerOrdenVentaConfirmadasFechaPaciente.class
 clientews\servicio\ObtenerMovimientosDeCorteVespertino.class
 clientews\servicio\UpdateArea.class
@@ -175,11 +189,14 @@ clientews\servicio\EncontrarVentaConceptosPorPacienteFechaEnWorklist.class
 clientews\servicio\ObtenerOrdenVentaConfirmadasFechaPacienteResponse.class
 Vistas\EstudiosInstituciones.class
 clientews\servicio\ListarTodasFormasPago.class
+clientews\servicio\ObtenerOrdenVentaConfirmadasPagadasPaciente.class
 clientews\servicio\EncontrarPacientePorCurp.class
+clientews\servicio\EncontrarEstadoPorId.class
 clientews\servicio\RegistrarEnWorklistPorOrdenVenta.class
 clientews\servicio\ActualizarPaciente.class
 clientews\servicio\RegistrarEnWorklistResponse.class
 clientews\servicio\ObtenerOrdenVentaNoPagadosFechaPaciente.class
+clientews\servicio\ObtenerOrdenVentaConfirmadasPagadasPacienteResponse.class
 clientews\servicio\ListarPorId.class
 clientews\servicio\UsuariosServiceImplService.class
 clientews\servicio\EncontrarEquipoDicomPorModalidad.class
@@ -191,6 +208,7 @@ Vistas\Estudios.class
 Controladores\CortesController.class
 clientews\servicio\RegistrarConceptosInstitucion.class
 clientews\servicio\Institucion.class
+clientews\servicio\ObtenerOrdenVentaConfirmadasPagadasEnFecha.class
 clientews\servicio\RegistrarVentaConceptosListResponse.class
 clientews\servicio\PagoOrdenVentaServiceWs.class
 clientews\servicio\EncontrarPacienteLikeNombre.class
@@ -209,11 +227,13 @@ Utilidades\QrUtil.class
 clientews\servicio\RegistrarPagoOrdenVentaResponse.class
 clientews\servicio\Mexico.class
 clientews\servicio\Areas.class
+clientews\servicio\EncontrarEstadoPorIdResponse.class
 clientews\servicio\EncontrarVentaConceptosPorInstitucionFechas.class
 clientews\servicio\Conceptos.class
 clientews\servicio\AreasServiceImplService.class
 clientews\servicio\EncontrarVentaConceptosPorPacienteFechaEnWorklistResponse.class
 clientews\servicio\EncontrarEquipoDicomPorNombre.class
+clientews\servicio\EsCandidatoParaEliminarConceptosDeOrdenResponse.class
 clientews\servicio\RegistrarVentaConceptosList.class
 Vistas\Instituciones$1.class
 Vistas\Menu.class

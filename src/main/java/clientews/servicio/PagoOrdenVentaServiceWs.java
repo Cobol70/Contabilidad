@@ -35,4 +35,16 @@ public interface PagoOrdenVentaServiceWs {
         @WebParam(name = "arg0", targetNamespace = "")
         PagoOrdenVenta arg0);
 
+    /**
+     * 
+     * @param arg0
+     */
+    @WebMethod
+    @RequestWrapper(localName = "eliminarPagoOrdenVentaPorIdOrdenVenta", targetNamespace = "http://servicio.sga.gm.com.mx/", className = "clientews.servicio.EliminarPagoOrdenVentaPorIdOrdenVenta")
+    @ResponseWrapper(localName = "eliminarPagoOrdenVentaPorIdOrdenVentaResponse", targetNamespace = "http://servicio.sga.gm.com.mx/", className = "clientews.servicio.EliminarPagoOrdenVentaPorIdOrdenVentaResponse")
+    @Action(input = "http://servicio.sga.gm.com.mx/PagoOrdenVentaServiceWs/eliminarPagoOrdenVentaPorIdOrdenVentaRequest", output = "http://servicio.sga.gm.com.mx/PagoOrdenVentaServiceWs/eliminarPagoOrdenVentaPorIdOrdenVentaResponse")
+    public void eliminarPagoOrdenVentaPorIdOrdenVenta(
+        @WebParam(name = "arg0", targetNamespace = "")
+        Long arg0);
+
 }

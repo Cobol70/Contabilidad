@@ -9,6 +9,7 @@ C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\clientews\s
 C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\clientews\servicio\EncontrarConceptoPorIdResponse.java
 C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\clientews\servicio\ObjectFactory.java
 C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\clientews\servicio\CatalogoFormaPago.java
+C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\clientews\servicio\EsCandidatoParaEliminarConceptosDeOrden.java
 C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\Vistas\EstudiosInstituciones.java
 C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\clientews\servicio\EquipoDicom.java
 C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\clientews\servicio\ObtenerTotalDeVentaResponse.java
@@ -18,6 +19,7 @@ C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\clientews\s
 C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\clientews\servicio\AreasServiceWs.java
 C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\clientews\servicio\ObtenerOrdenVentaConfirmadasEnFecha.java
 C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\clientews\servicio\ActualizarConceptosInstitucion.java
+C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\clientews\servicio\EncontrarEstadoPorNombreResponse.java
 C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\clientews\servicio\RegistrarMovimientoCorteResponse.java
 C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\clientews\servicio\EncontrarVentaConceptosPorPacienteFechaEnWorklistResponse.java
 C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\clientews\servicio\ActualizarTotalOrdenVenta.java
@@ -41,6 +43,7 @@ C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\clientews\s
 C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\clientews\servicio\ObtenerOrdenVentaNoPagadosFechaPaciente.java
 C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\clientews\servicio\EncontrarFormaPagoPorNombreResponse.java
 C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\clientews\servicio\EncontarVentaConceptosPorIdOrdenVenta.java
+C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\clientews\servicio\EncontrarEstadoPorIdResponse.java
 C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\clientews\servicio\EncontrarFormaPagoPorIdResponse.java
 C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\clientews\servicio\EsCorrectoLogin.java
 C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\clientews\servicio\ObtenerCantidadDeEstudiosHechosEnInstitucionFecha.java
@@ -56,21 +59,27 @@ C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\clientews\s
 C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\clientews\servicio\ObtenerOrdenVentaNoPagadosPacienteResponse.java
 C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\clientews\servicio\RegistrarEnWorklistResponse.java
 C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\clientews\servicio\EncontrarVentaConceptosPorIdResponse.java
+C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\clientews\servicio\EliminarOrdenVentaResponse.java
 C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\clientews\servicio\EliminarVentaConceptosResponse.java
 C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\clientews\servicio\RegistrarConceptosInstitucionResponse.java
 C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\clientews\servicio\RegistrarArea.java
 C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\clientews\servicio\ActualizarVentaConceptos.java
 C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\clientews\servicio\EncontrarConceptosPorInstitucionArea.java
 C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\clientews\servicio\VentaConceptos.java
+C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\clientews\servicio\EliminarPagoOrdenVentaPorIdOrdenVentaResponse.java
 C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\Utilidades\AleatoriosUtil.java
+C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\clientews\servicio\EncontrarEstadoPorId.java
 C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\clientews\servicio\EncontrarEquipoDicomPorIdAreaResponse.java
 C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\clientews\servicio\UsuariosServiceImplService.java
+C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\clientews\servicio\EliminarVentaConceptosPorIdOrdenVenta.java
 C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\Utilidades\Md5Util.java
+C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\clientews\servicio\EsCandidatoParaEliminarConceptosDeOrdenResponse.java
 C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\clientews\servicio\EncontrarConceptosPorInstitucionAreaResponse.java
 C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\clientews\servicio\ActualizarVentaConceptosResponse.java
 C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\clientews\servicio\FindAgendadosByFechaResponse.java
 C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\clientews\servicio\ObtenerOrdenVentaConfirmadasEnFechaResponse.java
 C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\clientews\servicio\EncontrarConceptosPorIdAreaResponse.java
+C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\clientews\servicio\ObtenerOrdenVentaConfirmadasPagadasPacienteResponse.java
 C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\clientews\servicio\ListarTodasFormasPagoResponse.java
 C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\Controladores\MenuController.java
 C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\clientews\servicio\Mexico.java
@@ -101,6 +110,7 @@ C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\clientews\s
 C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\clientews\servicio\EncontrarAgendadosPorAreaEquipoDicomFechaResponse.java
 C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\clientews\servicio\EncontrarConceptosPorIdVentaConceptosResponse.java
 C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\clientews\servicio\ObtenerOrdenVentaNoPagadosEnFechaResponse.java
+C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\clientews\servicio\EncontrarEstadoPorNombre.java
 C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\clientews\servicio\EncontrarAgendadosPorAreaEquipoDicomFechaInstitucionResponse.java
 C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\clientews\servicio\EncontrarPacientePorIdResponse.java
 C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\Vistas\Menu.java
@@ -119,6 +129,8 @@ C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\Controlador
 C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\clientews\servicio\ObtenerLimiteInstitucionResponse.java
 C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\clientews\servicio\FindInstitucionByIdOrdenVentaResponse.java
 C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\clientews\servicio\ObtenerMovimientosDeCorteMatutinoResponse.java
+C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\clientews\servicio\EliminarOrdenVenta.java
+C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\clientews\servicio\ObtenerTotalOrdenesEnUnDia.java
 C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\clientews\servicio\EncontrarEquipoDicomPorModalidadResponse.java
 C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\clientews\servicio\FindAgendadosByFecha.java
 C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\clientews\servicio\EncontrarEquipoDicomPorNombre.java
@@ -145,7 +157,9 @@ C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\clientews\s
 C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\clientews\servicio\ObtenerOrdenVentaNoPagadosPaciente.java
 C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\clientews\servicio\EncontrarVentaConceptosPorId.java
 C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\clientews\servicio\Institucion.java
+C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\clientews\servicio\ObtenerTotalOrdenesEnUnDiaResponse.java
 C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\clientews\servicio\RegistrarPacienteResponse.java
+C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\clientews\servicio\ObtenerOrdenVentaConfirmadasPagadasFechaPaciente.java
 C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\clientews\servicio\PagoOrdenVentaServiceWs.java
 C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\clientews\servicio\CatalogoFormaPagoServiceImplService.java
 C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\clientews\servicio\ListarTodasInstituciones.java
@@ -167,11 +181,13 @@ C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\clientews\s
 C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\clientews\servicio\ListarTodosVentaConceptos.java
 C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\clientews\servicio\ActualizarTotalOrdenVentaResponse.java
 C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\clientews\servicio\ObtenerOrdenVentaConfirmadasFechaPacienteResponse.java
+C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\clientews\servicio\EliminarPagoOrdenVentaPorIdOrdenVenta.java
 C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\clientews\servicio\EncontrarInstitucionPorNombre.java
 C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\Tables\TableOrdenesVenta.java
 C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\clientews\servicio\CatalogoFormaPagoServiceWs.java
 C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\clientews\servicio\EncontrarConceptosPorIdArea.java
 C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\clientews\servicio\ListarPorIdResponse.java
+C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\clientews\servicio\ObtenerOrdenVentaConfirmadasPagadasEnFechaResponse.java
 C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\clientews\servicio\ObtenerAreaPorNombre.java
 C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\Utilidades\QrUtil.java
 C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\clientews\servicio\EncontrarEquipoDicomPorNombreResponse.java
@@ -179,6 +195,7 @@ C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\clientews\s
 C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\DAO\LoginData.java
 C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\clientews\servicio\ActualizarIdOrdenVenta.java
 C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\clientews\servicio\EncontrarAgendadosPorAreaEquipoDicomFechaInstitucion.java
+C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\clientews\servicio\ObtenerOrdenVentaConfirmadasPagadasPaciente.java
 C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\clientews\servicio\ActualizarConceptosInstitucionResponse.java
 C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\clientews\servicio\EncontrarEquipoDicomPorIdResponse.java
 C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\clientews\servicio\ListarTodosPacientesResponse.java
@@ -190,6 +207,7 @@ C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\Vistas\Inst
 C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\clientews\servicio\Pacientes.java
 C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\clientews\servicio\MexicoServiceWs.java
 C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\clientews\servicio\ObtenerOrdenVentaPorIdResponse.java
+C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\clientews\servicio\ObtenerOrdenVentaConfirmadasPagadasEnFecha.java
 C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\clientews\servicio\EncontrarNumeroVentaConceptosPorEquipoFechaHora.java
 C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\Vistas\AreasVista.java
 C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\clientews\servicio\VentaConceptosServiceImplService.java
@@ -200,6 +218,8 @@ C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\clientews\s
 C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\clientews\servicio\EncontrarFormaPagoPorId.java
 C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\clientews\servicio\ActualizarOrdenVenta.java
 C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\clientews\servicio\EncontrarPacienteLikeCurp.java
+C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\clientews\servicio\ObtenerOrdenVentaConfirmadasPagadasFechaPacienteResponse.java
+C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\clientews\servicio\EliminarVentaConceptosPorIdOrdenVentaResponse.java
 C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\clientews\servicio\EncontrarFormaPagoPorNombre.java
 C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\clientews\servicio\ObtenerUltimaOrdenVentaRegistradaResponse.java
 C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\clientews\servicio\ObtenerMovimientosDeCorteVespertino.java
