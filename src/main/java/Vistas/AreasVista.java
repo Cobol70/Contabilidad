@@ -144,13 +144,11 @@ public class AreasVista extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 817, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 819, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 425, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 415, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -198,8 +196,8 @@ public class AreasVista extends javax.swing.JFrame {
     public javax.swing.JButton btnRegresar;
     public javax.swing.JComboBox<String> comboHoraFin;
     public javax.swing.JComboBox<String> comboHoraInicio;
-    private javax.swing.JLabel jLGuardar;
-    private javax.swing.JLabel jLModificar;
+    public javax.swing.JLabel jLGuardar;
+    public javax.swing.JLabel jLModificar;
     private javax.swing.JLabel jLRegresar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;

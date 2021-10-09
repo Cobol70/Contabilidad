@@ -29,22 +29,25 @@ public class Estudios extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         btnRegresar = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        checkDicom = new javax.swing.JCheckBox();
-        txtNombre = new javax.swing.JTextField();
-        comboArea = new javax.swing.JComboBox<>();
-        btnGuardar = new javax.swing.JButton();
-        jLabel3 = new javax.swing.JLabel();
-        txtBuscar = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
         tableEstudios = new javax.swing.JTable();
-        jLabel4 = new javax.swing.JLabel();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        txtInstrucciones = new javax.swing.JTextArea();
-        jLGuardar = new javax.swing.JLabel();
         jLRegresar = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
+        comboInstrucciones = new javax.swing.JComboBox<>();
+        jLabel2 = new javax.swing.JLabel();
+        checkDicom = new javax.swing.JCheckBox();
+        comboArea = new javax.swing.JComboBox<>();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        txtNombre = new javax.swing.JTextField();
+        btnNuevasInstrucciones = new javax.swing.JButton();
+        txtBuscar = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        comboAreaBusqueda = new javax.swing.JComboBox<>();
+        jLGuardar = new javax.swing.JLabel();
+        btnGuardar = new javax.swing.JButton();
+        btnVer = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -60,24 +63,57 @@ public class Estudios extends javax.swing.JFrame {
         });
         jPanel1.add(btnRegresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 20, 40, 40));
 
-        jLabel1.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        jLabel1.setText("Nombre");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 120, -1, -1));
+        jScrollPane1.setViewportView(tableEstudios);
+
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(342, 140, 440, 330));
+
+        jLRegresar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/flecha-regresar.png"))); // NOI18N
+        jLRegresar.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanel1.add(jLRegresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 20, -1, 40));
+
+        jPanel2.setBackground(new java.awt.Color(204, 204, 255));
+        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel2.add(comboInstrucciones, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 240, 240, -1));
 
         jLabel2.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jLabel2.setText("Instrucciones");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 210, -1, -1));
+        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 220, -1, -1));
 
         checkDicom.setBackground(new java.awt.Color(204, 204, 255));
         checkDicom.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         checkDicom.setText("Dicom");
-        jPanel1.add(checkDicom, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 320, -1, -1));
-
-        txtNombre.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        jPanel1.add(txtNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 120, 210, -1));
+        jPanel2.add(checkDicom, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 320, -1, -1));
 
         comboArea.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        jPanel1.add(comboArea, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 170, 210, -1));
+        jPanel2.add(comboArea, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 150, 240, -1));
+
+        jLabel4.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jLabel4.setText("Área");
+        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 20, -1, -1));
+
+        jLabel1.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jLabel1.setText("Nombre");
+        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 40, -1, -1));
+
+        txtNombre.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        jPanel2.add(txtNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 70, 240, -1));
+
+        btnNuevasInstrucciones.setText("Nuevas instrucciones");
+        jPanel2.add(btnNuevasInstrucciones, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 270, -1, -1));
+        jPanel2.add(txtBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 40, 230, -1));
+
+        jLabel3.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jLabel3.setText("Buscar");
+        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 20, -1, -1));
+
+        jLabel5.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jLabel5.setText("Área");
+        jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 130, -1, -1));
+        jPanel2.add(comboAreaBusqueda, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 40, 190, -1));
+
+        jLGuardar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/guardar2.png"))); // NOI18N
+        jLGuardar.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanel2.add(jLGuardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 370, 100, 30));
 
         btnGuardar.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         btnGuardar.setForeground(new java.awt.Color(0, 0, 51));
@@ -89,49 +125,12 @@ public class Estudios extends javax.swing.JFrame {
                 btnGuardarActionPerformed(evt);
             }
         });
-        jPanel1.add(btnGuardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 351, 70, 30));
+        jPanel2.add(btnGuardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 370, 70, 30));
 
-        jLabel3.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        jLabel3.setText("Buscar");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 90, -1, -1));
-        jPanel1.add(txtBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 90, 370, -1));
+        btnVer.setText("Ver");
+        jPanel2.add(btnVer, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 270, 60, -1));
 
-        jScrollPane1.setViewportView(tableEstudios);
-
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(342, 120, 440, 270));
-
-        jLabel4.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        jLabel4.setText("Área");
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 170, -1, -1));
-
-        txtInstrucciones.setColumns(20);
-        txtInstrucciones.setRows(5);
-        jScrollPane2.setViewportView(txtInstrucciones);
-
-        jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 210, 180, -1));
-
-        jLGuardar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/guardar2.png"))); // NOI18N
-        jLGuardar.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jPanel1.add(jLGuardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 350, 100, 30));
-
-        jLRegresar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/flecha-regresar.png"))); // NOI18N
-        jLRegresar.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jPanel1.add(jLRegresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 20, -1, 40));
-
-        jPanel2.setBackground(new java.awt.Color(204, 204, 255));
-
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 760, Short.MAX_VALUE)
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 330, Short.MAX_VALUE)
-        );
-
-        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 70, 760, 330));
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 70, 760, 430));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -143,7 +142,7 @@ public class Estudios extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 436, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 530, Short.MAX_VALUE)
         );
 
         pack();
@@ -151,7 +150,6 @@ public class Estudios extends javax.swing.JFrame {
 
     private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarActionPerformed
         // TODO add your handling code here:
-        System.out.println(txtInstrucciones.getText());
     }//GEN-LAST:event_btnGuardarActionPerformed
 
     private void btnRegresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegresarActionPerformed
@@ -195,22 +193,25 @@ public class Estudios extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton btnGuardar;
+    public javax.swing.JButton btnNuevasInstrucciones;
     public javax.swing.JButton btnRegresar;
+    public javax.swing.JButton btnVer;
     public javax.swing.JCheckBox checkDicom;
     public javax.swing.JComboBox<String> comboArea;
+    public javax.swing.JComboBox<String> comboAreaBusqueda;
+    public javax.swing.JComboBox<String> comboInstrucciones;
     private javax.swing.JLabel jLGuardar;
     private javax.swing.JLabel jLRegresar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane2;
     public javax.swing.JTable tableEstudios;
     public javax.swing.JTextField txtBuscar;
-    private javax.swing.JTextArea txtInstrucciones;
     public javax.swing.JTextField txtNombre;
     // End of variables declaration//GEN-END:variables
 }
