@@ -17,7 +17,7 @@ import javax.xml.bind.annotation.XmlType;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
  *         &lt;element name="idInstitucion" type="{http://www.w3.org/2001/XMLSchema}long" minOccurs="0"/>
- *         &lt;element name="limite" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+ *         &lt;element name="limite" type="{http://www.w3.org/2001/XMLSchema}int"/>
  *         &lt;element name="nombreInstitucion" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
@@ -36,7 +36,7 @@ import javax.xml.bind.annotation.XmlType;
 public class Institucion {
 
     protected Long idInstitucion;
-    protected Integer limite;
+    protected int limite;
     protected String nombreInstitucion;
 
     /**
@@ -66,24 +66,16 @@ public class Institucion {
     /**
      * Obtiene el valor de la propiedad limite.
      * 
-     * @return
-     *     possible object is
-     *     {@link Integer }
-     *     
      */
-    public Integer getLimite() {
+    public int getLimite() {
         return limite;
     }
 
     /**
      * Define el valor de la propiedad limite.
      * 
-     * @param value
-     *     allowed object is
-     *     {@link Integer }
-     *     
      */
-    public void setLimite(Integer value) {
+    public void setLimite(int value) {
         this.limite = value;
     }
 
