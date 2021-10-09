@@ -96,6 +96,7 @@
                                 <wsdlUrl>http://172.17.200.61:8080/MovimientoCorteServiceImplService/MovimientoCorteServiceImpl?wsdl</wsdlUrl>
                                 <wsdlUrl>http://172.17.200.61:8080/UsuariosServiceImplService/UsuariosServiceImpl?wsdl</wsdlUrl>
                                 <wsdlUrl>http://172.17.200.61:8080/WorklistServiceImplService/WorklistServiceImpl?wsdl</wsdlUrl>
+                                <wsdlUrl>http://172.17.200.61:8080/InstruccionesServiceImplService/InstruccionesServiceImpl?wsdl</wsdlUrl>
                             </wsdlUrls>
                             <packageName>clientews.servicio</packageName>
                             <sourceDestDir>${basedir}/src/main/java</sourceDestDir>

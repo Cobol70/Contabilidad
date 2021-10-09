@@ -230,13 +230,13 @@ public class Menu extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnAreas;
-    private javax.swing.JButton btnCortes;
-    private javax.swing.JButton btnEstudios;
-    private javax.swing.JButton btnEstudiosInstituciones;
-    private javax.swing.JButton btnInstituciones;
-    private javax.swing.JButton btnReagendar;
-    private javax.swing.JButton btnUrgencias;
+    public javax.swing.JButton btnAreas;
+    public javax.swing.JButton btnCortes;
+    public javax.swing.JButton btnEstudios;
+    public javax.swing.JButton btnEstudiosInstituciones;
+    public javax.swing.JButton btnInstituciones;
+    public javax.swing.JButton btnReagendar;
+    public javax.swing.JButton btnUrgencias;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;

@@ -48,6 +48,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *         &lt;element name="fechaRp" type="{http://www.w3.org/2001/XMLSchema}dateTime" minOccurs="0"/>
  *         &lt;element name="grupoEtnicop" type="{http://www.w3.org/2001/XMLSchema}short" minOccurs="0"/>
  *         &lt;element name="idDiscapacidadp" type="{http://www.w3.org/2001/XMLSchema}short" minOccurs="0"/>
+ *         &lt;element name="idFirma" type="{http://servicio.sga.gm.com.mx/}firma" minOccurs="0"/>
  *         &lt;element name="idOcupacionp" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
  *         &lt;element name="idP" type="{http://www.w3.org/2001/XMLSchema}long" minOccurs="0"/>
  *         &lt;element name="idReligionp" type="{http://www.w3.org/2001/XMLSchema}short" minOccurs="0"/>
@@ -112,6 +113,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
     "fechaRp",
     "grupoEtnicop",
     "idDiscapacidadp",
+    "idFirma",
     "idOcupacionp",
     "idP",
     "idReligionp",
@@ -172,6 +174,7 @@ public class Pacientes {
     protected XMLGregorianCalendar fechaRp;
     protected Short grupoEtnicop;
     protected Short idDiscapacidadp;
+    protected Firma idFirma;
     protected Integer idOcupacionp;
     protected Long idP;
     protected Short idReligionp;
@@ -889,6 +892,30 @@ public class Pacientes {
      */
     public void setIdDiscapacidadp(Short value) {
         this.idDiscapacidadp = value;
+    }
+
+    /**
+     * Obtiene el valor de la propiedad idFirma.
+     * 
+     * @return
+     *     possible object is
+     *     {@link Firma }
+     *     
+     */
+    public Firma getIdFirma() {
+        return idFirma;
+    }
+
+    /**
+     * Define el valor de la propiedad idFirma.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Firma }
+     *     
+     */
+    public void setIdFirma(Firma value) {
+        this.idFirma = value;
     }
 
     /**

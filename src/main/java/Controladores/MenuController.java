@@ -8,6 +8,7 @@ package Controladores;
 
 import Vistas.AreasVista;
 import Vistas.Cortes;
+import Vistas.Estudios;
 import Vistas.Menu;
 
 import java.awt.event.ActionEvent;
@@ -51,7 +52,7 @@ public class MenuController implements ActionListener {
         } else if (e.getSource() == this.vista.btnInstituciones) {
             abrirConfirmarCita();
         } else if (e.getSource() == this.vista.btnEstudios) {
-            abrirPagarOrden();
+            abrirEstudios();
         } else if(e.getSource() == this.vista.btnCortes){
             abrirCortes();
         }else if(e.getSource() == this.vista.btnEstudiosInstituciones){
@@ -75,10 +76,10 @@ public class MenuController implements ActionListener {
         controladorConfirmaciones.iniciar();*/
     }
 
-    private void abrirPagarOrden() {
-        /*vista.dispose();
-        PagarOrdenController controladorPagarOrden = new PagarOrdenController(new PagarOrden(), new DatosFacturacion());
-        controladorPagarOrden.iniciar();*/
+    private void abrirEstudios() {
+        vista.dispose();
+        EstudiosController estudiosController = new EstudiosController(new Estudios());
+        estudiosController.iniciar();
     }
 
     private void abrirCortes() {

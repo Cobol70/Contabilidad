@@ -34,6 +34,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *         &lt;element name="idConvenioTo" type="{http://www.w3.org/2001/XMLSchema}int"/>
  *         &lt;element name="idDepartamentoTo" type="{http://www.w3.org/2001/XMLSchema}short"/>
  *         &lt;element name="idGrupoTo" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+ *         &lt;element name="idInstrucciones" type="{http://servicio.sga.gm.com.mx/}instrucciones" minOccurs="0"/>
  *         &lt;element name="idMarcaTo" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
  *         &lt;element name="idMedicamentoG" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
  *         &lt;element name="idModeloTo" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
@@ -74,6 +75,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
     "idConvenioTo",
     "idDepartamentoTo",
     "idGrupoTo",
+    "idInstrucciones",
     "idMarcaTo",
     "idMedicamentoG",
     "idModeloTo",
@@ -108,6 +110,7 @@ public class Conceptos {
     protected int idConvenioTo;
     protected short idDepartamentoTo;
     protected Integer idGrupoTo;
+    protected Instrucciones idInstrucciones;
     protected Integer idMarcaTo;
     protected Integer idMedicamentoG;
     protected Integer idModeloTo;
@@ -489,6 +492,30 @@ public class Conceptos {
      */
     public void setIdGrupoTo(Integer value) {
         this.idGrupoTo = value;
+    }
+
+    /**
+     * Obtiene el valor de la propiedad idInstrucciones.
+     * 
+     * @return
+     *     possible object is
+     *     {@link Instrucciones }
+     *     
+     */
+    public Instrucciones getIdInstrucciones() {
+        return idInstrucciones;
+    }
+
+    /**
+     * Define el valor de la propiedad idInstrucciones.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Instrucciones }
+     *     
+     */
+    public void setIdInstrucciones(Instrucciones value) {
+        this.idInstrucciones = value;
     }
 
     /**

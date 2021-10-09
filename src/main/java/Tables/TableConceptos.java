@@ -5,10 +5,7 @@
  */
 package Tables;
 
-import Utilidades.DateUtil;
-import clientews.servicio.Pacientes;
-import clientews.servicio.VentaConceptos;
-import java.util.Date;
+import clientews.servicio.Conceptos;
 import java.util.List;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
@@ -20,105 +17,45 @@ import javax.swing.table.TableColumnModel;
  */
 public class TableConceptos {
 
-    public void cargarTabla(JTable tabla, List<VentaConceptos> list) {
+    public void cargarTabla(JTable tabla, List<Conceptos> list) {
 
         DefaultTableModel dt = new DefaultTableModel();
-        dt.addColumn("Id");
+        dt.addColumn("Área");
         dt.addColumn("Estudio");
-        dt.addColumn("Hora");
-        dt.addColumn("Paciente");
-        dt.addColumn("Telefono");
-        dt.addColumn("Correo");
-        dt.addColumn("idPaciente");
-        dt.addColumn("idConcepto");
+        dt.addColumn("Id");
 
-        VentaConceptos venta = new VentaConceptos();
+        Conceptos conceptos = new Conceptos();
 
         for (int i = 0; i < list.size(); i++) {
             Object fila[] = new Object[8];
-            venta = list.get(i);
-            fila[0] = venta.getIdVc();
-            fila[1] = venta.getIdConceptoEs().getConceptoTo();
-            fila[2] = venta.getHoraAsignado();
-            fila[3] = venta.getIdPacienteVc().getNombreP() + " " + venta.getIdPacienteVc().getApaternoP() + " " + venta.getIdPacienteVc().getAmaternoP();
-            fila[4] = venta.getIdPacienteVc().getTCelularp();
-            fila[5] = venta.getIdPacienteVc().getEmailP();
-            fila[6] = venta.getIdPacienteVc().getIdP();
-            fila[7] = venta.getIdConceptoEs().getIdTo();
+            conceptos = list.get(i);
+            fila[0] = conceptos.getIdAreaTo().getNombreA();
+            fila[1] = conceptos.getConceptoTo();
+            fila[2] = conceptos.getIdTo();
             dt.addRow(fila);
         }
         tabla.setModel(dt);
-        tabla.setRowHeight(60);
+        tabla.setRowHeight(40);
         TableColumnModel columnModel = tabla.getColumnModel();
-        columnModel.getColumn(0).setPreferredWidth(30);
-        columnModel.getColumn(1).setPreferredWidth(250);
-        columnModel.getColumn(2).setPreferredWidth(80);
-        columnModel.getColumn(3).setPreferredWidth(250);
-        columnModel.getColumn(4).setPreferredWidth(100);
-        columnModel.getColumn(5).setPreferredWidth(250);
-        columnModel.getColumn(6).setPreferredWidth(1);
+        columnModel.getColumn(0).setPreferredWidth(150);
+        columnModel.getColumn(1).setPreferredWidth(300);
+        columnModel.getColumn(2).setPreferredWidth(10);
 
-        columnModel.getColumn(7).setPreferredWidth(1);
-
-    }
-
-    public void cargarTablaEnPagos(JTable tabla, List<VentaConceptos> list) {
-
-        DefaultTableModel dt = new DefaultTableModel();
-        dt.addColumn("Id");
-        dt.addColumn("Estudio");
-        dt.addColumn("Fecha");
-        dt.addColumn("Hora");
-
-        VentaConceptos venta = new VentaConceptos();
-
-        for (int i = 0; i < list.size(); i++) {
-            Object fila[] = new Object[4];
-            venta = list.get(i);
-            fila[0] = venta.getIdVc();
-            fila[1] = venta.getIdConceptoEs().getConceptoTo();
-            try {
-                fila[2] = DateUtil.stringLegibleDate(venta.getFechaAsignado());
-            } catch (Exception e) {
-                                fila[2] = venta.getFechaAsignado();
-                                
-            }
-            fila[3] = venta.getHoraAsignado();
-            dt.addRow(fila);
-        }
-        tabla.setModel(dt);
-        tabla.setRowHeight(60);
-        TableColumnModel columnModel = tabla.getColumnModel();
-        columnModel.getColumn(0).setPreferredWidth(30);
-        columnModel.getColumn(1).setPreferredWidth(250);
-        columnModel.getColumn(1).setPreferredWidth(100);
-        columnModel.getColumn(3).setPreferredWidth(80);
     }
 
     public void cargarTablaVacia(JTable tabla) {
 
         DefaultTableModel dt = new DefaultTableModel();
-        dt.addColumn("Id");
+        dt.addColumn("Área");
         dt.addColumn("Estudio");
-        dt.addColumn("Hora");
-        dt.addColumn("Paciente");
-        dt.addColumn("Telefono");
-        dt.addColumn("Correo");
-        dt.addColumn("idPaciente");
-        dt.addColumn("idConcepto");
+        dt.addColumn("Id");
 
         tabla.setModel(dt);
-        tabla.setRowHeight(60);
+        tabla.setRowHeight(40);
         TableColumnModel columnModel = tabla.getColumnModel();
-        columnModel.getColumn(0).setPreferredWidth(30);
-        columnModel.getColumn(1).setPreferredWidth(250);
-        columnModel.getColumn(2).setPreferredWidth(80);
-        columnModel.getColumn(3).setPreferredWidth(250);
-        columnModel.getColumn(4).setPreferredWidth(100);
-        columnModel.getColumn(5).setPreferredWidth(250);
-        columnModel.getColumn(6).setPreferredWidth(1);
-
-        columnModel.getColumn(7).setPreferredWidth(1);
+        columnModel.getColumn(0).setPreferredWidth(150);
+        columnModel.getColumn(1).setPreferredWidth(300);
+        columnModel.getColumn(2).setPreferredWidth(10);
 
     }
 }
