@@ -133,4 +133,43 @@ public interface InstitucionServiceWs {
         @WebParam(name = "arg1", targetNamespace = "")
         String arg1);
 
+    /**
+     * 
+     * @param arg0
+     */
+    @WebMethod
+    @RequestWrapper(localName = "registrarInstitucion", targetNamespace = "http://servicio.sga.gm.com.mx/", className = "clientews.servicio.RegistrarInstitucion")
+    @ResponseWrapper(localName = "registrarInstitucionResponse", targetNamespace = "http://servicio.sga.gm.com.mx/", className = "clientews.servicio.RegistrarInstitucionResponse")
+    @Action(input = "http://servicio.sga.gm.com.mx/InstitucionServiceWs/registrarInstitucionRequest", output = "http://servicio.sga.gm.com.mx/InstitucionServiceWs/registrarInstitucionResponse")
+    public void registrarInstitucion(
+        @WebParam(name = "arg0", targetNamespace = "")
+        Institucion arg0);
+
+    /**
+     * 
+     * @param arg0
+     */
+    @WebMethod
+    @RequestWrapper(localName = "actualizarInstitucion", targetNamespace = "http://servicio.sga.gm.com.mx/", className = "clientews.servicio.ActualizarInstitucion")
+    @ResponseWrapper(localName = "actualizarInstitucionResponse", targetNamespace = "http://servicio.sga.gm.com.mx/", className = "clientews.servicio.ActualizarInstitucionResponse")
+    @Action(input = "http://servicio.sga.gm.com.mx/InstitucionServiceWs/actualizarInstitucionRequest", output = "http://servicio.sga.gm.com.mx/InstitucionServiceWs/actualizarInstitucionResponse")
+    public void actualizarInstitucion(
+        @WebParam(name = "arg0", targetNamespace = "")
+        Institucion arg0);
+
+    /**
+     * 
+     * @param arg0
+     * @return
+     *     returns java.util.List<clientews.servicio.Institucion>
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "encontrarInstitucionesLikeNombre", targetNamespace = "http://servicio.sga.gm.com.mx/", className = "clientews.servicio.EncontrarInstitucionesLikeNombre")
+    @ResponseWrapper(localName = "encontrarInstitucionesLikeNombreResponse", targetNamespace = "http://servicio.sga.gm.com.mx/", className = "clientews.servicio.EncontrarInstitucionesLikeNombreResponse")
+    @Action(input = "http://servicio.sga.gm.com.mx/InstitucionServiceWs/encontrarInstitucionesLikeNombreRequest", output = "http://servicio.sga.gm.com.mx/InstitucionServiceWs/encontrarInstitucionesLikeNombreResponse")
+    public List<Institucion> encontrarInstitucionesLikeNombre(
+        @WebParam(name = "arg0", targetNamespace = "")
+        String arg0);
+
 }

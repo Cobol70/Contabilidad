@@ -9,6 +9,7 @@ package Controladores;
 import Vistas.AreasVista;
 import Vistas.Cortes;
 import Vistas.Estudios;
+import Vistas.Instituciones;
 import Vistas.Menu;
 
 import java.awt.event.ActionEvent;
@@ -50,7 +51,7 @@ public class MenuController implements ActionListener {
         if (e.getSource() == this.vista.btnAreas) {
             abrirAreas();
         } else if (e.getSource() == this.vista.btnInstituciones) {
-            abrirConfirmarCita();
+            abrirInstituciones();
         } else if (e.getSource() == this.vista.btnEstudios) {
             abrirEstudios();
         } else if(e.getSource() == this.vista.btnCortes){
@@ -70,10 +71,10 @@ public class MenuController implements ActionListener {
         controladorAreas.iniciar();
     }
 
-    private void abrirConfirmarCita() {
-       /* vista.dispose();
-        ConfirmarCitaController controladorConfirmaciones = new ConfirmarCitaController(new ConfirmarCita());
-        controladorConfirmaciones.iniciar();*/
+    private void abrirInstituciones() {
+        vista.dispose();
+        InstitucionesController controladorInstituciones = new InstitucionesController(new Instituciones());
+        controladorInstituciones.iniciar();
     }
 
     private void abrirEstudios() {

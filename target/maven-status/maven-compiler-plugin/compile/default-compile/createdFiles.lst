@@ -4,6 +4,7 @@ clientews\servicio\ConceptosInstitucionServiceImplService.class
 clientews\servicio\PacienteServiceWs.class
 clientews\servicio\EncontrarEquipoDicomPorIdAreaResponse.class
 clientews\servicio\EliminarOrdenVentaResponse.class
+clientews\servicio\RegistrarInstitucion.class
 clientews\servicio\EncontrarFormaPagoPorId.class
 clientews\servicio\RegistrarInstruccionesResponse.class
 clientews\servicio\ConceptosInstitucion.class
@@ -12,12 +13,14 @@ Tables\TableVentaConceptos.class
 clientews\servicio\ActualizarConceptosInstitucionResponse.class
 clientews\servicio\EncontrarConceptoLikeNombre.class
 clientews\servicio\WorklistServiceWs.class
+Tables\TableInstituciones.class
 clientews\servicio\FindInstitucionByIdOrdenVentaResponse.class
 Vistas\Instituciones$2.class
 clientews\servicio\ListarTodasAreasResponse.class
 clientews\servicio\EncontrarTodosConceptosResponse.class
 clientews\servicio\ObtenerTotalDeVenta.class
 clientews\servicio\EncontrarEquipoDicomPorIdArea.class
+Vistas\NuevasInstrucciones$1.class
 clientews\servicio\ConceptosInstitucionServiceWs.class
 clientews\servicio\RegistrarArea.class
 clientews\servicio\ObtenerMovimientosDeCorteMatutinoResponse.class
@@ -37,6 +40,7 @@ clientews\servicio\ActualizarIdOrdenVenta.class
 clientews\servicio\ActualizarOrdenVenta.class
 clientews\servicio\PagoOrdenVenta.class
 clientews\servicio\Firma.class
+clientews\servicio\ActualizarInstitucionResponse.class
 clientews\servicio\ObtenerOrdenVentaConfirmadasPacienteResponse.class
 clientews\servicio\PagoOrdenVentaServiceImplService.class
 clientews\servicio\EncontrarEquipoDicomPorArea.class
@@ -67,9 +71,11 @@ clientews\servicio\ObtenerOrdenVentaPorId.class
 clientews\servicio\ActualizarConceptosInstitucion.class
 clientews\servicio\ObtenerTotalDeVentaResponse.class
 clientews\servicio\EncontrarConceptoLikeNombreResponse.class
+clientews\servicio\EncontrarInstitucionesLikeNombreResponse.class
 clientews\servicio\ObtenerAreasPorInstitucionResponse.class
 clientews\servicio\CatalogoFormaPago.class
 clientews\servicio\EncontrarVentaConceptoPorOrdenVentaConceptoHoraAsignado.class
+DAO\InstitucionDao.class
 clientews\servicio\EncontrarEstadoPorNombreResponse.class
 clientews\servicio\ListarTodasFormasPagoResponse.class
 DAO\InstruccionesDao.class
@@ -84,6 +90,7 @@ DAO\AreasDao.class
 clientews\servicio\EliminarVentaConceptosPorIdOrdenVenta.class
 clientews\servicio\EsCorrectoLoginResponse.class
 Vistas\Cortes$1.class
+DAO\InstitucionDaoImp.class
 clientews\servicio\RegistrarConceptoResponse.class
 clientews\servicio\RegistrarPaciente.class
 clientews\servicio\EncontrarVentaConceptosPorIdResponse.class
@@ -142,6 +149,7 @@ clientews\servicio\MovimientoCorteServiceWs.class
 clientews\servicio\VentaConceptosServiceImplService.class
 clientews\servicio\Pacientes.class
 clientews\servicio\EncontrarPacientePorCurpResponse.class
+clientews\servicio\RegistrarInstitucionResponse.class
 clientews\servicio\ObtenerOrdenVentaNoPagadosFechaPacienteResponse.class
 clientews\servicio\ListarTodosPacientesResponse.class
 clientews\servicio\ObtenerMovimientosDeCorteVespertinoResponse.class
@@ -185,9 +193,11 @@ clientews\servicio\ObtenerAreaPorNombre.class
 clientews\servicio\EliminarPagoOrdenVentaPorIdOrdenVentaResponse.class
 clientews\servicio\ActualizarVentaConceptosResponse.class
 clientews\servicio\EncontrarConceptosPorIdArea.class
+clientews\servicio\EncontrarInstitucionesLikeNombre.class
 clientews\servicio\EncontrarNumeroVentaConceptosPorEquipoFechaHora.class
 clientews\servicio\ObtenerTotalOrdenesEnUnDia.class
 Controladores\InstitucionesController.class
+Vistas\NuevasInstrucciones.class
 clientews\servicio\ObtenerOrdenVentaConfirmadasFechaPaciente.class
 clientews\servicio\ObtenerMovimientosDeCorteVespertino.class
 clientews\servicio\UpdateArea.class
@@ -258,9 +268,11 @@ clientews\servicio\EncontrarVentaConceptosPorInstitucionFechas.class
 clientews\servicio\Conceptos.class
 clientews\servicio\AreasServiceImplService.class
 clientews\servicio\EncontrarVentaConceptosPorPacienteFechaEnWorklistResponse.class
+clientews\servicio\ActualizarInstitucion.class
 clientews\servicio\EncontrarConceptosPorAreaYNombre.class
 clientews\servicio\EncontrarEquipoDicomPorNombre.class
 clientews\servicio\EsCandidatoParaEliminarConceptosDeOrdenResponse.class
+Controladores\InstruccionesController.class
 clientews\servicio\RegistrarVentaConceptosList.class
 Vistas\Instituciones$1.class
 Vistas\Menu.class
