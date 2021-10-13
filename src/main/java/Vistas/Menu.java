@@ -63,7 +63,7 @@ public class Menu extends javax.swing.JFrame {
         jLInstitucionM = new javax.swing.JLabel();
         btnInstituciones = new javax.swing.JButton();
         jPanel7 = new javax.swing.JPanel();
-        btnUrgencias = new javax.swing.JButton();
+        btnConsentimientos = new javax.swing.JButton();
         jPanel8 = new javax.swing.JPanel();
         btnReagendar = new javax.swing.JButton();
         jLogoEmpresa = new javax.swing.JLabel();
@@ -74,7 +74,6 @@ public class Menu extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
-        setPreferredSize(new java.awt.Dimension(700, 450));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel10.setBackground(new java.awt.Color(255, 255, 255));
@@ -177,7 +176,9 @@ public class Menu extends javax.swing.JFrame {
 
         jPanel7.setBackground(new java.awt.Color(204, 204, 255));
         jPanel7.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        jPanel7.add(btnUrgencias, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, 120, 30));
+
+        btnConsentimientos.setText("Consentimientos");
+        jPanel7.add(btnConsentimientos, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, 120, 30));
 
         jPanel10.add(jPanel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 320, 140, 110));
 
@@ -261,12 +262,12 @@ public class Menu extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton btnAreas;
+    public javax.swing.JButton btnConsentimientos;
     public javax.swing.JButton btnCortes;
     public javax.swing.JButton btnEstudios;
     public javax.swing.JButton btnEstudiosInstituciones;
     public javax.swing.JButton btnInstituciones;
     public javax.swing.JButton btnReagendar;
-    public javax.swing.JButton btnUrgencias;
     public javax.swing.JButton jButton1;
     public javax.swing.JButton jButton2;
     private javax.swing.JLabel jLAreaM;

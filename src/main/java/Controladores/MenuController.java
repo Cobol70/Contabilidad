@@ -7,6 +7,7 @@ package Controladores;
 
 
 import Vistas.AreasVista;
+import Vistas.Consentimientos;
 import Vistas.Cortes;
 import Vistas.Estudios;
 import Vistas.Instituciones;
@@ -42,7 +43,7 @@ public class MenuController implements ActionListener {
         this.vista.btnEstudios.addActionListener(this);
         this.vista.btnCortes.addActionListener(this);
         this.vista.btnEstudiosInstituciones.addActionListener(this);
-        this.vista.btnUrgencias.addActionListener(this);
+        this.vista.btnConsentimientos.addActionListener(this);
         this.vista.btnReagendar.addActionListener(this);
     }
 
@@ -58,8 +59,8 @@ public class MenuController implements ActionListener {
             abrirCortes();
         }else if(e.getSource() == this.vista.btnEstudiosInstituciones){
             abrirMovimientosCortes();
-        }else if(e.getSource() == this.vista.btnUrgencias){
-            abrirUrgencias();
+        }else if(e.getSource() == this.vista.btnConsentimientos){
+            abrirConsentimientos();
         }else if(e.getSource() == this.vista.btnReagendar){
             abrirReagendar();
         }
@@ -95,10 +96,10 @@ public class MenuController implements ActionListener {
         controladorMovimientos.iniciar();*/
     }
 
-    private void abrirUrgencias() {
-       /* vista.dispose();
-        MenuUrgenciasController controladorUrgencias = new MenuUrgenciasController(new MenuUrgencias());
-        controladorUrgencias.iniciar();*/
+    private void abrirConsentimientos() {
+        vista.dispose();
+        ConsentimientosController consentimientos = new ConsentimientosController(new Consentimientos());
+        consentimientos.iniciar();
     }
 
     private void abrirReagendar() {

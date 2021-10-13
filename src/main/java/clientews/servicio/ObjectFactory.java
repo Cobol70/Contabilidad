@@ -24,27 +24,21 @@ import javax.xml.namespace.QName;
 @XmlRegistry
 public class ObjectFactory {
 
-    private final static QName _EncontrarInstruccionesPorNombreResponse_QNAME = new QName("http://servicio.sga.gm.com.mx/", "encontrarInstruccionesPorNombreResponse");
-    private final static QName _ObtenerTodasInstrucciones_QNAME = new QName("http://servicio.sga.gm.com.mx/", "obtenerTodasInstrucciones");
-    private final static QName _EncontrarInstruccionesPorNombre_QNAME = new QName("http://servicio.sga.gm.com.mx/", "encontrarInstruccionesPorNombre");
+    private final static QName _Conceptos_QNAME = new QName("http://servicio.sga.gm.com.mx/", "conceptos");
+    private final static QName _ConsentimientoConcepto_QNAME = new QName("http://servicio.sga.gm.com.mx/", "consentimientoConcepto");
+    private final static QName _EliminarConsentimientoConcepto_QNAME = new QName("http://servicio.sga.gm.com.mx/", "eliminarConsentimientoConcepto");
     private final static QName _Instrucciones_QNAME = new QName("http://servicio.sga.gm.com.mx/", "instrucciones");
-    private final static QName _ObtenerTodasInstruccionesResponse_QNAME = new QName("http://servicio.sga.gm.com.mx/", "obtenerTodasInstruccionesResponse");
-    private final static QName _RegistrarInstrucciones_QNAME = new QName("http://servicio.sga.gm.com.mx/", "registrarInstrucciones");
-    private final static QName _RegistrarInstruccionesResponse_QNAME = new QName("http://servicio.sga.gm.com.mx/", "registrarInstruccionesResponse");
+    private final static QName _EliminarConsentimientoConceptoResponse_QNAME = new QName("http://servicio.sga.gm.com.mx/", "eliminarConsentimientoConceptoResponse");
+    private final static QName _Areas_QNAME = new QName("http://servicio.sga.gm.com.mx/", "areas");
+    private final static QName _Consentimiento_QNAME = new QName("http://servicio.sga.gm.com.mx/", "consentimiento");
+    private final static QName _RegistrarConsentimientoConcepto_QNAME = new QName("http://servicio.sga.gm.com.mx/", "registrarConsentimientoConcepto");
+    private final static QName _RegistrarConsentimientoConceptoResponse_QNAME = new QName("http://servicio.sga.gm.com.mx/", "registrarConsentimientoConceptoResponse");
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: clientews.servicio
      * 
      */
     public ObjectFactory() {
-    }
-
-    /**
-     * Create an instance of {@link EncontrarInstruccionesPorNombre }
-     * 
-     */
-    public EncontrarInstruccionesPorNombre createEncontrarInstruccionesPorNombre() {
-        return new EncontrarInstruccionesPorNombre();
     }
 
     /**
@@ -56,70 +50,94 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link ObtenerTodasInstruccionesResponse }
+     * Create an instance of {@link ConsentimientoConcepto }
      * 
      */
-    public ObtenerTodasInstruccionesResponse createObtenerTodasInstruccionesResponse() {
-        return new ObtenerTodasInstruccionesResponse();
+    public ConsentimientoConcepto createConsentimientoConcepto() {
+        return new ConsentimientoConcepto();
     }
 
     /**
-     * Create an instance of {@link EncontrarInstruccionesPorNombreResponse }
+     * Create an instance of {@link EliminarConsentimientoConcepto }
      * 
      */
-    public EncontrarInstruccionesPorNombreResponse createEncontrarInstruccionesPorNombreResponse() {
-        return new EncontrarInstruccionesPorNombreResponse();
+    public EliminarConsentimientoConcepto createEliminarConsentimientoConcepto() {
+        return new EliminarConsentimientoConcepto();
     }
 
     /**
-     * Create an instance of {@link ObtenerTodasInstrucciones }
+     * Create an instance of {@link Conceptos }
      * 
      */
-    public ObtenerTodasInstrucciones createObtenerTodasInstrucciones() {
-        return new ObtenerTodasInstrucciones();
+    public Conceptos createConceptos() {
+        return new Conceptos();
     }
 
     /**
-     * Create an instance of {@link RegistrarInstruccionesResponse }
+     * Create an instance of {@link RegistrarConsentimientoConcepto }
      * 
      */
-    public RegistrarInstruccionesResponse createRegistrarInstruccionesResponse() {
-        return new RegistrarInstruccionesResponse();
+    public RegistrarConsentimientoConcepto createRegistrarConsentimientoConcepto() {
+        return new RegistrarConsentimientoConcepto();
     }
 
     /**
-     * Create an instance of {@link RegistrarInstrucciones }
+     * Create an instance of {@link RegistrarConsentimientoConceptoResponse }
      * 
      */
-    public RegistrarInstrucciones createRegistrarInstrucciones() {
-        return new RegistrarInstrucciones();
+    public RegistrarConsentimientoConceptoResponse createRegistrarConsentimientoConceptoResponse() {
+        return new RegistrarConsentimientoConceptoResponse();
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link EncontrarInstruccionesPorNombreResponse }{@code >}}
+     * Create an instance of {@link Areas }
      * 
      */
-    @XmlElementDecl(namespace = "http://servicio.sga.gm.com.mx/", name = "encontrarInstruccionesPorNombreResponse")
-    public JAXBElement<EncontrarInstruccionesPorNombreResponse> createEncontrarInstruccionesPorNombreResponse(EncontrarInstruccionesPorNombreResponse value) {
-        return new JAXBElement<EncontrarInstruccionesPorNombreResponse>(_EncontrarInstruccionesPorNombreResponse_QNAME, EncontrarInstruccionesPorNombreResponse.class, null, value);
+    public Areas createAreas() {
+        return new Areas();
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ObtenerTodasInstrucciones }{@code >}}
+     * Create an instance of {@link Consentimiento }
      * 
      */
-    @XmlElementDecl(namespace = "http://servicio.sga.gm.com.mx/", name = "obtenerTodasInstrucciones")
-    public JAXBElement<ObtenerTodasInstrucciones> createObtenerTodasInstrucciones(ObtenerTodasInstrucciones value) {
-        return new JAXBElement<ObtenerTodasInstrucciones>(_ObtenerTodasInstrucciones_QNAME, ObtenerTodasInstrucciones.class, null, value);
+    public Consentimiento createConsentimiento() {
+        return new Consentimiento();
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link EncontrarInstruccionesPorNombre }{@code >}}
+     * Create an instance of {@link EliminarConsentimientoConceptoResponse }
      * 
      */
-    @XmlElementDecl(namespace = "http://servicio.sga.gm.com.mx/", name = "encontrarInstruccionesPorNombre")
-    public JAXBElement<EncontrarInstruccionesPorNombre> createEncontrarInstruccionesPorNombre(EncontrarInstruccionesPorNombre value) {
-        return new JAXBElement<EncontrarInstruccionesPorNombre>(_EncontrarInstruccionesPorNombre_QNAME, EncontrarInstruccionesPorNombre.class, null, value);
+    public EliminarConsentimientoConceptoResponse createEliminarConsentimientoConceptoResponse() {
+        return new EliminarConsentimientoConceptoResponse();
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link Conceptos }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://servicio.sga.gm.com.mx/", name = "conceptos")
+    public JAXBElement<Conceptos> createConceptos(Conceptos value) {
+        return new JAXBElement<Conceptos>(_Conceptos_QNAME, Conceptos.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link ConsentimientoConcepto }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://servicio.sga.gm.com.mx/", name = "consentimientoConcepto")
+    public JAXBElement<ConsentimientoConcepto> createConsentimientoConcepto(ConsentimientoConcepto value) {
+        return new JAXBElement<ConsentimientoConcepto>(_ConsentimientoConcepto_QNAME, ConsentimientoConcepto.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link EliminarConsentimientoConcepto }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://servicio.sga.gm.com.mx/", name = "eliminarConsentimientoConcepto")
+    public JAXBElement<EliminarConsentimientoConcepto> createEliminarConsentimientoConcepto(EliminarConsentimientoConcepto value) {
+        return new JAXBElement<EliminarConsentimientoConcepto>(_EliminarConsentimientoConcepto_QNAME, EliminarConsentimientoConcepto.class, null, value);
     }
 
     /**
@@ -132,30 +150,48 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ObtenerTodasInstruccionesResponse }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link EliminarConsentimientoConceptoResponse }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://servicio.sga.gm.com.mx/", name = "obtenerTodasInstruccionesResponse")
-    public JAXBElement<ObtenerTodasInstruccionesResponse> createObtenerTodasInstruccionesResponse(ObtenerTodasInstruccionesResponse value) {
-        return new JAXBElement<ObtenerTodasInstruccionesResponse>(_ObtenerTodasInstruccionesResponse_QNAME, ObtenerTodasInstruccionesResponse.class, null, value);
+    @XmlElementDecl(namespace = "http://servicio.sga.gm.com.mx/", name = "eliminarConsentimientoConceptoResponse")
+    public JAXBElement<EliminarConsentimientoConceptoResponse> createEliminarConsentimientoConceptoResponse(EliminarConsentimientoConceptoResponse value) {
+        return new JAXBElement<EliminarConsentimientoConceptoResponse>(_EliminarConsentimientoConceptoResponse_QNAME, EliminarConsentimientoConceptoResponse.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link RegistrarInstrucciones }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link Areas }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://servicio.sga.gm.com.mx/", name = "registrarInstrucciones")
-    public JAXBElement<RegistrarInstrucciones> createRegistrarInstrucciones(RegistrarInstrucciones value) {
-        return new JAXBElement<RegistrarInstrucciones>(_RegistrarInstrucciones_QNAME, RegistrarInstrucciones.class, null, value);
+    @XmlElementDecl(namespace = "http://servicio.sga.gm.com.mx/", name = "areas")
+    public JAXBElement<Areas> createAreas(Areas value) {
+        return new JAXBElement<Areas>(_Areas_QNAME, Areas.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link RegistrarInstruccionesResponse }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link Consentimiento }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://servicio.sga.gm.com.mx/", name = "registrarInstruccionesResponse")
-    public JAXBElement<RegistrarInstruccionesResponse> createRegistrarInstruccionesResponse(RegistrarInstruccionesResponse value) {
-        return new JAXBElement<RegistrarInstruccionesResponse>(_RegistrarInstruccionesResponse_QNAME, RegistrarInstruccionesResponse.class, null, value);
+    @XmlElementDecl(namespace = "http://servicio.sga.gm.com.mx/", name = "consentimiento")
+    public JAXBElement<Consentimiento> createConsentimiento(Consentimiento value) {
+        return new JAXBElement<Consentimiento>(_Consentimiento_QNAME, Consentimiento.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link RegistrarConsentimientoConcepto }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://servicio.sga.gm.com.mx/", name = "registrarConsentimientoConcepto")
+    public JAXBElement<RegistrarConsentimientoConcepto> createRegistrarConsentimientoConcepto(RegistrarConsentimientoConcepto value) {
+        return new JAXBElement<RegistrarConsentimientoConcepto>(_RegistrarConsentimientoConcepto_QNAME, RegistrarConsentimientoConcepto.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link RegistrarConsentimientoConceptoResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://servicio.sga.gm.com.mx/", name = "registrarConsentimientoConceptoResponse")
+    public JAXBElement<RegistrarConsentimientoConceptoResponse> createRegistrarConsentimientoConceptoResponse(RegistrarConsentimientoConceptoResponse value) {
+        return new JAXBElement<RegistrarConsentimientoConceptoResponse>(_RegistrarConsentimientoConceptoResponse_QNAME, RegistrarConsentimientoConceptoResponse.class, null, value);
     }
 
 }
