@@ -37,6 +37,7 @@ public interface ConsentimientoConceptoServiceWs {
 
     /**
      * 
+     * @param arg1
      * @param arg0
      */
     @WebMethod
@@ -45,6 +46,8 @@ public interface ConsentimientoConceptoServiceWs {
     @Action(input = "http://servicio.sga.gm.com.mx/ConsentimientoConceptoServiceWs/registrarConsentimientoConceptoRequest", output = "http://servicio.sga.gm.com.mx/ConsentimientoConceptoServiceWs/registrarConsentimientoConceptoResponse")
     public void registrarConsentimientoConcepto(
         @WebParam(name = "arg0", targetNamespace = "")
-        ConsentimientoConcepto arg0);
+        Long arg0,
+        @WebParam(name = "arg1", targetNamespace = "")
+        Long arg1);
 
 }

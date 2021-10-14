@@ -21,25 +21,36 @@ public class TableInstituciones {
 
         DefaultTableModel dt = new DefaultTableModel();
         dt.addColumn("Nombre");
-        dt.addColumn("Límite");
         dt.addColumn("Id");
 
         Institucion instituciones = new Institucion();
 
         for (int i = 0; i < list.size(); i++) {
-            Object fila[] = new Object[8];
+            Object fila[] = new Object[2];
             instituciones = list.get(i);
             fila[0] = instituciones.getNombreInstitucion();
-            fila[1] = instituciones.getLimite();
-            fila[2] = instituciones.getIdInstitucion();
+            fila[1] = instituciones.getIdInstitucion();
             dt.addRow(fila);
         }
         tabla.setModel(dt);
         tabla.setRowHeight(40);
         TableColumnModel columnModel = tabla.getColumnModel();
         columnModel.getColumn(0).setPreferredWidth(300);
-        columnModel.getColumn(1).setPreferredWidth(150);
-        columnModel.getColumn(2).setPreferredWidth(10);
+        columnModel.getColumn(1).setPreferredWidth(1);
+
+    }
+    
+    public void cargarTablaVacia(JTable tabla) {
+
+        DefaultTableModel dt = new DefaultTableModel();
+        dt.addColumn("Nombre");
+        dt.addColumn("Id");
+     
+        tabla.setModel(dt);
+        tabla.setRowHeight(40);
+        TableColumnModel columnModel = tabla.getColumnModel();
+        columnModel.getColumn(0).setPreferredWidth(300);
+        columnModel.getColumn(1).setPreferredWidth(1);
 
     }
 

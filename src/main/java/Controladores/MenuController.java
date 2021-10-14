@@ -10,17 +10,21 @@ import Vistas.AreasVista;
 import Vistas.Consentimientos;
 import Vistas.Cortes;
 import Vistas.Estudios;
+import Vistas.EstudiosInstituciones;
 import Vistas.Instituciones;
 import Vistas.Menu;
+import static java.awt.Frame.ICONIFIED;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 
 /**
  *
  * @author alanm
  */
-public class MenuController implements ActionListener {
+public class MenuController implements ActionListener, MouseListener {
 
     private Menu vista;
 
@@ -45,6 +49,9 @@ public class MenuController implements ActionListener {
         this.vista.btnEstudiosInstituciones.addActionListener(this);
         this.vista.btnConsentimientos.addActionListener(this);
         this.vista.btnReagendar.addActionListener(this);
+        
+        this.vista.jLCerrar.addMouseListener(this);
+        this.vista.jLMinimizar.addMouseListener(this);
     }
 
     @Override
@@ -58,7 +65,7 @@ public class MenuController implements ActionListener {
         } else if(e.getSource() == this.vista.btnCortes){
             abrirCortes();
         }else if(e.getSource() == this.vista.btnEstudiosInstituciones){
-            abrirMovimientosCortes();
+            abrirEstudiosInstituciones();
         }else if(e.getSource() == this.vista.btnConsentimientos){
             abrirConsentimientos();
         }else if(e.getSource() == this.vista.btnReagendar){
@@ -90,10 +97,10 @@ public class MenuController implements ActionListener {
         controladorCortes.iniciar();
     }
 
-    private void abrirMovimientosCortes() {
-       /* vista.dispose();
-        MovimientosCorteController controladorMovimientos = new MovimientosCorteController(new MovimientosCorte());
-        controladorMovimientos.iniciar();*/
+    private void abrirEstudiosInstituciones() {
+       vista.dispose();
+        EstudiosInstitucionesController ediosInes = new EstudiosInstitucionesController(new EstudiosInstituciones());
+        ediosInes.iniciar();
     }
 
     private void abrirConsentimientos() {
@@ -106,6 +113,32 @@ public class MenuController implements ActionListener {
        /* vista.dispose();
         ReagendarController controladorReagendar = new ReagendarController(new Reagendar());
         controladorReagendar.iniciar();*/
+    }
+
+    @Override
+    public void mouseClicked(MouseEvent e) {
+        if(e.getSource() == vista.jLMinimizar){
+            vista.setExtendedState(ICONIFIED);
+        }
+        else if(e.getSource() == vista.jLCerrar){
+            System.exit(0);
+        }
+    }
+
+    @Override
+    public void mousePressed(MouseEvent e) {
+    }
+
+    @Override
+    public void mouseReleased(MouseEvent e) {
+    }
+
+    @Override
+    public void mouseEntered(MouseEvent e) {
+    }
+
+    @Override
+    public void mouseExited(MouseEvent e) {
     }
 
 }

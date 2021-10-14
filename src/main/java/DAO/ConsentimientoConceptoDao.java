@@ -15,6 +15,6 @@ public interface ConsentimientoConceptoDao {
 
     public void eliminarConsentimientoConcepto(ConsentimientoConcepto consentimientoConcepto);
 
-    public void registrarConsentimientoConcepto(ConsentimientoConcepto consentimientoConcepto);
+    public void registrarConsentimientoConcepto(Long idConsentimiento, Long idConcepto);
 
 }

@@ -55,7 +55,7 @@ public class ConsentimientosController implements ActionListener, KeyListener, M
         this.vista.btnNuevoConsentimiento.addActionListener(this);
         this.vista.btnVerConsentimiento.addActionListener(this);
         this.vista.btnRegresar.addActionListener(this);
-        
+
         //Action listener a comboBox
         this.vista.comboAreaBusqueda.addActionListener(this);
         this.vista.comboConsentimiento.addActionListener(this);
@@ -88,7 +88,9 @@ public class ConsentimientosController implements ActionListener, KeyListener, M
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        if (e.getSource() == vista.comboAreaBusqueda) {
+        if (e.getSource() == vista.btnRegresar) {
+            abrirMenu();
+        } else if (e.getSource() == vista.comboAreaBusqueda) {
             if (vista.comboAreaBusqueda.getSelectedIndex() != 0) {
                 encontrarAreaBusqueda();
             }
@@ -101,10 +103,8 @@ public class ConsentimientosController implements ActionListener, KeyListener, M
             if (vista.tableEstudios.getSelectedRow() != -1 && vista.comboConsentimiento.getSelectedIndex() != 0) { //Ya hay un estudio seleccionado y un consentimiento para agregar
                 if (deseaAgregar() == 0) {
                     try {
-                        ConsentimientoConcepto temporal = new ConsentimientoConcepto();
-                        temporal.setIdConcepto(estudio);
-                        temporal.setIdConsentimiento(consentimiento);
-                        modeloConsentimientoConcepto.registrarConsentimientoConcepto(temporal);
+
+                        modeloConsentimientoConcepto.registrarConsentimientoConcepto(consentimiento.getId(), estudio.getIdTo());
                         JOptionPane.showMessageDialog(null, "Se ha agregado el consentimiento");
                         cargarTablaConsentimientos();
                     } catch (Exception ex) {
@@ -158,9 +158,7 @@ public class ConsentimientosController implements ActionListener, KeyListener, M
     @Override
     public void mouseClicked(MouseEvent e
     ) {
-        if (e.getSource() == vista.btnRegresar) {
-            abrirMenu();
-        } else if (e.getSource() == vista.tableEstudios) {
+        if (e.getSource() == vista.tableEstudios) {
             if (vista.tableEstudios.getSelectedRow() != -1) {
                 //Se va a realizar la búsqueda del estudio en el backend
                 int fila = vista.tableEstudios.getSelectedRow(); //Se obtiene la fila seleccionada
@@ -173,7 +171,6 @@ public class ConsentimientosController implements ActionListener, KeyListener, M
                 //Cargar texto del estudio
                 vista.txtEstudio.setText(estudio.getConceptoTo());
 
-                
                 cargarTablaConsentimientos();
             }
         } else if (e.getSource() == vista.tableConsentimientos) {
@@ -181,7 +178,7 @@ public class ConsentimientosController implements ActionListener, KeyListener, M
                 int fila = vista.tableConsentimientos.getSelectedRow();
                 Long id = Long.parseLong(vista.tableConsentimientos.getValueAt(fila, 1).toString());
                 consentimiento = buscarConsentimiento(id);
-                
+
                 vista.comboConsentimiento.setSelectedItem(consentimiento.getNombre());
             }
         }

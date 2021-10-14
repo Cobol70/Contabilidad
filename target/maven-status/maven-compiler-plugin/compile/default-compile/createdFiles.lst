@@ -20,6 +20,7 @@ Vistas\Instituciones$2.class
 clientews\servicio\ListarTodasAreasResponse.class
 clientews\servicio\EncontrarTodosConceptosResponse.class
 clientews\servicio\ObtenerTotalDeVenta.class
+clientews\servicio\EncontrarConceptosPorIdInstitucionResponse.class
 clientews\servicio\EncontrarEquipoDicomPorIdArea.class
 Vistas\NuevasInstrucciones$1.class
 clientews\servicio\ConceptosInstitucionServiceWs.class
@@ -46,6 +47,7 @@ clientews\servicio\PagoOrdenVenta.class
 clientews\servicio\Firma.class
 clientews\servicio\ActualizarInstitucionResponse.class
 clientews\servicio\ObtenerOrdenVentaConfirmadasPacienteResponse.class
+clientews\servicio\EncontrarConceptosPorIdInstitucion.class
 clientews\servicio\PagoOrdenVentaServiceImplService.class
 clientews\servicio\EncontrarEquipoDicomPorArea.class
 clientews\servicio\ObtenerConsentimientosResponse.class
@@ -69,6 +71,7 @@ clientews\servicio\EliminarConsentimientoResponse.class
 clientews\servicio\ConsentimientoConceptoServiceImplService.class
 clientews\servicio\ObtenerUltimaOrdenVentaRegistradaResponse.class
 Controladores\EstudiosController.class
+Controladores\EstudiosInstitucionesController.class
 Tables\TableOrdenesVenta.class
 clientews\servicio\EncontrarFormaPagoPorIdResponse.class
 Vistas\AreasVista.class
@@ -147,6 +150,7 @@ clientews\servicio\RegistrarInstrucciones.class
 clientews\servicio\EliminarPagoOrdenVentaPorIdOrdenVenta.class
 clientews\servicio\RegistrarVentaConceptosResponse.class
 clientews\servicio\EncontrarConceptosPorIdVentaConceptos.class
+DAO\ConceptosInstitucionDaoImpl.class
 DAO\AreasDaoImpl.class
 Vistas\AreasVista$2.class
 clientews\servicio\EncontrarEnVentaConceptosResponse.class
@@ -307,6 +311,7 @@ clientews\servicio\ActualizarInstitucion.class
 clientews\servicio\EncontrarConceptosPorAreaYNombre.class
 clientews\servicio\EncontrarEquipoDicomPorNombre.class
 clientews\servicio\EsCandidatoParaEliminarConceptosDeOrdenResponse.class
+DAO\ConceptosInstitucionDao.class
 Controladores\InstruccionesController.class
 clientews\servicio\RegistrarVentaConceptosList.class
 Vistas\Instituciones$1.class

@@ -32,8 +32,9 @@ public class ConsentimientoConceptoDaoImpl implements ConsentimientoConceptoDao 
     }
 
     @Override
-    public void registrarConsentimientoConcepto(ConsentimientoConcepto consentimientoConcepto) {
-        servicio.eliminarConsentimientoConcepto(consentimientoConcepto);
+    public void registrarConsentimientoConcepto(Long idConsentimiento, Long idConcepto) {
+        servicio.registrarConsentimientoConcepto(idConsentimiento, idConcepto);
     }
+
 
 }

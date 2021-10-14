@@ -272,11 +272,11 @@ public class Menu extends javax.swing.JFrame {
     public javax.swing.JButton jButton2;
     private javax.swing.JLabel jLAreaM;
     private javax.swing.JLabel jLAsignarEsM;
-    private javax.swing.JLabel jLCerrar;
+    public javax.swing.JLabel jLCerrar;
     private javax.swing.JLabel jLCorteM;
     private javax.swing.JLabel jLEstudioM;
     private javax.swing.JLabel jLInstitucionM;
-    private javax.swing.JLabel jLMinimizar;
+    public javax.swing.JLabel jLMinimizar;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLogoEmpresa;
     private javax.swing.JPanel jPanel1;
