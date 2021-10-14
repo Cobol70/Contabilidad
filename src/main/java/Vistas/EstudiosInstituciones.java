@@ -28,7 +28,6 @@ public class EstudiosInstituciones extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        btnRegresar = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tableInstituciones = new javax.swing.JTable();
@@ -45,11 +44,8 @@ public class EstudiosInstituciones extends javax.swing.JFrame {
         txtEstudio = new javax.swing.JTextField();
         txtInstitucion = new javax.swing.JTextField();
         txtPrecioPublico = new javax.swing.JTextField();
-        btnModificar = new javax.swing.JButton();
-        btnGuardar = new javax.swing.JButton();
         jLabel9 = new javax.swing.JLabel();
         txtCosto = new javax.swing.JTextField();
-        jLGuardar = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
         txtClaveAnteriorPensiones = new javax.swing.JTextField();
@@ -58,10 +54,12 @@ public class EstudiosInstituciones extends javax.swing.JFrame {
         checkActivo = new javax.swing.JCheckBox();
         jLabel6 = new javax.swing.JLabel();
         txtClaveInstitucion = new javax.swing.JTextField();
-        jLCerrar = new javax.swing.JLabel();
+        btnModificar = new javax.swing.JButton();
+        btnGuardar = new javax.swing.JButton();
         btnCerrar = new javax.swing.JButton();
-        jLMin = new javax.swing.JLabel();
         btnMin = new javax.swing.JButton();
+        jLabel10 = new javax.swing.JLabel();
+        btnRegresar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -69,13 +67,6 @@ public class EstudiosInstituciones extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(0, 51, 102));
         jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(102, 102, 102), 2));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        btnRegresar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/salirmenu.png"))); // NOI18N
-        btnRegresar.setText("logo");
-        btnRegresar.setBorder(null);
-        btnRegresar.setBorderPainted(false);
-        btnRegresar.setContentAreaFilled(false);
-        jPanel1.add(btnRegresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 10, 80, 50));
 
         jLabel1.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jLabel1.setText("Institucion");
@@ -116,35 +107,12 @@ public class EstudiosInstituciones extends javax.swing.JFrame {
         txtPrecioPublico.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         jPanel1.add(txtPrecioPublico, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 410, 120, -1));
 
-        btnModificar.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        btnModificar.setForeground(new java.awt.Color(0, 0, 51));
-        btnModificar.setText("Modificar");
-        btnModificar.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        btnModificar.setContentAreaFilled(false);
-        jPanel1.add(btnModificar, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 640, 80, 30));
-
-        btnGuardar.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        btnGuardar.setForeground(new java.awt.Color(0, 0, 51));
-        btnGuardar.setText("Guardar");
-        btnGuardar.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        btnGuardar.setContentAreaFilled(false);
-        btnGuardar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnGuardarActionPerformed(evt);
-            }
-        });
-        jPanel1.add(btnGuardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 640, 60, 30));
-
         jLabel9.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jLabel9.setText("Costo");
         jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 390, -1, -1));
 
         txtCosto.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         jPanel1.add(txtCosto, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 410, 110, -1));
-
-        jLGuardar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/guardar2.png"))); // NOI18N
-        jLGuardar.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jPanel1.add(jLGuardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 640, 90, 30));
 
         jPanel2.setBackground(new java.awt.Color(204, 204, 255));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -169,22 +137,50 @@ public class EstudiosInstituciones extends javax.swing.JFrame {
         jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(421, 383, -1, -1));
         jPanel2.add(txtClaveInstitucion, new org.netbeans.lib.awtextra.AbsoluteConstraints(421, 402, 240, -1));
 
+        btnModificar.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        btnModificar.setForeground(new java.awt.Color(0, 0, 51));
+        btnModificar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/modificar.png"))); // NOI18N
+        btnModificar.setText("Modificar");
+        btnModificar.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btnModificar.setContentAreaFilled(false);
+        jPanel2.add(btnModificar, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 570, 100, 30));
+
+        btnGuardar.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        btnGuardar.setForeground(new java.awt.Color(0, 0, 51));
+        btnGuardar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/guardar2.png"))); // NOI18N
+        btnGuardar.setText("Guardar");
+        btnGuardar.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btnGuardar.setContentAreaFilled(false);
+        btnGuardar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnGuardarActionPerformed(evt);
+            }
+        });
+        jPanel2.add(btnGuardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 570, 90, 30));
+
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 60, 680, 620));
 
-        jLCerrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/CerrarSecundario.png"))); // NOI18N
-        jPanel1.add(jLCerrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 0, 30, 30));
-
+        btnCerrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/CerrarSecundario.png"))); // NOI18N
         btnCerrar.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnCerrar.setBorderPainted(false);
         btnCerrar.setContentAreaFilled(false);
         jPanel1.add(btnCerrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 0, 40, 30));
 
-        jLMin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/minSecundario.png"))); // NOI18N
-        jPanel1.add(jLMin, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 0, -1, 30));
-
+        btnMin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/minSecundario.png"))); // NOI18N
         btnMin.setBorderPainted(false);
         btnMin.setContentAreaFilled(false);
-        jPanel1.add(btnMin, new org.netbeans.lib.awtextra.AbsoluteConstraints(683, 0, 40, 30));
+        jPanel1.add(btnMin, new org.netbeans.lib.awtextra.AbsoluteConstraints(683, 0, 30, 30));
+
+        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel10.setText("LOGO");
+        jLabel10.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 10, 160, 45));
+
+        btnRegresar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/flecha-regresar.png"))); // NOI18N
+        btnRegresar.setBorder(null);
+        btnRegresar.setBorderPainted(false);
+        btnRegresar.setContentAreaFilled(false);
+        jPanel1.add(btnRegresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, 40, -1));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 758, 705));
 
@@ -231,16 +227,14 @@ public class EstudiosInstituciones extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnCerrar;
+    public javax.swing.JButton btnCerrar;
     public javax.swing.JButton btnGuardar;
-    private javax.swing.JButton btnMin;
+    public javax.swing.JButton btnMin;
     public javax.swing.JButton btnModificar;
     public javax.swing.JButton btnRegresar;
     public javax.swing.JCheckBox checkActivo;
-    private javax.swing.JLabel jLCerrar;
-    private javax.swing.JLabel jLGuardar;
-    private javax.swing.JLabel jLMin;
     private javax.swing.JLabel jLabel1;
+    public javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;

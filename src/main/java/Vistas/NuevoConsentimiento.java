@@ -31,17 +31,13 @@ public class NuevoConsentimiento extends javax.swing.JFrame {
         btnRegresar = new javax.swing.JButton();
         btnGuardar = new javax.swing.JButton();
         btnCancelar = new javax.swing.JButton();
-        jLGuardar = new javax.swing.JLabel();
-        jLCancelar = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         txtNombre = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         txtTexto = new javax.swing.JTextArea();
-        jLMinimizar = new javax.swing.JLabel();
         btnMinimizar = new javax.swing.JButton();
-        jLCerrar = new javax.swing.JLabel();
         btnCerrar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -51,30 +47,26 @@ public class NuevoConsentimiento extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(0, 51, 102));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        btnRegresar.setText("Regresar");
-        jPanel1.add(btnRegresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, -1, -1));
+        btnRegresar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/flecha-regresar.png"))); // NOI18N
+        btnRegresar.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btnRegresar.setContentAreaFilled(false);
+        jPanel1.add(btnRegresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 40, 40));
 
         btnGuardar.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         btnGuardar.setForeground(new java.awt.Color(0, 0, 51));
+        btnGuardar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/guardar2.png"))); // NOI18N
         btnGuardar.setText("Guardar");
         btnGuardar.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnGuardar.setContentAreaFilled(false);
-        jPanel1.add(btnGuardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 370, 60, 30));
+        jPanel1.add(btnGuardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 370, 100, 30));
 
         btnCancelar.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         btnCancelar.setForeground(new java.awt.Color(0, 0, 51));
+        btnCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/eliminar2.png"))); // NOI18N
         btnCancelar.setText("Cancelar");
         btnCancelar.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnCancelar.setContentAreaFilled(false);
-        jPanel1.add(btnCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 370, 70, 30));
-
-        jLGuardar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/guardar2.png"))); // NOI18N
-        jLGuardar.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jPanel1.add(jLGuardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 370, 90, 30));
-
-        jLCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/eliminar2.png"))); // NOI18N
-        jLCancelar.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jPanel1.add(jLCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 370, 100, 30));
+        jPanel1.add(btnCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 370, 100, 30));
 
         jPanel2.setBackground(new java.awt.Color(204, 204, 255));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -99,18 +91,14 @@ public class NuevoConsentimiento extends javax.swing.JFrame {
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 60, 480, 350));
 
-        jLMinimizar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/minSecundario.png"))); // NOI18N
-        jPanel1.add(jLMinimizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 0, 20, 30));
-
+        btnMinimizar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/minSecundario.png"))); // NOI18N
         btnMinimizar.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnMinimizar.setBorderPainted(false);
         btnMinimizar.setContentAreaFilled(false);
-        jPanel1.add(btnMinimizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 0, 40, 30));
-
-        jLCerrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/CerrarSecundario.png"))); // NOI18N
-        jPanel1.add(jLCerrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 0, 30, 30));
+        jPanel1.add(btnMinimizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 0, 30, 30));
 
         btnCerrar.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        btnCerrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/CerrarSecundario.png"))); // NOI18N
         btnCerrar.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnCerrar.setBorderPainted(false);
         btnCerrar.setContentAreaFilled(false);
@@ -172,10 +160,6 @@ public class NuevoConsentimiento extends javax.swing.JFrame {
     public javax.swing.JButton btnGuardar;
     private javax.swing.JButton btnMinimizar;
     public javax.swing.JButton btnRegresar;
-    private javax.swing.JLabel jLCancelar;
-    private javax.swing.JLabel jLCerrar;
-    private javax.swing.JLabel jLGuardar;
-    private javax.swing.JLabel jLMinimizar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;

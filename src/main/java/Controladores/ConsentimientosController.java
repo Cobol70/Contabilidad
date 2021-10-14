@@ -54,7 +54,8 @@ public class ConsentimientosController implements ActionListener, KeyListener, M
         this.vista.btnGuardar.addActionListener(this);
         this.vista.btnNuevoConsentimiento.addActionListener(this);
         this.vista.btnVerConsentimiento.addActionListener(this);
-
+        this.vista.btnRegresar.addActionListener(this);
+        
         //Action listener a comboBox
         this.vista.comboAreaBusqueda.addActionListener(this);
         this.vista.comboConsentimiento.addActionListener(this);
@@ -62,7 +63,6 @@ public class ConsentimientosController implements ActionListener, KeyListener, M
         //Mouse listener a tablas e ícono de regreso
         this.vista.tableConsentimientos.addMouseListener(this);
         this.vista.tableEstudios.addMouseListener(this);
-        this.vista.lblIcono.addMouseListener(this);
 
         //KeyListener a textos
         this.vista.txtBuscar.addKeyListener(this);
@@ -160,7 +160,7 @@ public class ConsentimientosController implements ActionListener, KeyListener, M
     @Override
     public void mouseClicked(MouseEvent e
     ) {
-        if (e.getSource() == vista.lblIcono) {
+        if (e.getSource() == vista.btnRegresar) {
             abrirMenu();
         } else if (e.getSource() == vista.tableEstudios) {
             if (vista.tableEstudios.getSelectedRow() != -1) {

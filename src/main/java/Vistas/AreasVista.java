@@ -43,15 +43,11 @@ public class AreasVista extends javax.swing.JFrame {
         btnModificar = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         tableAreas = new javax.swing.JTable();
-        jLGuardar = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        jLModificar = new javax.swing.JLabel();
-        jLRegresar = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
-        jLCerrar = new javax.swing.JLabel();
         btnCerrar = new javax.swing.JButton();
-        jLMin = new javax.swing.JLabel();
         btnMin = new javax.swing.JButton();
+        jLabel6 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -59,9 +55,15 @@ public class AreasVista extends javax.swing.JFrame {
         jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(102, 102, 102), 2));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        btnRegresar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/flecha-regresar.png"))); // NOI18N
         btnRegresar.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnRegresar.setContentAreaFilled(false);
-        jPanel1.add(btnRegresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 10, 40, 40));
+        btnRegresar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRegresarActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnRegresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 10, 40, 40));
 
         jLabel1.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jLabel1.setText("Buscar");
@@ -100,6 +102,7 @@ public class AreasVista extends javax.swing.JFrame {
 
         btnGuardar.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         btnGuardar.setForeground(new java.awt.Color(0, 0, 51));
+        btnGuardar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/guardar2.png"))); // NOI18N
         btnGuardar.setText("Guardar");
         btnGuardar.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnGuardar.setContentAreaFilled(false);
@@ -107,44 +110,34 @@ public class AreasVista extends javax.swing.JFrame {
 
         btnModificar.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         btnModificar.setForeground(new java.awt.Color(0, 0, 51));
+        btnModificar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/modificar.png"))); // NOI18N
         btnModificar.setText("Modificar");
         btnModificar.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnModificar.setContentAreaFilled(false);
-        jPanel1.add(btnModificar, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 300, 80, 30));
+        jPanel1.add(btnModificar, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 300, 100, 30));
 
         tableAreas.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         jScrollPane1.setViewportView(tableAreas);
 
         jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 110, 430, 270));
-
-        jLGuardar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/guardar2.png"))); // NOI18N
-        jLGuardar.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jPanel1.add(jLGuardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 300, 120, 30));
         jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 280, -1, -1));
-
-        jLModificar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/modificar.png"))); // NOI18N
-        jLModificar.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jPanel1.add(jLModificar, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 300, 110, 30));
-
-        jLRegresar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/flecha-regresar.png"))); // NOI18N
-        jLRegresar.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jPanel1.add(jLRegresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 10, 40, 40));
 
         jPanel2.setBackground(new java.awt.Color(204, 204, 255));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 70, 750, 320));
 
-        jLCerrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/CerrarSecundario.png"))); // NOI18N
-        jPanel1.add(jLCerrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 0, -1, 30));
-
+        btnCerrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/CerrarSecundario.png"))); // NOI18N
         btnCerrar.setContentAreaFilled(false);
         jPanel1.add(btnCerrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 0, 40, 30));
 
-        jLMin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/minSecundario.png"))); // NOI18N
-        jPanel1.add(jLMin, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 0, -1, 30));
-
+        btnMin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/minSecundario.png"))); // NOI18N
         btnMin.setContentAreaFilled(false);
         jPanel1.add(btnMin, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 0, 30, 30));
+
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel6.setText("logo");
+        jLabel6.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 10, 160, 45));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -163,6 +156,10 @@ public class AreasVista extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnRegresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegresarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnRegresarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -201,23 +198,19 @@ public class AreasVista extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnCerrar;
+    public javax.swing.JButton btnCerrar;
     public javax.swing.JButton btnGuardar;
-    private javax.swing.JButton btnMin;
+    public javax.swing.JButton btnMin;
     public javax.swing.JButton btnModificar;
     public javax.swing.JButton btnRegresar;
     public javax.swing.JComboBox<String> comboHoraFin;
     public javax.swing.JComboBox<String> comboHoraInicio;
-    private javax.swing.JLabel jLCerrar;
-    public javax.swing.JLabel jLGuardar;
-    private javax.swing.JLabel jLMin;
-    public javax.swing.JLabel jLModificar;
-    private javax.swing.JLabel jLRegresar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    public javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     public javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;

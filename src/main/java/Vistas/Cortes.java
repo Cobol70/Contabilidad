@@ -33,41 +33,38 @@ public class Cortes extends javax.swing.JFrame {
         btnConsultar = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         comboTurnos = new javax.swing.JComboBox<>();
-        jLRegresar = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jLCerrar = new javax.swing.JLabel();
         btnCerrar = new javax.swing.JButton();
-        jLMin = new javax.swing.JLabel();
         btnMin = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(0, 51, 102));
         jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(102, 102, 102), 2));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        btnRegresar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/flecha-regresar.png"))); // NOI18N
         btnRegresar.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnRegresar.setContentAreaFilled(false);
-        jPanel1.add(btnRegresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, 40, 40));
-        jPanel1.add(dateFecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 90, 220, -1));
+        jPanel1.add(btnRegresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 40, 40));
+        jPanel1.add(dateFecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 110, 220, -1));
 
         btnConsultar.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         btnConsultar.setForeground(new java.awt.Color(0, 0, 51));
         btnConsultar.setText("Consultar");
         btnConsultar.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnConsultar.setContentAreaFilled(false);
-        jPanel1.add(btnConsultar, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 200, 80, 30));
+        jPanel1.add(btnConsultar, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 220, 80, 30));
 
         jLabel2.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jLabel2.setText("Turno");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 150, -1, -1));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 170, -1, -1));
 
         comboTurnos.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        jPanel1.add(comboTurnos, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 150, 220, -1));
-
-        jLRegresar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/flecha-regresar.png"))); // NOI18N
-        jPanel1.add(jLRegresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, 40));
+        jPanel1.add(comboTurnos, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 170, 220, -1));
 
         jPanel2.setBackground(new java.awt.Color(204, 204, 255));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -76,34 +73,22 @@ public class Cortes extends javax.swing.JFrame {
         jLabel1.setText("Fecha");
         jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, -1, -1));
 
-        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 60, 310, 190));
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 80, 310, 190));
 
-        jLCerrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/CerrarSecundario.png"))); // NOI18N
-        jPanel1.add(jLCerrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(344, 0, 30, 30));
-
+        btnCerrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/CerrarSecundario.png"))); // NOI18N
         btnCerrar.setContentAreaFilled(false);
-        jPanel1.add(btnCerrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(343, 0, 30, 30));
+        jPanel1.add(btnCerrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 0, 30, 30));
 
-        jLMin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/minSecundario.png"))); // NOI18N
-        jPanel1.add(jLMin, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 0, -1, 30));
-
+        btnMin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/minSecundario.png"))); // NOI18N
         btnMin.setContentAreaFilled(false);
-        jPanel1.add(btnMin, new org.netbeans.lib.awtextra.AbsoluteConstraints(313, 0, 30, 30));
+        jPanel1.add(btnMin, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 0, 30, 30));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 280, Short.MAX_VALUE)
-                .addContainerGap())
-        );
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setText("LOGO");
+        jLabel3.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 20, 160, 45));
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 400, 300));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -151,11 +136,9 @@ public class Cortes extends javax.swing.JFrame {
     public javax.swing.JButton btnRegresar;
     public javax.swing.JComboBox<String> comboTurnos;
     public com.toedter.calendar.JDateChooser dateFecha;
-    private javax.swing.JLabel jLCerrar;
-    private javax.swing.JLabel jLMin;
-    private javax.swing.JLabel jLRegresar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables
