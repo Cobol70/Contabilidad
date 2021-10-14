@@ -26,6 +26,7 @@ clientews\servicio\ConceptosInstitucionServiceWs.class
 clientews\servicio\RegistrarArea.class
 clientews\servicio\ObtenerMovimientosDeCorteMatutinoResponse.class
 clientews\servicio\ObtenerConsentimientoPorId.class
+Vistas\NuevoConsentimiento.class
 clientews\servicio\EncontrarConceptosPorInstitucionAreaResponse.class
 clientews\servicio\ObtenerLimiteInstitucionResponse.class
 clientews\servicio\FindAgendadosByFechaResponse.class
@@ -93,6 +94,7 @@ clientews\servicio\FindAreasLikeNombreResponse.class
 clientews\servicio\ObtenerCantidadDeEstudiosHechosEnInstitucionFecha.class
 clientews\servicio\ModificarConsentimientoResponse.class
 Vistas\Menu$2.class
+Vistas\NuevoConsentimiento$1.class
 clientews\servicio\EquipoDicom.class
 DAO\AreasDao.class
 clientews\servicio\EliminarVentaConceptosPorIdOrdenVenta.class
@@ -204,6 +206,7 @@ clientews\servicio\AunEsPosibleAgendarEnInstitucionResponse.class
 clientews\servicio\InstitucionServiceWs.class
 clientews\servicio\EncontrarEquipoDicomPorIdResponse.class
 clientews\servicio\EncontarVentaConceptosPorIdOrdenVentaResponse.class
+clientews\servicio\ObtenerConsentimientoPorNombre.class
 clientews\servicio\ActualizarVentaConceptos.class
 clientews\servicio\MovimientoCorte.class
 clientews\servicio\ObtenerAreaPorNombre.class
@@ -224,10 +227,12 @@ Vistas\Cortes.class
 Vistas\EstudiosInstituciones$2.class
 clientews\servicio\EncontrarVentaConceptosPorInstitucionFechasResponse.class
 clientews\servicio\VentaConceptosServiceWs.class
+Controladores\NuevoConsentimientoController.class
 Tables\TableAreas.class
 clientews\servicio\FindAgendadosByFecha.class
 clientews\servicio\FindInstitucionByIdOrdenVenta.class
 clientews\servicio\ObtenerOrdenVentaConfirmadasPaciente.class
+Vistas\NuevoConsentimiento$2.class
 clientews\servicio\EliminarConsentimientoConceptoResponse.class
 clientews\servicio\VentaConceptos.class
 Vistas\Menu$1.class
@@ -307,5 +312,6 @@ Vistas\Instituciones$1.class
 Vistas\Menu.class
 clientews\servicio\EncontrarEquipoDicomPorModalidadResponse.class
 clientews\servicio\ConsentimientoConcepto.class
+clientews\servicio\ObtenerConsentimientoPorNombreResponse.class
 Utilidades\DateUtil.class
 clientews\servicio\CatalogoFormaPagoServiceWs.class

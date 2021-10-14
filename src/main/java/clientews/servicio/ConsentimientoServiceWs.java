@@ -27,42 +27,15 @@ public interface ConsentimientoServiceWs {
 
     /**
      * 
-     * @param arg0
      * @return
-     *     returns clientews.servicio.Consentimiento
+     *     returns java.util.List<clientews.servicio.Consentimiento>
      */
     @WebMethod
     @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "obtenerConsentimientoPorId", targetNamespace = "http://servicio.sga.gm.com.mx/", className = "clientews.servicio.ObtenerConsentimientoPorId")
-    @ResponseWrapper(localName = "obtenerConsentimientoPorIdResponse", targetNamespace = "http://servicio.sga.gm.com.mx/", className = "clientews.servicio.ObtenerConsentimientoPorIdResponse")
-    @Action(input = "http://servicio.sga.gm.com.mx/ConsentimientoServiceWs/obtenerConsentimientoPorIdRequest", output = "http://servicio.sga.gm.com.mx/ConsentimientoServiceWs/obtenerConsentimientoPorIdResponse")
-    public Consentimiento obtenerConsentimientoPorId(
-        @WebParam(name = "arg0", targetNamespace = "")
-        Long arg0);
-
-    /**
-     * 
-     * @param arg0
-     */
-    @WebMethod
-    @RequestWrapper(localName = "eliminarConsentimiento", targetNamespace = "http://servicio.sga.gm.com.mx/", className = "clientews.servicio.EliminarConsentimiento")
-    @ResponseWrapper(localName = "eliminarConsentimientoResponse", targetNamespace = "http://servicio.sga.gm.com.mx/", className = "clientews.servicio.EliminarConsentimientoResponse")
-    @Action(input = "http://servicio.sga.gm.com.mx/ConsentimientoServiceWs/eliminarConsentimientoRequest", output = "http://servicio.sga.gm.com.mx/ConsentimientoServiceWs/eliminarConsentimientoResponse")
-    public void eliminarConsentimiento(
-        @WebParam(name = "arg0", targetNamespace = "")
-        Consentimiento arg0);
-
-    /**
-     * 
-     * @param arg0
-     */
-    @WebMethod
-    @RequestWrapper(localName = "modificarConsentimiento", targetNamespace = "http://servicio.sga.gm.com.mx/", className = "clientews.servicio.ModificarConsentimiento")
-    @ResponseWrapper(localName = "modificarConsentimientoResponse", targetNamespace = "http://servicio.sga.gm.com.mx/", className = "clientews.servicio.ModificarConsentimientoResponse")
-    @Action(input = "http://servicio.sga.gm.com.mx/ConsentimientoServiceWs/modificarConsentimientoRequest", output = "http://servicio.sga.gm.com.mx/ConsentimientoServiceWs/modificarConsentimientoResponse")
-    public void modificarConsentimiento(
-        @WebParam(name = "arg0", targetNamespace = "")
-        Consentimiento arg0);
+    @RequestWrapper(localName = "obtenerConsentimientos", targetNamespace = "http://servicio.sga.gm.com.mx/", className = "clientews.servicio.ObtenerConsentimientos")
+    @ResponseWrapper(localName = "obtenerConsentimientosResponse", targetNamespace = "http://servicio.sga.gm.com.mx/", className = "clientews.servicio.ObtenerConsentimientosResponse")
+    @Action(input = "http://servicio.sga.gm.com.mx/ConsentimientoServiceWs/obtenerConsentimientosRequest", output = "http://servicio.sga.gm.com.mx/ConsentimientoServiceWs/obtenerConsentimientosResponse")
+    public List<Consentimiento> obtenerConsentimientos();
 
     /**
      * 
@@ -93,14 +66,56 @@ public interface ConsentimientoServiceWs {
 
     /**
      * 
+     * @param arg0
+     */
+    @WebMethod
+    @RequestWrapper(localName = "eliminarConsentimiento", targetNamespace = "http://servicio.sga.gm.com.mx/", className = "clientews.servicio.EliminarConsentimiento")
+    @ResponseWrapper(localName = "eliminarConsentimientoResponse", targetNamespace = "http://servicio.sga.gm.com.mx/", className = "clientews.servicio.EliminarConsentimientoResponse")
+    @Action(input = "http://servicio.sga.gm.com.mx/ConsentimientoServiceWs/eliminarConsentimientoRequest", output = "http://servicio.sga.gm.com.mx/ConsentimientoServiceWs/eliminarConsentimientoResponse")
+    public void eliminarConsentimiento(
+        @WebParam(name = "arg0", targetNamespace = "")
+        Consentimiento arg0);
+
+    /**
+     * 
+     * @param arg0
+     */
+    @WebMethod
+    @RequestWrapper(localName = "modificarConsentimiento", targetNamespace = "http://servicio.sga.gm.com.mx/", className = "clientews.servicio.ModificarConsentimiento")
+    @ResponseWrapper(localName = "modificarConsentimientoResponse", targetNamespace = "http://servicio.sga.gm.com.mx/", className = "clientews.servicio.ModificarConsentimientoResponse")
+    @Action(input = "http://servicio.sga.gm.com.mx/ConsentimientoServiceWs/modificarConsentimientoRequest", output = "http://servicio.sga.gm.com.mx/ConsentimientoServiceWs/modificarConsentimientoResponse")
+    public void modificarConsentimiento(
+        @WebParam(name = "arg0", targetNamespace = "")
+        Consentimiento arg0);
+
+    /**
+     * 
+     * @param arg0
      * @return
-     *     returns java.util.List<clientews.servicio.Consentimiento>
+     *     returns clientews.servicio.Consentimiento
      */
     @WebMethod
     @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "obtenerConsentimientos", targetNamespace = "http://servicio.sga.gm.com.mx/", className = "clientews.servicio.ObtenerConsentimientos")
-    @ResponseWrapper(localName = "obtenerConsentimientosResponse", targetNamespace = "http://servicio.sga.gm.com.mx/", className = "clientews.servicio.ObtenerConsentimientosResponse")
-    @Action(input = "http://servicio.sga.gm.com.mx/ConsentimientoServiceWs/obtenerConsentimientosRequest", output = "http://servicio.sga.gm.com.mx/ConsentimientoServiceWs/obtenerConsentimientosResponse")
-    public List<Consentimiento> obtenerConsentimientos();
+    @RequestWrapper(localName = "obtenerConsentimientoPorId", targetNamespace = "http://servicio.sga.gm.com.mx/", className = "clientews.servicio.ObtenerConsentimientoPorId")
+    @ResponseWrapper(localName = "obtenerConsentimientoPorIdResponse", targetNamespace = "http://servicio.sga.gm.com.mx/", className = "clientews.servicio.ObtenerConsentimientoPorIdResponse")
+    @Action(input = "http://servicio.sga.gm.com.mx/ConsentimientoServiceWs/obtenerConsentimientoPorIdRequest", output = "http://servicio.sga.gm.com.mx/ConsentimientoServiceWs/obtenerConsentimientoPorIdResponse")
+    public Consentimiento obtenerConsentimientoPorId(
+        @WebParam(name = "arg0", targetNamespace = "")
+        Long arg0);
+
+    /**
+     * 
+     * @param arg0
+     * @return
+     *     returns clientews.servicio.Consentimiento
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "obtenerConsentimientoPorNombre", targetNamespace = "http://servicio.sga.gm.com.mx/", className = "clientews.servicio.ObtenerConsentimientoPorNombre")
+    @ResponseWrapper(localName = "obtenerConsentimientoPorNombreResponse", targetNamespace = "http://servicio.sga.gm.com.mx/", className = "clientews.servicio.ObtenerConsentimientoPorNombreResponse")
+    @Action(input = "http://servicio.sga.gm.com.mx/ConsentimientoServiceWs/obtenerConsentimientoPorNombreRequest", output = "http://servicio.sga.gm.com.mx/ConsentimientoServiceWs/obtenerConsentimientoPorNombreResponse")
+    public Consentimiento obtenerConsentimientoPorNombre(
+        @WebParam(name = "arg0", targetNamespace = "")
+        String arg0);
 
 }

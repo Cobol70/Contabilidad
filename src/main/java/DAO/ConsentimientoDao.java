@@ -25,5 +25,7 @@ public interface ConsentimientoDao {
     public void modificarConsentimiento(Consentimiento consentimieno);
 
     public Consentimiento obtenerConsentimientoPorId(Long id);
+    
+    public Consentimiento obtenerConsentimientoPorNombre(String nombre);
 
 }

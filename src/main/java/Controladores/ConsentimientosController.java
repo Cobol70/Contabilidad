@@ -95,7 +95,7 @@ public class ConsentimientosController implements ActionListener, KeyListener, M
             realizarBusqueda();
         } else if (e.getSource() == vista.comboConsentimiento) {
             if (vista.comboConsentimiento.getSelectedIndex() != 0) {
-                consentimiento = buscarConsentimiento(obtenerIdDeCombo(vista.comboConsentimiento.getSelectedItem().toString()));
+                consentimiento = buscarConsentimientoPorNombre(vista.comboConsentimiento.getSelectedItem().toString());
             }
         } else if (e.getSource() == vista.btnGuardar) {
             if (vista.tableEstudios.getSelectedRow() != -1 && vista.comboConsentimiento.getSelectedIndex() != 0) { //Ya hay un estudio seleccionado y un consentimiento para agregar
@@ -128,13 +128,11 @@ public class ConsentimientosController implements ActionListener, KeyListener, M
                     }
                 }
             }
-        }
-        else if(e.getSource() == vista.btnVerConsentimiento){
-            if(vista.comboConsentimiento.getSelectedIndex() != 0){
+        } else if (e.getSource() == vista.btnVerConsentimiento) {
+            if (vista.comboConsentimiento.getSelectedIndex() != 0) {
                 JOptionPane.showMessageDialog(null, consentimiento.getTexto());
             }
-        }
-        else if(e.getSource() == vista.btnNuevoConsentimiento){
+        } else if (e.getSource() == vista.btnNuevoConsentimiento) {
             abrirNuevoConsentimiento();
         }
     }
@@ -175,6 +173,7 @@ public class ConsentimientosController implements ActionListener, KeyListener, M
                 //Cargar texto del estudio
                 vista.txtEstudio.setText(estudio.getConceptoTo());
 
+                
                 cargarTablaConsentimientos();
             }
         } else if (e.getSource() == vista.tableConsentimientos) {
@@ -182,6 +181,8 @@ public class ConsentimientosController implements ActionListener, KeyListener, M
                 int fila = vista.tableConsentimientos.getSelectedRow();
                 Long id = Long.parseLong(vista.tableConsentimientos.getValueAt(fila, 1).toString());
                 consentimiento = buscarConsentimiento(id);
+                
+                vista.comboConsentimiento.setSelectedItem(consentimiento.getNombre());
             }
         }
     }
@@ -272,13 +273,13 @@ public class ConsentimientosController implements ActionListener, KeyListener, M
     }
 
     //Carga todos los consentimientos
-    private void cargarConsentimientos() {
+    public void cargarConsentimientos() {
         try {
             JComboBox combo = new JComboBox();
             combo.removeAllItems();
             combo.addItem("SELECCIONE UNA OPCIÓN");
             for (Consentimiento consentimientoFor : modeloConsentimientos.obtenerConsentimientos()) {
-                combo.addItem(consentimientoFor.getNombre() + " :" + consentimientoFor.getId());
+                combo.addItem(consentimientoFor.getNombre());
             }
             vista.comboConsentimiento.setModel(combo.getModel());
         } catch (Exception e) {
@@ -301,25 +302,12 @@ public class ConsentimientosController implements ActionListener, KeyListener, M
         constructorTabla.cargarTablaVacia(vista.tableConsentimientos);
     }
 
-    private Long obtenerIdDeCombo(String text) {
-        boolean dosPuntosSuperado = false;
-        String id = "";
-        for (int i = 0; i < text.length(); i++) {
-            if (dosPuntosSuperado) {
-                id += text.charAt(i);
-            } else if (text.charAt(i) == ':') {
-                dosPuntosSuperado = true;
-            }
-        }
-        return Long.parseLong(id);
-    }
-
     private int deseaAgregar() {
         int dialog = JOptionPane.YES_NO_OPTION;
         return (JOptionPane.showConfirmDialog(null, "¿Seguro que desea agregar el consentimiento? ", "Agregar", dialog));
     }
-    
-     private int deseaEliminar() {
+
+    private int deseaEliminar() {
         int dialog = JOptionPane.YES_NO_OPTION;
         return (JOptionPane.showConfirmDialog(null, "¿Seguro que desea quitar el consentimiento? ", "Quitar", dialog));
     }
@@ -327,5 +315,9 @@ public class ConsentimientosController implements ActionListener, KeyListener, M
     private void abrirNuevoConsentimiento() {
         NuevoConsentimientoController nuevoConsentimientoController = new NuevoConsentimientoController(new NuevoConsentimiento(), this);
         nuevoConsentimientoController.iniciar();
+    }
+
+    private Consentimiento buscarConsentimientoPorNombre(String text) {
+        return modeloConsentimientos.obtenerConsentimientoPorNombre(text);
     }
 }

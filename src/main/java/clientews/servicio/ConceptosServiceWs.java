@@ -118,6 +118,18 @@ public interface ConceptosServiceWs {
     /**
      * 
      * @param arg0
+     */
+    @WebMethod
+    @RequestWrapper(localName = "registrarConcepto", targetNamespace = "http://servicio.sga.gm.com.mx/", className = "clientews.servicio.RegistrarConcepto")
+    @ResponseWrapper(localName = "registrarConceptoResponse", targetNamespace = "http://servicio.sga.gm.com.mx/", className = "clientews.servicio.RegistrarConceptoResponse")
+    @Action(input = "http://servicio.sga.gm.com.mx/ConceptosServiceWs/registrarConceptoRequest", output = "http://servicio.sga.gm.com.mx/ConceptosServiceWs/registrarConceptoResponse")
+    public void registrarConcepto(
+        @WebParam(name = "arg0", targetNamespace = "")
+        Conceptos arg0);
+
+    /**
+     * 
+     * @param arg0
      * @return
      *     returns java.util.List<clientews.servicio.Conceptos>
      */
@@ -129,18 +141,6 @@ public interface ConceptosServiceWs {
     public List<Conceptos> encontrarConceptoLikeNombre(
         @WebParam(name = "arg0", targetNamespace = "")
         String arg0);
-
-    /**
-     * 
-     * @param arg0
-     */
-    @WebMethod
-    @RequestWrapper(localName = "registrarConcepto", targetNamespace = "http://servicio.sga.gm.com.mx/", className = "clientews.servicio.RegistrarConcepto")
-    @ResponseWrapper(localName = "registrarConceptoResponse", targetNamespace = "http://servicio.sga.gm.com.mx/", className = "clientews.servicio.RegistrarConceptoResponse")
-    @Action(input = "http://servicio.sga.gm.com.mx/ConceptosServiceWs/registrarConceptoRequest", output = "http://servicio.sga.gm.com.mx/ConceptosServiceWs/registrarConceptoResponse")
-    public void registrarConcepto(
-        @WebParam(name = "arg0", targetNamespace = "")
-        Conceptos arg0);
 
     /**
      * 

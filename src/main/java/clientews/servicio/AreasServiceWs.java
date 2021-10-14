@@ -85,18 +85,6 @@ public interface AreasServiceWs {
     /**
      * 
      * @param arg0
-     */
-    @WebMethod
-    @RequestWrapper(localName = "updateArea", targetNamespace = "http://servicio.sga.gm.com.mx/", className = "clientews.servicio.UpdateArea")
-    @ResponseWrapper(localName = "updateAreaResponse", targetNamespace = "http://servicio.sga.gm.com.mx/", className = "clientews.servicio.UpdateAreaResponse")
-    @Action(input = "http://servicio.sga.gm.com.mx/AreasServiceWs/updateAreaRequest", output = "http://servicio.sga.gm.com.mx/AreasServiceWs/updateAreaResponse")
-    public void updateArea(
-        @WebParam(name = "arg0", targetNamespace = "")
-        Areas arg0);
-
-    /**
-     * 
-     * @param arg0
      * @return
      *     returns java.util.List<clientews.servicio.Areas>
      */
@@ -108,6 +96,18 @@ public interface AreasServiceWs {
     public List<Areas> findAreasLikeNombre(
         @WebParam(name = "arg0", targetNamespace = "")
         String arg0);
+
+    /**
+     * 
+     * @param arg0
+     */
+    @WebMethod
+    @RequestWrapper(localName = "updateArea", targetNamespace = "http://servicio.sga.gm.com.mx/", className = "clientews.servicio.UpdateArea")
+    @ResponseWrapper(localName = "updateAreaResponse", targetNamespace = "http://servicio.sga.gm.com.mx/", className = "clientews.servicio.UpdateAreaResponse")
+    @Action(input = "http://servicio.sga.gm.com.mx/AreasServiceWs/updateAreaRequest", output = "http://servicio.sga.gm.com.mx/AreasServiceWs/updateAreaResponse")
+    public void updateArea(
+        @WebParam(name = "arg0", targetNamespace = "")
+        Areas arg0);
 
     /**
      * 
