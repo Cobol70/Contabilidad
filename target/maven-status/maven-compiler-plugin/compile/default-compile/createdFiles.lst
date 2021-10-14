@@ -148,6 +148,7 @@ clientews\servicio\EliminarPagoOrdenVentaPorIdOrdenVenta.class
 clientews\servicio\RegistrarVentaConceptosResponse.class
 clientews\servicio\EncontrarConceptosPorIdVentaConceptos.class
 DAO\AreasDaoImpl.class
+Vistas\AreasVista$2.class
 clientews\servicio\EncontrarEnVentaConceptosResponse.class
 clientews\servicio\EncontrarVentaConceptosPorId.class
 clientews\servicio\RegistrarEnWorklistPorOrdenVentaResponse.class
