@@ -39,6 +39,7 @@ public class NuevasInstrucciones extends javax.swing.JFrame {
         txtTexto = new javax.swing.JTextArea();
         btnMinimizar = new javax.swing.JButton();
         btnCerrar = new javax.swing.JButton();
+        labelLOGO = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -108,6 +109,9 @@ public class NuevasInstrucciones extends javax.swing.JFrame {
         });
         jPanel1.add(btnCerrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 0, 40, 30));
 
+        labelLOGO.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/imagotipo.png"))); // NOI18N
+        jPanel1.add(labelLOGO, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 10, 60, 60));
+
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 539, 444));
 
         pack();
@@ -163,6 +167,7 @@ public class NuevasInstrucciones extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JLabel labelLOGO;
     public javax.swing.JTextField txtNombre;
     public javax.swing.JTextArea txtTexto;
     // End of variables declaration//GEN-END:variables

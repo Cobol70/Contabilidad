@@ -86,14 +86,11 @@ public class EstudiosInstituciones extends javax.swing.JFrame {
         jPanel1.add(btnMin, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 0, 30, 30));
 
         jLabel10.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel10.setText("LOGO");
-        jLabel10.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 10, 160, 45));
+        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/imagotipo.png"))); // NOI18N
+        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 0, 60, 70));
 
         btnRegresar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/flecha-regresar.png"))); // NOI18N
-        btnRegresar.setBorder(null);
-        btnRegresar.setBorderPainted(false);
-        btnRegresar.setContentAreaFilled(false);
+        btnRegresar.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jPanel1.add(btnRegresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, 40, -1));
 
         jPanel4.setBackground(new java.awt.Color(204, 204, 255));
@@ -107,7 +104,7 @@ public class EstudiosInstituciones extends javax.swing.JFrame {
 
         jScrollPane1.setViewportView(tableInstituciones);
 
-        jPanel3.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, 240, 130));
+        jPanel3.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, 240, 110));
         jPanel3.add(txtBuscarInstitucion, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, 240, -1));
 
         jLabel1.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
@@ -116,14 +113,14 @@ public class EstudiosInstituciones extends javax.swing.JFrame {
 
         jLabel2.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jLabel2.setText("Estudio");
-        jPanel3.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 20, -1, -1));
+        jPanel3.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 10, -1, 20));
         jPanel3.add(txtBuscarEstudio, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 40, 410, -1));
 
         jScrollPane2.setViewportView(tableEstudios);
 
-        jPanel3.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 70, 410, 130));
+        jPanel3.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 70, 410, 110));
 
-        jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 50, 710, 210));
+        jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 70, 710, 190));
 
         jPanel5.setBackground(new java.awt.Color(204, 204, 255));
         jPanel5.setBorder(javax.swing.BorderFactory.createTitledBorder("Registrar/modificar"));

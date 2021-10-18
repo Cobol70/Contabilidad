@@ -100,6 +100,7 @@ public class Estudios extends javax.swing.JFrame {
         jPanel2.add(txtNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 70, 240, -1));
 
         btnNuevasInstrucciones.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        btnNuevasInstrucciones.setForeground(new java.awt.Color(0, 0, 51));
         btnNuevasInstrucciones.setText("Nuevas instrucciones");
         btnNuevasInstrucciones.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnNuevasInstrucciones.setContentAreaFilled(false);
@@ -143,9 +144,8 @@ public class Estudios extends javax.swing.JFrame {
         jPanel1.add(btnMinimizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(783, 0, 30, 30));
 
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel7.setText("LOGO");
-        jLabel7.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 10, 160, 45));
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/imagotipo.png"))); // NOI18N
+        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 0, 70, 70));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 852, 530));
 
@@ -198,7 +198,7 @@ public class Estudios extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton btnCerrar;
     public javax.swing.JButton btnGuardar;
-    protected javax.swing.JButton btnMinimizar;
+    public javax.swing.JButton btnMinimizar;
     public javax.swing.JButton btnNuevasInstrucciones;
     public javax.swing.JButton btnRegresar;
     public javax.swing.JButton btnVer;

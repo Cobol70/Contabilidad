@@ -64,6 +64,7 @@ public class Menu extends javax.swing.JFrame {
         btnInstituciones = new javax.swing.JButton();
         jPanel7 = new javax.swing.JPanel();
         btnConsentimientos = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
         jPanel8 = new javax.swing.JPanel();
         btnReagendar = new javax.swing.JButton();
         jLogoEmpresa = new javax.swing.JLabel();
@@ -177,8 +178,15 @@ public class Menu extends javax.swing.JFrame {
         jPanel7.setBackground(new java.awt.Color(204, 204, 255));
         jPanel7.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        btnConsentimientos.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
+        btnConsentimientos.setForeground(new java.awt.Color(0, 0, 51));
         btnConsentimientos.setText("Consentimientos");
-        jPanel7.add(btnConsentimientos, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, 120, 30));
+        btnConsentimientos.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btnConsentimientos.setContentAreaFilled(false);
+        jPanel7.add(btnConsentimientos, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, 140, 30));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/consentimiento.png"))); // NOI18N
+        jPanel7.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 20, -1, -1));
 
         jPanel10.add(jPanel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 320, 140, 110));
 
@@ -277,6 +285,7 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JLabel jLEstudioM;
     private javax.swing.JLabel jLInstitucionM;
     public javax.swing.JLabel jLMinimizar;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLogoEmpresa;
     private javax.swing.JPanel jPanel1;
