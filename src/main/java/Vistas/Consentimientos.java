@@ -138,9 +138,8 @@ public class Consentimientos extends javax.swing.JFrame {
         jPanel1.add(btnMin, new org.netbeans.lib.awtextra.AbsoluteConstraints(813, 0, 30, 30));
 
         jLabel10.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel10.setText("LOGO");
-        jLabel10.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 10, 160, 45));
+        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/imagotipo.png"))); // NOI18N
+        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 0, 60, 70));
 
         btnRegresar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/flecha-regresar.png"))); // NOI18N
         btnRegresar.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));

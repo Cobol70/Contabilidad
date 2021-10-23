@@ -84,9 +84,8 @@ public class Cortes extends javax.swing.JFrame {
         jPanel1.add(btnMin, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 0, 30, 30));
 
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setText("LOGO");
-        jLabel3.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 20, 160, 45));
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/imagotipo.png"))); // NOI18N
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 10, 60, 60));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 400, 300));
 
