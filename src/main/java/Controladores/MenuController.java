@@ -9,6 +9,7 @@ package Controladores;
 import Vistas.AreasVista;
 import Vistas.Consentimientos;
 import Vistas.Cortes;
+import Vistas.EquipoDicomVista;
 import Vistas.Estudios;
 import Vistas.EstudiosInstituciones;
 import Vistas.Instituciones;
@@ -48,7 +49,7 @@ public class MenuController implements ActionListener, MouseListener {
         this.vista.btnCortes.addActionListener(this);
         this.vista.btnEstudiosInstituciones.addActionListener(this);
         this.vista.btnConsentimientos.addActionListener(this);
-        this.vista.btnReagendar.addActionListener(this);
+        this.vista.btnEquipoDicom.addActionListener(this);
         
         this.vista.jLCerrar.addMouseListener(this);
         this.vista.jLMinimizar.addMouseListener(this);
@@ -68,8 +69,8 @@ public class MenuController implements ActionListener, MouseListener {
             abrirEstudiosInstituciones();
         }else if(e.getSource() == this.vista.btnConsentimientos){
             abrirConsentimientos();
-        }else if(e.getSource() == this.vista.btnReagendar){
-            abrirReagendar();
+        }else if(e.getSource() == this.vista.btnEquipoDicom){
+            abrirEquipoDicom();
         }
     }
 
@@ -109,10 +110,10 @@ public class MenuController implements ActionListener, MouseListener {
         consentimientos.iniciar();
     }
 
-    private void abrirReagendar() {
-       /* vista.dispose();
-        ReagendarController controladorReagendar = new ReagendarController(new Reagendar());
-        controladorReagendar.iniciar();*/
+    private void abrirEquipoDicom() {
+        vista.dispose();
+        EquipoDicomController controladorEquipoDicom = new EquipoDicomController(new EquipoDicomVista());
+        controladorEquipoDicom.iniciar();
     }
 
     @Override

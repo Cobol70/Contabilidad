@@ -432,7 +432,7 @@
             <Property name="useNullLayout" type="boolean" value="false"/>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JButton" name="btnReagendar">
+            <Component class="javax.swing.JButton" name="btnEquipoDicom">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Equipo dicom"/>
               </Properties>

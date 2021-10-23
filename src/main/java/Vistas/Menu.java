@@ -66,7 +66,7 @@ public class Menu extends javax.swing.JFrame {
         btnConsentimientos = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jPanel8 = new javax.swing.JPanel();
-        btnReagendar = new javax.swing.JButton();
+        btnEquipoDicom = new javax.swing.JButton();
         jLogoEmpresa = new javax.swing.JLabel();
         jLMinimizar = new javax.swing.JLabel();
         jLCerrar = new javax.swing.JLabel();
@@ -193,8 +193,8 @@ public class Menu extends javax.swing.JFrame {
         jPanel8.setBackground(new java.awt.Color(204, 204, 255));
         jPanel8.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        btnReagendar.setText("Equipo dicom");
-        jPanel8.add(btnReagendar, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, 120, 30));
+        btnEquipoDicom.setText("Equipo dicom");
+        jPanel8.add(btnEquipoDicom, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, 120, 30));
 
         jPanel10.add(jPanel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 320, 140, 110));
 
@@ -274,10 +274,10 @@ public class Menu extends javax.swing.JFrame {
     public javax.swing.JButton btnAreas;
     public javax.swing.JButton btnConsentimientos;
     public javax.swing.JButton btnCortes;
+    public javax.swing.JButton btnEquipoDicom;
     public javax.swing.JButton btnEstudios;
     public javax.swing.JButton btnEstudiosInstituciones;
     public javax.swing.JButton btnInstituciones;
-    public javax.swing.JButton btnReagendar;
     public javax.swing.JButton jButton1;
     public javax.swing.JButton jButton2;
     private javax.swing.JLabel jLAreaM;
