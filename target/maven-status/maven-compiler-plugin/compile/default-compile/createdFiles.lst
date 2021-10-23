@@ -101,6 +101,7 @@ Vistas\NuevoConsentimiento$1.class
 clientews\servicio\EquipoDicom.class
 DAO\AreasDao.class
 clientews\servicio\EliminarVentaConceptosPorIdOrdenVenta.class
+clientews\servicio\EncontrarConceptoInstitucionPorIdConceptoIdInstitucionResponse.class
 clientews\servicio\EsCorrectoLoginResponse.class
 Vistas\Cortes$1.class
 DAO\InstitucionDaoImp.class
@@ -241,6 +242,7 @@ Vistas\NuevoConsentimiento$2.class
 clientews\servicio\EliminarConsentimientoConceptoResponse.class
 clientews\servicio\VentaConceptos.class
 Vistas\Menu$1.class
+clientews\servicio\EncontrarConceptoInstitucionPorIdConceptoIdInstitucion.class
 Vistas\EstudiosInstituciones$1.class
 clientews\servicio\EncontrarEquipoDicomPorId.class
 Vistas\Estudios$2.class

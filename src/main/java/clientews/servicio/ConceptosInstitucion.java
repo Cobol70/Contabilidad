@@ -19,6 +19,7 @@ import javax.xml.bind.annotation.XmlType;
  *         &lt;element name="activo" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
  *         &lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}long" minOccurs="0"/>
  *         &lt;element name="idConcepto" type="{http://servicio.sga.gm.com.mx/}conceptos" minOccurs="0"/>
+ *         &lt;element name="idContpaq" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="idInstitucion" type="{http://servicio.sga.gm.com.mx/}institucion" minOccurs="0"/>
  *         &lt;element name="idInternoInstitucion" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="limiteDiario" type="{http://www.w3.org/2001/XMLSchema}int"/>
@@ -38,6 +39,7 @@ import javax.xml.bind.annotation.XmlType;
     "activo",
     "id",
     "idConcepto",
+    "idContpaq",
     "idInstitucion",
     "idInternoInstitucion",
     "limiteDiario",
@@ -50,6 +52,7 @@ public class ConceptosInstitucion {
     protected boolean activo;
     protected Long id;
     protected Conceptos idConcepto;
+    protected String idContpaq;
     protected Institucion idInstitucion;
     protected String idInternoInstitucion;
     protected int limiteDiario;
@@ -119,6 +122,30 @@ public class ConceptosInstitucion {
      */
     public void setIdConcepto(Conceptos value) {
         this.idConcepto = value;
+    }
+
+    /**
+     * Obtiene el valor de la propiedad idContpaq.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getIdContpaq() {
+        return idContpaq;
+    }
+
+    /**
+     * Define el valor de la propiedad idContpaq.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setIdContpaq(String value) {
+        this.idContpaq = value;
     }
 
     /**

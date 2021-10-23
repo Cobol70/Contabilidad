@@ -3,6 +3,7 @@ package clientews.servicio;
 
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
+import javax.jws.WebResult;
 import javax.jws.WebService;
 import javax.xml.bind.annotation.XmlSeeAlso;
 import javax.xml.ws.Action;
@@ -22,6 +23,24 @@ import javax.xml.ws.ResponseWrapper;
 })
 public interface ConceptosInstitucionServiceWs {
 
+
+    /**
+     * 
+     * @param arg1
+     * @param arg0
+     * @return
+     *     returns clientews.servicio.ConceptosInstitucion
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "encontrarConceptoInstitucionPorIdConceptoIdInstitucion", targetNamespace = "http://servicio.sga.gm.com.mx/", className = "clientews.servicio.EncontrarConceptoInstitucionPorIdConceptoIdInstitucion")
+    @ResponseWrapper(localName = "encontrarConceptoInstitucionPorIdConceptoIdInstitucionResponse", targetNamespace = "http://servicio.sga.gm.com.mx/", className = "clientews.servicio.EncontrarConceptoInstitucionPorIdConceptoIdInstitucionResponse")
+    @Action(input = "http://servicio.sga.gm.com.mx/ConceptosInstitucionServiceWs/encontrarConceptoInstitucionPorIdConceptoIdInstitucionRequest", output = "http://servicio.sga.gm.com.mx/ConceptosInstitucionServiceWs/encontrarConceptoInstitucionPorIdConceptoIdInstitucionResponse")
+    public ConceptosInstitucion encontrarConceptoInstitucionPorIdConceptoIdInstitucion(
+        @WebParam(name = "arg0", targetNamespace = "")
+        Long arg0,
+        @WebParam(name = "arg1", targetNamespace = "")
+        Long arg1);
 
     /**
      * 

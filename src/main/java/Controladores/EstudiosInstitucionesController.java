@@ -16,6 +16,7 @@ import Tables.TableInstituciones;
 import Vistas.EstudiosInstituciones;
 import Vistas.Menu;
 import clientews.servicio.Conceptos;
+import clientews.servicio.ConceptosInstitucion;
 import clientews.servicio.Institucion;
 import static java.awt.Frame.ICONIFIED;
 import java.awt.event.ActionEvent;
@@ -38,7 +39,8 @@ public class EstudiosInstitucionesController implements ActionListener, KeyListe
     private ConceptosInstitucionDao modeloConceptosInstituciones;
     private Institucion institucionSeleccionada;
     private Conceptos estudioSeleccionado;
-    
+    private ConceptosInstitucion relacionSeleccionada;
+
     public EstudiosInstitucionesController(EstudiosInstituciones vista) {
         this.vista = vista;
 
@@ -53,6 +55,7 @@ public class EstudiosInstitucionesController implements ActionListener, KeyListe
 
         this.vista.tableEstudios.addMouseListener(this);
         this.vista.tableInstituciones.addMouseListener(this);
+        this.vista.tableConceptosInstitucion.addMouseListener(this);
     }
 
     public void iniciar() {
@@ -119,27 +122,43 @@ public class EstudiosInstitucionesController implements ActionListener, KeyListe
                 int fila = vista.tableInstituciones.getSelectedRow();
                 Long id = Long.parseLong(vista.tableInstituciones.getValueAt(fila, 1).toString());
                 institucionSeleccionada = buscarInstitucionPorId(id);
-                
+
                 //Llevar al text
                 vista.txtInstitucion.setText(institucionSeleccionada.getNombreInstitucion());
-                
+
                 cargarTablaInstitucionesConceptos();
-                
+
             }
-        }else if(e.getSource() == vista.tableEstudios){
-            if(vista.tableEstudios.getSelectedRow() != -1){
+        } else if (e.getSource() == vista.tableEstudios) {
+            if (vista.tableEstudios.getSelectedRow() != -1) {
                 int fila = vista.tableEstudios.getSelectedRow();
                 Long id = Long.parseLong(vista.tableEstudios.getValueAt(fila, 2).toString());
-                
+
                 estudioSeleccionado = buscarEstudioPorId(id);
-                
+
                 //LLevar al text
                 vista.txtEstudio.setText(estudioSeleccionado.getConceptoTo());
-                
+
+            }
+        } else if (e.getSource() == vista.tableConceptosInstitucion) {
+            if (vista.tableConceptosInstitucion.getSelectedRow() != -1) {
+                int fila = vista.tableConceptosInstitucion.getSelectedRow();
+                Long id = Long.parseLong(vista.tableConceptosInstitucion.getValueAt(fila, 2).toString());
+
+                estudioSeleccionado = buscarEstudioPorId(id);
+
+                //LLevar al text
+                vista.txtEstudio.setText(estudioSeleccionado.getConceptoTo());
+
+                System.out.println("id institucion " + institucionSeleccionada.getIdInstitucion());
+                System.out.println("id concepto " + estudioSeleccionado.getIdTo());
+
+                relacionSeleccionada = modeloConceptosInstituciones.encontrarConceptoInstitucionPorIdConceptoIdInstitucion(estudioSeleccionado.getIdTo(), institucionSeleccionada.getIdInstitucion());
+
+                cargarCampos(relacionSeleccionada);
             }
         }
-        
-        
+
     }
 
     @Override
@@ -180,11 +199,33 @@ public class EstudiosInstitucionesController implements ActionListener, KeyListe
     }
 
     private void modificar() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        if (datosValidosModificar() && deseaModificar()) {
+            try {
+                obtenerDatosParaModificacion();
+                modificarDb();
+                JOptionPane.showMessageDialog(null, "Se ha actualizado el estudio");
+                limpiar();
+                cargarTablaInstitucionesConceptos();
+            } catch (Exception e) {
+                JOptionPane.showMessageDialog(null, "No se ha podido actualizar el estudio");
+                e.printStackTrace(System.out);
+            }
+        }
     }
 
     private void guardar() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        if (datosValidosGuardar() && deseaGuardar()) {
+            try {
+                obtenerDatos();
+                persistirDb();
+                JOptionPane.showMessageDialog(null, "Se ha vinculado el estudio");
+                limpiar();
+                cargarTablaInstitucionesConceptos();
+            } catch (Exception e) {
+                JOptionPane.showMessageDialog(null, "No se ha podido asignar el estudio");
+                e.printStackTrace(System.out);
+            }
+        }
     }
 
     private void cargarTablaConceptosVacia() {
@@ -228,4 +269,143 @@ public class EstudiosInstitucionesController implements ActionListener, KeyListe
         temporal.setIdTo(id);
         return modeloConceptos.encontrarConceptoPorId(temporal);
     }
+
+    private void cargarCampos(ConceptosInstitucion relacionSeleccionada) {
+        vista.txtPrecioPublico.setText(relacionSeleccionada.getPrecioPublico() + "");
+        vista.txtCosto.setText(relacionSeleccionada.getPrecio() + "");
+        vista.txtClaveInstitucion.setText(relacionSeleccionada.getIdInternoInstitucion());
+        vista.txtClaveContpaq.setText(relacionSeleccionada.getIdContpaq());
+        vista.txtClaveAnteriorPensiones.setText(relacionSeleccionada.getPensionesClaveAnterior());
+        vista.checkActivo.setSelected(relacionSeleccionada.isActivo());
+    }
+
+    private boolean datosValidosGuardar() {
+        if (vista.tableInstituciones.getSelectedRow() == -1) {
+            return false;
+        }
+        if (vista.tableEstudios.getSelectedRow() == -1) {
+            return false;
+        }
+        if (vista.txtPrecioPublico.getText().equals("")) {
+            return false;
+        }
+        if (vista.txtClaveInstitucion.getText().equals("")) {
+            return false;
+        }
+        if (vista.txtClaveContpaq.getText().equals("")) {
+            return false;
+        }
+        if (!esDecimal(vista.txtPrecioPublico.getText())) {
+            return false;
+        }
+        if (!vista.txtCosto.getText().equals("")) {
+            //Si hay costo
+            if (!esDecimal(vista.txtCosto.getText())) {
+                //Pero no es decimal
+                return false;
+            }
+        }
+        return true;
+    }
+
+    private void obtenerDatos() {
+        relacionSeleccionada = new ConceptosInstitucion();
+        relacionSeleccionada.setActivo(vista.checkActivo.isSelected());
+        relacionSeleccionada.setIdConcepto(estudioSeleccionado);
+        relacionSeleccionada.setIdContpaq(vista.txtClaveContpaq.getText());
+        relacionSeleccionada.setIdInstitucion(institucionSeleccionada);
+        relacionSeleccionada.setIdInternoInstitucion(vista.txtClaveInstitucion.getText());
+        relacionSeleccionada.setLimiteDiario(0); //Ya no es límite diario por estudio
+        relacionSeleccionada.setPensionesClaveAnterior(vista.txtClaveAnteriorPensiones.getText());
+        if (!vista.txtCosto.getText().equals("")) {
+            relacionSeleccionada.setPrecio(Double.parseDouble(vista.txtCosto.getText()));
+        }
+        relacionSeleccionada.setPrecioPublico(Double.parseDouble(vista.txtPrecioPublico.getText()));
+    }
+
+    private boolean deseaGuardar() {
+        int dialog = JOptionPane.YES_NO_OPTION;
+        return (JOptionPane.showConfirmDialog(null, "¿Seguro que desea asignar el estudio? ", "Asignar", dialog)) == 0;
+    }
+
+    private void limpiar() {
+        vista.txtEstudio.setText("");
+        vista.txtInstitucion.setText("");
+        vista.txtCosto.setText("");
+        vista.txtPrecioPublico.setText("");
+        vista.txtClaveInstitucion.setText("");
+        vista.txtClaveContpaq.setText("");
+        vista.txtClaveAnteriorPensiones.setText("");
+        vista.checkActivo.setSelected(false);
+
+        vista.txtBuscarEstudio.setText("");
+        vista.txtBuscarInstitucion.setText("");
+    }
+
+    private void persistirDb() {
+        modeloConceptosInstituciones.registrarConceptosInstitucion(relacionSeleccionada);
+    }
+
+    private boolean esDecimal(String text) {
+        try {
+            Double.parseDouble(text);
+            return true;
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    private boolean datosValidosModificar() {
+        if (vista.tableInstituciones.getSelectedRow() == -1) {
+            return false;
+        }
+        if (vista.tableConceptosInstitucion.getSelectedRow() == -1) {
+            return false;
+        }
+        if (vista.txtPrecioPublico.getText().equals("")) {
+            return false;
+        }
+        if (vista.txtClaveInstitucion.getText().equals("")) {
+            return false;
+        }
+        if (vista.txtClaveContpaq.getText().equals("")) {
+            return false;
+        }
+        if (!esDecimal(vista.txtPrecioPublico.getText())) {
+            return false;
+        }
+        if (!vista.txtCosto.getText().equals("")) {
+            //Si hay costo
+            if (!esDecimal(vista.txtCosto.getText())) {
+                //Pero no es decimal
+                return false;
+            }
+        }
+        return true;
+    }
+
+    private boolean deseaModificar() {
+        int dialog = JOptionPane.YES_NO_OPTION;
+        return (JOptionPane.showConfirmDialog(null, "¿Seguro que desea modificar el estudio? ", "Modificar", dialog)) == 0;
+    }
+
+    private void obtenerDatosParaModificacion() {
+        System.out.println(vista.checkActivo.isSelected());
+        relacionSeleccionada.setActivo(vista.checkActivo.isSelected());
+        relacionSeleccionada.setIdConcepto(estudioSeleccionado);
+        relacionSeleccionada.setIdContpaq(vista.txtClaveContpaq.getText());
+        relacionSeleccionada.setIdInstitucion(institucionSeleccionada);
+        relacionSeleccionada.setIdInternoInstitucion(vista.txtClaveInstitucion.getText());
+        relacionSeleccionada.setLimiteDiario(0); //Ya no es límite diario por estudio
+        relacionSeleccionada.setPensionesClaveAnterior(vista.txtClaveAnteriorPensiones.getText());
+        if (!vista.txtCosto.getText().equals("")) {
+            relacionSeleccionada.setPrecio(Double.parseDouble(vista.txtCosto.getText()));
+        }
+        relacionSeleccionada.setPrecioPublico(Double.parseDouble(vista.txtPrecioPublico.getText()));
+    }
+
+    private void modificarDb() {
+        modeloConceptosInstituciones.actualizarConceptosInstitucion(relacionSeleccionada);
+    }
+
 }

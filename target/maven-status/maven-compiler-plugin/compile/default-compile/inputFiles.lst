@@ -113,6 +113,7 @@ C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\clientews\s
 C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\clientews\servicio\EncontrarVentaConceptoPorOrdenVentaConceptoHoraAsignado.java
 C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\clientews\servicio\Consentimiento.java
 C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\clientews\servicio\EncontrarConceptoPorId.java
+C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\clientews\servicio\EncontrarConceptoInstitucionPorIdConceptoIdInstitucion.java
 C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\clientews\servicio\RegistrarEnWorklist.java
 C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\clientews\servicio\EncontrarPacientePorId.java
 C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\clientews\servicio\PacienteServiceWs.java
@@ -151,6 +152,7 @@ C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\clientews\s
 C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\clientews\servicio\EncontrarAgendadosPorAreaEquipoDicomFecha.java
 C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\clientews\servicio\UpdateAreaResponse.java
 C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\DAO\ConsentimientoDao.java
+C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\clientews\servicio\EncontrarConceptoInstitucionPorIdConceptoIdInstitucionResponse.java
 C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\clientews\servicio\ObtenerLimiteInstitucion.java
 C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\clientews\servicio\RegistrarVentaConceptosListResponse.java
 C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\clientews\servicio\EncontrarPacientePorCurp.java

@@ -409,6 +409,9 @@
           </Layout>
           <SubComponents>
             <Component class="javax.swing.JButton" name="btnReagendar">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Equipo dicom"/>
+              </Properties>
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
               </AuxValues>
