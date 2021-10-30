@@ -49,6 +49,7 @@ public class EquipoDicomController implements ActionListener, MouseListener, Key
 
         this.vista.txtNombre.addKeyListener(this);
         this.vista.txtModalidad.addKeyListener(this);
+        this.vista.txtBuscar.addKeyListener(this);
 
         this.vista.tableEquipos.addMouseListener(this);
     }
@@ -98,7 +99,6 @@ public class EquipoDicomController implements ActionListener, MouseListener, Key
                     System.out.println("No encontré el área");
                     ex.printStackTrace(System.out);
                 }
-
             }
         }
     }
@@ -145,6 +145,13 @@ public class EquipoDicomController implements ActionListener, MouseListener, Key
             vista.txtNombre.setText(aMayusculas(vista.txtNombre.getText()));
         } else if (e.getSource() == vista.txtModalidad) {
             vista.txtModalidad.setText(aMayusculas(vista.txtModalidad.getText()));
+        } else if (e.getSource() == vista.txtBuscar) {
+            if (!vista.txtBuscar.getText().equals("")) {
+                buscarLikeNombre(vista.txtBuscar.getText());
+            }
+            else{
+                cargarTabla();
+            }
         }
     }
 
@@ -173,7 +180,7 @@ public class EquipoDicomController implements ActionListener, MouseListener, Key
 
     private void cargarTabla() {
         TableEquipoDicom creador = new TableEquipoDicom();
-        //creador.cargarTabla(vista.tableEquipos, modeloEquipoDicom.);
+        creador.cargarTabla(vista.tableEquipos, modeloEquipoDicom.listarEquiposDicom());
     }
 
     private void cargarAreas() {
@@ -221,8 +228,7 @@ public class EquipoDicomController implements ActionListener, MouseListener, Key
     }
 
     private void guardar(EquipoDicom nuevo) {
-        // modeloEquipoDicom.
-        System.out.println("A la verga, me falta ese método jaja");
+        modeloEquipoDicom.guardar(nuevo);
     }
 
     private void abrirMenu() {
@@ -261,7 +267,7 @@ public class EquipoDicomController implements ActionListener, MouseListener, Key
     }
 
     private boolean deseaModificar() {
-int dialog = JOptionPane.YES_NO_OPTION;
+        int dialog = JOptionPane.YES_NO_OPTION;
         return (JOptionPane.showConfirmDialog(null, "¿Seguro que desea modificar el equipo? ", "Confirmar", dialog)) == 0;
     }
 
@@ -273,8 +279,12 @@ int dialog = JOptionPane.YES_NO_OPTION;
     }
 
     private void modificar() {
-        //modeloEquipoDicom.
-        System.out.println("Que te esperes jaja");
+        modeloEquipoDicom.actualizar(equipoSeleccionado);
+    }
+
+    private void buscarLikeNombre(String text) {
+        TableEquipoDicom creador = new TableEquipoDicom();
+        creador.cargarTabla(vista.tableEquipos, modeloEquipoDicom.encontrarEquipoDicomLikeNombre(text));
     }
 
 }

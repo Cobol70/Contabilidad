@@ -44,6 +44,7 @@ public class EstudiosInstituciones extends javax.swing.JFrame {
         txtBuscarEstudio = new javax.swing.JTextField();
         jScrollPane2 = new javax.swing.JScrollPane();
         tableEstudios = new javax.swing.JTable();
+        comboArea = new javax.swing.JComboBox<>();
         jPanel5 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         txtEstudio = new javax.swing.JTextField();
@@ -104,8 +105,8 @@ public class EstudiosInstituciones extends javax.swing.JFrame {
 
         jScrollPane1.setViewportView(tableInstituciones);
 
-        jPanel3.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, 240, 110));
-        jPanel3.add(txtBuscarInstitucion, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, 240, -1));
+        jPanel3.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, 240, 130));
+        jPanel3.add(txtBuscarInstitucion, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 20, 170, -1));
 
         jLabel1.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jLabel1.setText("Institucion");
@@ -113,12 +114,15 @@ public class EstudiosInstituciones extends javax.swing.JFrame {
 
         jLabel2.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jLabel2.setText("Estudio");
-        jPanel3.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 10, -1, 20));
-        jPanel3.add(txtBuscarEstudio, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 40, 410, -1));
+        jPanel3.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 20, -1, 20));
+        jPanel3.add(txtBuscarEstudio, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 20, 170, -1));
 
         jScrollPane2.setViewportView(tableEstudios);
 
-        jPanel3.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 70, 410, 110));
+        jPanel3.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 50, 410, 130));
+
+        comboArea.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jPanel3.add(comboArea, new org.netbeans.lib.awtextra.AbsoluteConstraints(526, 20, 150, -1));
 
         jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 70, 710, 190));
 
@@ -244,6 +248,7 @@ public class EstudiosInstituciones extends javax.swing.JFrame {
     public javax.swing.JButton btnModificar;
     public javax.swing.JButton btnRegresar;
     public javax.swing.JCheckBox checkActivo;
+    private javax.swing.JComboBox<String> comboArea;
     private javax.swing.JLabel jLabel1;
     public javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;

@@ -24,4 +24,10 @@ public interface EquipoDicomDao {
     public List<EquipoDicom> encontrarEquipoDicomPorIdArea(Integer idArea);
     
     public EquipoDicom encontrarEquipoDicomPorNombre(String nombre);
+    
+    public List<EquipoDicom> encontrarEquipoDicomLikeNombre(String nombre);
+    public List<EquipoDicom> listarEquiposDicom();
+    public void guardar(EquipoDicom equipo);
+    public void actualizar(EquipoDicom equipo);
+    
 }

@@ -53,5 +53,25 @@ public class EquipoDicomDaoImp implements EquipoDicomDao{
     public EquipoDicom encontrarEquipoDicomPorNombre(String nombre) {
         return servicio.encontrarEquipoDicomPorNombre(nombre);
     }
+
+    @Override
+    public List<EquipoDicom> encontrarEquipoDicomLikeNombre(String nombre) {
+        return servicio.encontrarEquipoDicomLikeNombre(nombre);
+    }
+
+    @Override
+    public List<EquipoDicom> listarEquiposDicom() {
+        return servicio.listarEquiposDicom();
+    }
+
+    @Override
+    public void guardar(EquipoDicom equipo) {
+        servicio.guardarEquipoDicom(equipo);
+    }
+
+    @Override
+    public void actualizar(EquipoDicom equipo) {
+        servicio.actualizarEquipoDicom(equipo);
+    }
     
 }
