@@ -12,6 +12,7 @@ import DAO.ConceptosDaoImp;
 import DAO.InstruccionesDao;
 import DAO.InstruccionesDaoImpl;
 import Tables.TableConceptos;
+import Utilidades.BarUtil;
 import Vistas.Estudios;
 import Vistas.Menu;
 import Vistas.NuevasInstrucciones;
@@ -52,6 +53,8 @@ public class EstudiosController implements ActionListener, MouseListener, KeyLis
         this.vista.comboInstrucciones.addActionListener(this);
         this.vista.comboArea.addActionListener(this);
         this.vista.comboAreaBusqueda.addActionListener(this);
+        this.vista.btnCerrar.addActionListener(this);
+        this.vista.btnMinimizar.addActionListener(this);
 
         this.vista.txtBuscar.addKeyListener(this);
         this.vista.txtNombre.addKeyListener(this);
@@ -106,6 +109,11 @@ public class EstudiosController implements ActionListener, MouseListener, KeyLis
             if(vista.comboInstrucciones.getSelectedIndex()!=0){
                 JOptionPane.showMessageDialog(null, instruccionesSeleccionadas.getTexto());
             }
+        }
+        else if (e.getSource() == vista.btnMinimizar) {
+            BarUtil.minimizar(vista);
+        } else if (e.getSource() == vista.btnCerrar) {
+            BarUtil.cerrar(vista);
         }
     }
 

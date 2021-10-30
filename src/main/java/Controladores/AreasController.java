@@ -9,6 +9,7 @@ import DAO.AreasDao;
 import DAO.AreasDaoImpl;
 import Tables.TableAreas;
 import Utilidades.AleatoriosUtil;
+import Utilidades.BarUtil;
 import Vistas.AreasVista;
 import Vistas.Menu;
 import clientews.servicio.Areas;
@@ -45,6 +46,9 @@ public class AreasController implements ActionListener, MouseListener, KeyListen
         this.vista.txtBuscar.addKeyListener(this);
 
         this.vista.tableAreas.addMouseListener(this);
+        
+        this.vista.btnCerrar.addActionListener(this);
+        this.vista.btnMin.addActionListener(this);
 
     }
 
@@ -65,6 +69,11 @@ public class AreasController implements ActionListener, MouseListener, KeyListen
                 limpiar();
                 cargarAreas();
             }
+        }
+        else if (e.getSource() == vista.btnMin) {
+            BarUtil.minimizar(vista);
+        } else if (e.getSource() == vista.btnCerrar) {
+            BarUtil.cerrar(vista);
         }
         
     }

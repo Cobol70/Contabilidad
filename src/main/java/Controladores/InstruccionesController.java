@@ -7,6 +7,7 @@ package Controladores;
 
 import DAO.InstruccionesDao;
 import DAO.InstruccionesDaoImpl;
+import Utilidades.BarUtil;
 import Vistas.NuevasInstrucciones;
 import clientews.servicio.Instrucciones;
 import java.awt.event.ActionEvent;
@@ -32,6 +33,8 @@ public class InstruccionesController implements ActionListener, KeyListener {
         this.vista.btnRegresar.addActionListener(this);
         this.vista.btnCancelar.addActionListener(this);
         this.vista.btnGuardar.addActionListener(this);
+        this.vista.btnMinimizar.addActionListener(this);
+        this.vista.btnCerrar.addActionListener(this);
         
         this.vista.txtNombre.addKeyListener(this);
     }
@@ -69,6 +72,11 @@ public class InstruccionesController implements ActionListener, KeyListener {
             }
         } else if (e.getSource() == vista.btnCancelar || e.getSource() == vista.btnRegresar) {
             cerrar();
+        }
+        else if (e.getSource() == vista.btnMinimizar) {
+            BarUtil.minimizar(vista);
+        } else if (e.getSource() == vista.btnCerrar) {
+            BarUtil.cerrar(vista);
         }
     }
     

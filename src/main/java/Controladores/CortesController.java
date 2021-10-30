@@ -6,6 +6,7 @@
 package Controladores;
 
 import DAO.LoginData;
+import Utilidades.BarUtil;
 import Utilidades.DateUtil;
 import Utilidades.UrlUtil;
 import Vistas.Cortes;
@@ -28,6 +29,8 @@ public class CortesController implements ActionListener {
 
         this.vista.btnRegresar.addActionListener(this);
         this.vista.btnConsultar.addActionListener(this);
+        this.vista.btnCerrar.addActionListener(this);
+        this.vista.btnMin.addActionListener(this);
     }
 
     public void iniciar() {
@@ -63,6 +66,11 @@ public class CortesController implements ActionListener {
             Menu vista = new Menu();
             MenuController menu = new MenuController(vista);
             menu.iniciar();
+        }
+        else if (e.getSource() == vista.btnMin) {
+            BarUtil.minimizar(vista);
+        } else if (e.getSource() == vista.btnCerrar) {
+            BarUtil.cerrar(vista);
         }
     }
 

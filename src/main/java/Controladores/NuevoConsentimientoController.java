@@ -7,6 +7,7 @@ package Controladores;
 
 import DAO.ConsentimientoDao;
 import DAO.ConsentimientoDaoImpl;
+import Utilidades.BarUtil;
 import Vistas.NuevoConsentimiento;
 import clientews.servicio.Consentimiento;
 import java.awt.event.ActionEvent;
@@ -32,6 +33,8 @@ public class NuevoConsentimientoController implements ActionListener, KeyListene
         this.vista.btnRegresar.addActionListener(this);
         this.vista.btnCancelar.addActionListener(this);
         this.vista.btnGuardar.addActionListener(this);
+        this.vista.btnMinimizar.addActionListener(this);
+        this.vista.btnCerrar.addActionListener(this);
 
         this.vista.txtNombre.addKeyListener(this);
     }
@@ -59,6 +62,11 @@ public class NuevoConsentimientoController implements ActionListener, KeyListene
             }
         } else if (e.getSource() == vista.btnCancelar || e.getSource() == vista.btnRegresar) {
             cerrar();
+        }
+        else if (e.getSource() == vista.btnMinimizar) {
+            BarUtil.minimizar(vista);
+        } else if (e.getSource() == vista.btnCerrar) {
+            BarUtil.cerrar(vista);
         }
     }
 

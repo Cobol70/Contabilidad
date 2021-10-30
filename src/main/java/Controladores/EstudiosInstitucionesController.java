@@ -13,6 +13,7 @@ import DAO.InstitucionDao;
 import DAO.InstitucionDaoImp;
 import Tables.TableConceptos;
 import Tables.TableInstituciones;
+import Utilidades.BarUtil;
 import Vistas.EstudiosInstituciones;
 import Vistas.Menu;
 import clientews.servicio.Conceptos;
@@ -49,6 +50,8 @@ public class EstudiosInstitucionesController implements ActionListener, KeyListe
         this.vista.btnGuardar.addActionListener(this);
         this.vista.btnModificar.addActionListener(this);
         this.vista.btnRegresar.addActionListener(this);
+        this.vista.btnCerrar.addActionListener(this);
+        this.vista.btnMin.addActionListener(this);
 
         this.vista.txtBuscarEstudio.addKeyListener(this);
         this.vista.txtBuscarInstitucion.addKeyListener(this);
@@ -87,6 +90,10 @@ public class EstudiosInstitucionesController implements ActionListener, KeyListe
             modificar();
         } else if (e.getSource() == vista.btnRegresar) {
             abrirMenu();
+        }else if (e.getSource() == vista.btnMin) {
+            BarUtil.minimizar(vista);
+        } else if (e.getSource() == vista.btnCerrar) {
+            BarUtil.cerrar(vista);
         }
     }
 

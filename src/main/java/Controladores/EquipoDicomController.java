@@ -10,6 +10,7 @@ import DAO.AreasDaoImpl;
 import DAO.EquipoDicomDao;
 import DAO.EquipoDicomDaoImp;
 import Tables.TableEquipoDicom;
+import Utilidades.BarUtil;
 import Vistas.EquipoDicomVista;
 import Vistas.Menu;
 import clientews.servicio.Areas;
@@ -44,6 +45,8 @@ public class EquipoDicomController implements ActionListener, MouseListener, Key
         this.vista.btnMin.addActionListener(this);
         this.vista.btnModificar.addActionListener(this);
         this.vista.btnRegresar.addActionListener(this);
+        this.vista.btnMin.addActionListener(this);
+        this.vista.btnCerrar.addActionListener(this);
 
         this.vista.comboArea.addActionListener(this);
 
@@ -100,6 +103,11 @@ public class EquipoDicomController implements ActionListener, MouseListener, Key
                     ex.printStackTrace(System.out);
                 }
             }
+        }
+        else if (e.getSource() == vista.btnMin) {
+            BarUtil.minimizar(vista);
+        } else if (e.getSource() == vista.btnCerrar) {
+            BarUtil.cerrar(vista);
         }
     }
 

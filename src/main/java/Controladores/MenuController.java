@@ -6,6 +6,7 @@
 package Controladores;
 
 
+import Utilidades.BarUtil;
 import Vistas.AreasVista;
 import Vistas.Consentimientos;
 import Vistas.Cortes;
@@ -119,10 +120,10 @@ public class MenuController implements ActionListener, MouseListener {
     @Override
     public void mouseClicked(MouseEvent e) {
         if(e.getSource() == vista.jLMinimizar){
-            vista.setExtendedState(ICONIFIED);
+            BarUtil.minimizar(vista);
         }
         else if(e.getSource() == vista.jLCerrar){
-            System.exit(0);
+            BarUtil.cerrar(vista);
         }
     }
 

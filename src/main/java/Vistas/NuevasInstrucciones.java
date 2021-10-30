@@ -158,9 +158,9 @@ public class NuevasInstrucciones extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton btnCancelar;
-    private javax.swing.JButton btnCerrar;
+    public javax.swing.JButton btnCerrar;
     public javax.swing.JButton btnGuardar;
-    private javax.swing.JButton btnMinimizar;
+    public javax.swing.JButton btnMinimizar;
     public javax.swing.JButton btnRegresar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;

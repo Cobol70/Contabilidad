@@ -129,9 +129,9 @@ public class Cortes extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnCerrar;
+    public javax.swing.JButton btnCerrar;
     public javax.swing.JButton btnConsultar;
-    private javax.swing.JButton btnMin;
+    public javax.swing.JButton btnMin;
     public javax.swing.JButton btnRegresar;
     public javax.swing.JComboBox<String> comboTurnos;
     public com.toedter.calendar.JDateChooser dateFecha;

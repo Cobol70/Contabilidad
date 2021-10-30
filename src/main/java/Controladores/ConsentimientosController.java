@@ -15,6 +15,7 @@ import DAO.ConsentimientoDao;
 import DAO.ConsentimientoDaoImpl;
 import Tables.TableConceptos;
 import Tables.TableConsentimientos;
+import Utilidades.BarUtil;
 import Vistas.Consentimientos;
 import Vistas.Menu;
 import Vistas.NuevoConsentimiento;
@@ -55,6 +56,8 @@ public class ConsentimientosController implements ActionListener, KeyListener, M
         this.vista.btnNuevoConsentimiento.addActionListener(this);
         this.vista.btnVerConsentimiento.addActionListener(this);
         this.vista.btnRegresar.addActionListener(this);
+        this.vista.btnMin.addActionListener(this);
+        this.vista.btnSalir.addActionListener(this);
 
         //Action listener a comboBox
         this.vista.comboAreaBusqueda.addActionListener(this);
@@ -134,6 +137,10 @@ public class ConsentimientosController implements ActionListener, KeyListener, M
             }
         } else if (e.getSource() == vista.btnNuevoConsentimiento) {
             abrirNuevoConsentimiento();
+        } else if (e.getSource() == vista.btnMin) {
+            BarUtil.minimizar(vista);
+        } else if (e.getSource() == vista.btnSalir) {
+            BarUtil.cerrar(vista);
         }
     }
 

@@ -8,6 +8,7 @@ package Controladores;
 import DAO.InstitucionDao;
 import DAO.InstitucionDaoImp;
 import Tables.TableInstituciones;
+import Utilidades.BarUtil;
 import Vistas.Instituciones;
 import Vistas.Menu;
 import clientews.servicio.Institucion;
@@ -35,6 +36,8 @@ public class InstitucionesController implements ActionListener, MouseListener, K
         this.vista.btnRegresar.addActionListener(this);
         this.vista.btnGuardar.addActionListener(this);
         this.vista.btnModificar.addActionListener(this);
+        this.vista.btnCerrar.addActionListener(this);
+        this.vista.btnMinimizar.addActionListener(this);
 
         this.vista.txtNombre.addKeyListener(this);
         this.vista.txtBuscar.addKeyListener(this);
@@ -50,6 +53,7 @@ public class InstitucionesController implements ActionListener, MouseListener, K
         modeloInstituciones = new InstitucionDaoImp();
         cargarInstituciones();
         habilitarBotonEditar(false);
+        institucionSeleccionada = new Institucion();
     }
 
     @Override
@@ -73,6 +77,10 @@ public class InstitucionesController implements ActionListener, MouseListener, K
             }
         } else if (e.getSource() == vista.btnRegresar) {
             abrirMenu();
+        }else if (e.getSource() == vista.btnMinimizar) {
+            BarUtil.minimizar(vista);
+        } else if (e.getSource() == vista.btnCerrar) {
+            BarUtil.cerrar(vista);
         }
     }
 
@@ -138,7 +146,7 @@ public class InstitucionesController implements ActionListener, MouseListener, K
         try {
             Institucion temporal = new Institucion();
             int filaSeleccionada = vista.tableInstituciones.getSelectedRow();
-            temporal.setIdInstitucion(Long.parseLong(vista.tableInstituciones.getValueAt(filaSeleccionada, 2).toString()));
+            temporal.setIdInstitucion(Long.parseLong(vista.tableInstituciones.getValueAt(filaSeleccionada, 1).toString()));
             System.out.println("id de tabla = " + temporal.getIdInstitucion());
             institucionSeleccionada = modeloInstituciones.encontrarPorId(temporal);
             System.out.println("Institucion encontrada = " + institucionSeleccionada.getNombreInstitucion() + " : " + institucionSeleccionada.getIdInstitucion());
