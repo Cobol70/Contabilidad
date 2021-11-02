@@ -7,6 +7,7 @@ clientews\servicio\RegistrarConsentimientoResponse.class
 Tables\TableVentaConceptos.class
 clientews\servicio\WorklistServiceWs.class
 Tables\TableInstituciones.class
+Vistas\Paquetes$4.class
 Vistas\Instituciones$2.class
 clientews\servicio\EncontrarTodosConceptosResponse.class
 clientews\servicio\ObtenerTotalDeVenta.class
@@ -54,6 +55,7 @@ Vistas\NuevoConsentimiento$1.class
 DAO\AreasDao.class
 clientews\servicio\EliminarVentaConceptosPorIdOrdenVenta.class
 clientews\servicio\EsCorrectoLoginResponse.class
+Vistas\Paquetes$6.class
 clientews\servicio\UsuariosServiceWs.class
 clientews\servicio\RegistrarConsentimientoConcepto.class
 clientews\servicio\ObjectFactory.class
@@ -87,6 +89,7 @@ clientews\servicio\ObtenerConsentimientoPorIdResponse.class
 Vistas\Instituciones.class
 Utilidades\AleatoriosUtil.class
 clientews\servicio\MovimientoCorteServiceWs.class
+Vistas\Paquetes$7.class
 clientews\servicio\EncontrarPacientePorCurpResponse.class
 clientews\servicio\RegistrarInstitucionResponse.class
 DAO\EquipoDicomDaoImp.class
@@ -150,6 +153,7 @@ DAO\ConsentimientoDaoImpl.class
 clientews\servicio\EncontrarEstadoPorId.class
 clientews\servicio\ObtenerConceptosDePaqueteResponse.class
 clientews\servicio\RegistrarEnWorklistPorOrdenVenta.class
+Vistas\Paquetes$3.class
 clientews\servicio\ListarPorId.class
 clientews\servicio\EliminarVentaConceptosResponse.class
 Controladores\EquipoDicomController.class
@@ -157,6 +161,7 @@ clientews\servicio\EncontrarPaquetePorIdResponse.class
 clientews\servicio\RegistrarPaqueteResponse.class
 clientews\servicio\ObtenerOrdenVentaNoPagadosPaciente.class
 Controladores\CortesController.class
+Vistas\Paquetes$2.class
 clientews\servicio\RegistrarVentaConceptosListResponse.class
 clientews\servicio\EncontrarPacienteLikeNombre.class
 clientews\servicio\OrdenVenta.class
@@ -170,6 +175,7 @@ clientews\servicio\ObtenerOrdenVentaNoPagadosPacienteResponse.class
 Tables\TablePacientes.class
 DAO\InstruccionesDaoImpl.class
 Utilidades\QrUtil.class
+Vistas\Paquetes$1.class
 clientews\servicio\Mexico.class
 clientews\servicio\EncontrarVentaConceptosPorInstitucionFechas.class
 clientews\servicio\Conceptos.class
@@ -228,6 +234,7 @@ Vistas\EquipoDicomVista$2.class
 Tables\TableOrdenesVenta.class
 clientews\servicio\EncontrarFormaPagoPorIdResponse.class
 Vistas\AreasVista.class
+Vistas\Paquetes$5.class
 clientews\servicio\Usuarios.class
 clientews\servicio\WorklistServiceImplService.class
 clientews\servicio\EliminarVentaConceptos.class
@@ -253,6 +260,7 @@ clientews\servicio\RegistrarPaciente.class
 clientews\servicio\EncontrarVentaConceptosPorIdResponse.class
 clientews\servicio\ObtenerConceptosDePaquete.class
 Controladores\AreasController.class
+Tables\TablePaquetes.class
 clientews\servicio\InstruccionesServiceWs.class
 clientews\servicio\EncontrarFormaPagoPorNombre.class
 clientews\servicio\AunEsPosibleAgendarEnInstitucion.class
@@ -284,6 +292,7 @@ Utilidades\UrlUtil.class
 clientews\servicio\EncontrarPacientePorIdResponse.class
 clientews\servicio\EliminarOrdenVenta.class
 clientews\servicio\VentaConceptosServiceImplService.class
+Vistas\Paquetes.class
 clientews\servicio\Pacientes.class
 clientews\servicio\PaquetesServiceWs.class
 clientews\servicio\EliminarConceptoPaqueteResponse.class
@@ -322,6 +331,7 @@ Vistas\Menu$1.class
 clientews\servicio\EncontrarConceptoInstitucionPorIdConceptoIdInstitucion.class
 DAO\PaqueteDaoImpl.class
 Vistas\EstudiosInstituciones$1.class
+Controladores\PaquetesController.class
 clientews\servicio\EncontrarEquipoDicomLikeNombreResponse.class
 clientews\servicio\Actualizar.class
 clientews\servicio\EncontrarInstruccionesPorNombre.class

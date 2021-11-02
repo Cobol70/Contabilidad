@@ -15,7 +15,7 @@ import Vistas.Estudios;
 import Vistas.EstudiosInstituciones;
 import Vistas.Instituciones;
 import Vistas.Menu;
-import static java.awt.Frame.ICONIFIED;
+import Vistas.Paquetes;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -51,6 +51,7 @@ public class MenuController implements ActionListener, MouseListener {
         this.vista.btnEstudiosInstituciones.addActionListener(this);
         this.vista.btnConsentimientos.addActionListener(this);
         this.vista.btnEquipoDicom.addActionListener(this);
+        this.vista.btnPaquetes.addActionListener(this);
         
         this.vista.jLCerrar.addMouseListener(this);
         this.vista.jLMinimizar.addMouseListener(this);
@@ -72,6 +73,9 @@ public class MenuController implements ActionListener, MouseListener {
             abrirConsentimientos();
         }else if(e.getSource() == this.vista.btnEquipoDicom){
             abrirEquipoDicom();
+        }
+        else if(e.getSource() == this.vista.btnPaquetes){
+            abrirPaquetes();
         }
     }
 
@@ -115,6 +119,12 @@ public class MenuController implements ActionListener, MouseListener {
         vista.dispose();
         EquipoDicomController controladorEquipoDicom = new EquipoDicomController(new EquipoDicomVista());
         controladorEquipoDicom.iniciar();
+    }
+    
+    private void abrirPaquetes(){
+       /* vista.dispose();
+        PaquetesController controladorPaquetes = new PaquetesController(new Paquetes());
+        controladorPaquetes.iniciar();*/
     }
 
     @Override
