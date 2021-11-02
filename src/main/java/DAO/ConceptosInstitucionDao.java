@@ -6,6 +6,7 @@
 package DAO;
 
 import clientews.servicio.ConceptosInstitucion;
+import java.util.List;
 
 /**
  *
@@ -16,5 +17,7 @@ public interface ConceptosInstitucionDao {
 
     public void actualizarConceptosInstitucion(ConceptosInstitucion conceptoInstitucion);
         public ConceptosInstitucion encontrarConceptoInstitucionPorIdConceptoIdInstitucion(Long idConcepto, Long idInstitucion);
+            public List<ConceptosInstitucion> obtenerConceptosInstitucionPorIdInstitucion(Long idInstitucion);
+
 
 }

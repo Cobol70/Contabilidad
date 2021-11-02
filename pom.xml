@@ -25,11 +25,7 @@
     </repositories>
     
     <dependencies>
-        <dependency>
-            <groupId>unknown.binary</groupId>
-            <artifactId>AbsoluteLayout</artifactId>
-            <version>SNAPSHOT</version>
-        </dependency>
+
         <dependency>
             <groupId>com.toedter</groupId>
             <artifactId>jcalendar</artifactId>
@@ -40,6 +36,11 @@
             <artifactId>commons-lang</artifactId>
             <version>2.6</version>
             <type>jar</type>
+        </dependency>
+        <dependency>
+            <groupId>unknown.binary</groupId>
+            <artifactId>AbsoluteLayout</artifactId>
+            <version>SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>javax</groupId>
@@ -99,6 +100,7 @@
                                 <wsdlUrl>http://172.17.200.61:8080/InstruccionesServiceImplService/InstruccionesServiceImpl?wsdl</wsdlUrl>
                                 <wsdlUrl>http://172.17.200.61:8080/ConsentimientoServiceImplService/ConsentimientoServiceImpl?wsdl</wsdlUrl>
                                 <wsdlUrl>http://172.17.200.61:8080/ConsentimientoConceptoServiceImplService/ConsentimientoConceptoServiceImpl?wsdl</wsdlUrl>
+                                <wsdlUrl>http://172.17.200.61:8080/PaquetesServiceImplService/PaquetesServiceImpl?wsdl</wsdlUrl>
                             </wsdlUrls>
                             <packageName>clientews.servicio</packageName>
                             <sourceDestDir>${basedir}/src/main/java</sourceDestDir>
