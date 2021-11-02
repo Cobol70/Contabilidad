@@ -72,6 +72,8 @@ public class Menu extends javax.swing.JFrame {
         jLCerrar = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
+        jPanel11 = new javax.swing.JPanel();
+        btnPaquetes = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -196,7 +198,7 @@ public class Menu extends javax.swing.JFrame {
         btnEquipoDicom.setText("Equipo dicom");
         jPanel8.add(btnEquipoDicom, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, 120, 30));
 
-        jPanel10.add(jPanel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 320, 140, 110));
+        jPanel10.add(jPanel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 320, 140, 110));
 
         jLogoEmpresa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/Diagnocons.png"))); // NOI18N
         jPanel10.add(jLogoEmpresa, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 20, -1, -1));
@@ -214,6 +216,14 @@ public class Menu extends javax.swing.JFrame {
         jButton2.setText("jButton2");
         jButton2.setContentAreaFilled(false);
         jPanel10.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(623, 0, 30, 30));
+
+        jPanel11.setBackground(new java.awt.Color(204, 204, 255));
+        jPanel11.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        btnPaquetes.setText("Paquetes");
+        jPanel11.add(btnPaquetes, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, 120, 30));
+
+        jPanel10.add(jPanel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 320, 140, 110));
 
         getContentPane().add(jPanel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 460));
 
@@ -278,6 +288,7 @@ public class Menu extends javax.swing.JFrame {
     public javax.swing.JButton btnEstudios;
     public javax.swing.JButton btnEstudiosInstituciones;
     public javax.swing.JButton btnInstituciones;
+    public javax.swing.JButton btnPaquetes;
     public javax.swing.JButton jButton1;
     public javax.swing.JButton jButton2;
     private javax.swing.JLabel jLAreaM;
@@ -292,6 +303,7 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JLabel jLogoEmpresa;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
+    private javax.swing.JPanel jPanel11;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;

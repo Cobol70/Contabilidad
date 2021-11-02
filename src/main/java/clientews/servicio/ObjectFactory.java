@@ -24,15 +24,27 @@ import javax.xml.namespace.QName;
 @XmlRegistry
 public class ObjectFactory {
 
+    private final static QName _ConceptoPaquete_QNAME = new QName("http://servicio.sga.gm.com.mx/", "conceptoPaquete");
     private final static QName _Conceptos_QNAME = new QName("http://servicio.sga.gm.com.mx/", "conceptos");
-    private final static QName _ConsentimientoConcepto_QNAME = new QName("http://servicio.sga.gm.com.mx/", "consentimientoConcepto");
-    private final static QName _EliminarConsentimientoConcepto_QNAME = new QName("http://servicio.sga.gm.com.mx/", "eliminarConsentimientoConcepto");
+    private final static QName _ObtenerConceptosDePaqueteResponse_QNAME = new QName("http://servicio.sga.gm.com.mx/", "obtenerConceptosDePaqueteResponse");
+    private final static QName _ObtenerConceptosDePaquete_QNAME = new QName("http://servicio.sga.gm.com.mx/", "obtenerConceptosDePaquete");
+    private final static QName _RegistrarConceptoPaquete_QNAME = new QName("http://servicio.sga.gm.com.mx/", "registrarConceptoPaquete");
+    private final static QName _EliminarConceptoPaquete_QNAME = new QName("http://servicio.sga.gm.com.mx/", "eliminarConceptoPaquete");
+    private final static QName _EliminarPaquete_QNAME = new QName("http://servicio.sga.gm.com.mx/", "eliminarPaquete");
+    private final static QName _EliminarPaqueteResponse_QNAME = new QName("http://servicio.sga.gm.com.mx/", "eliminarPaqueteResponse");
+    private final static QName _ListarPaquetes_QNAME = new QName("http://servicio.sga.gm.com.mx/", "listarPaquetes");
+    private final static QName _ListarPaquetesResponse_QNAME = new QName("http://servicio.sga.gm.com.mx/", "listarPaquetesResponse");
+    private final static QName _RegistrarConceptoPaqueteResponse_QNAME = new QName("http://servicio.sga.gm.com.mx/", "registrarConceptoPaqueteResponse");
+    private final static QName _RegistrarPaqueteResponse_QNAME = new QName("http://servicio.sga.gm.com.mx/", "registrarPaqueteResponse");
+    private final static QName _EncontrarPaquetePorIdResponse_QNAME = new QName("http://servicio.sga.gm.com.mx/", "encontrarPaquetePorIdResponse");
+    private final static QName _EncontrarPaquetePorId_QNAME = new QName("http://servicio.sga.gm.com.mx/", "encontrarPaquetePorId");
+    private final static QName _ModificarPaquete_QNAME = new QName("http://servicio.sga.gm.com.mx/", "modificarPaquete");
     private final static QName _Instrucciones_QNAME = new QName("http://servicio.sga.gm.com.mx/", "instrucciones");
-    private final static QName _EliminarConsentimientoConceptoResponse_QNAME = new QName("http://servicio.sga.gm.com.mx/", "eliminarConsentimientoConceptoResponse");
+    private final static QName _Paquete_QNAME = new QName("http://servicio.sga.gm.com.mx/", "paquete");
     private final static QName _Areas_QNAME = new QName("http://servicio.sga.gm.com.mx/", "areas");
-    private final static QName _Consentimiento_QNAME = new QName("http://servicio.sga.gm.com.mx/", "consentimiento");
-    private final static QName _RegistrarConsentimientoConcepto_QNAME = new QName("http://servicio.sga.gm.com.mx/", "registrarConsentimientoConcepto");
-    private final static QName _RegistrarConsentimientoConceptoResponse_QNAME = new QName("http://servicio.sga.gm.com.mx/", "registrarConsentimientoConceptoResponse");
+    private final static QName _ModificarPaqueteResponse_QNAME = new QName("http://servicio.sga.gm.com.mx/", "modificarPaqueteResponse");
+    private final static QName _RegistrarPaquete_QNAME = new QName("http://servicio.sga.gm.com.mx/", "registrarPaquete");
+    private final static QName _EliminarConceptoPaqueteResponse_QNAME = new QName("http://servicio.sga.gm.com.mx/", "eliminarConceptoPaqueteResponse");
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: clientews.servicio
@@ -50,43 +62,51 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link ConsentimientoConcepto }
+     * Create an instance of {@link ModificarPaquete }
      * 
      */
-    public ConsentimientoConcepto createConsentimientoConcepto() {
-        return new ConsentimientoConcepto();
+    public ModificarPaquete createModificarPaquete() {
+        return new ModificarPaquete();
     }
 
     /**
-     * Create an instance of {@link EliminarConsentimientoConcepto }
+     * Create an instance of {@link EncontrarPaquetePorId }
      * 
      */
-    public EliminarConsentimientoConcepto createEliminarConsentimientoConcepto() {
-        return new EliminarConsentimientoConcepto();
+    public EncontrarPaquetePorId createEncontrarPaquetePorId() {
+        return new EncontrarPaquetePorId();
     }
 
     /**
-     * Create an instance of {@link Conceptos }
+     * Create an instance of {@link EncontrarPaquetePorIdResponse }
      * 
      */
-    public Conceptos createConceptos() {
-        return new Conceptos();
+    public EncontrarPaquetePorIdResponse createEncontrarPaquetePorIdResponse() {
+        return new EncontrarPaquetePorIdResponse();
     }
 
     /**
-     * Create an instance of {@link RegistrarConsentimientoConcepto }
+     * Create an instance of {@link RegistrarPaqueteResponse }
      * 
      */
-    public RegistrarConsentimientoConcepto createRegistrarConsentimientoConcepto() {
-        return new RegistrarConsentimientoConcepto();
+    public RegistrarPaqueteResponse createRegistrarPaqueteResponse() {
+        return new RegistrarPaqueteResponse();
     }
 
     /**
-     * Create an instance of {@link RegistrarConsentimientoConceptoResponse }
+     * Create an instance of {@link EliminarConceptoPaqueteResponse }
      * 
      */
-    public RegistrarConsentimientoConceptoResponse createRegistrarConsentimientoConceptoResponse() {
-        return new RegistrarConsentimientoConceptoResponse();
+    public EliminarConceptoPaqueteResponse createEliminarConceptoPaqueteResponse() {
+        return new EliminarConceptoPaqueteResponse();
+    }
+
+    /**
+     * Create an instance of {@link RegistrarPaquete }
+     * 
+     */
+    public RegistrarPaquete createRegistrarPaquete() {
+        return new RegistrarPaquete();
     }
 
     /**
@@ -98,19 +118,116 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link Consentimiento }
+     * Create an instance of {@link ModificarPaqueteResponse }
      * 
      */
-    public Consentimiento createConsentimiento() {
-        return new Consentimiento();
+    public ModificarPaqueteResponse createModificarPaqueteResponse() {
+        return new ModificarPaqueteResponse();
     }
 
     /**
-     * Create an instance of {@link EliminarConsentimientoConceptoResponse }
+     * Create an instance of {@link Paquete }
      * 
      */
-    public EliminarConsentimientoConceptoResponse createEliminarConsentimientoConceptoResponse() {
-        return new EliminarConsentimientoConceptoResponse();
+    public Paquete createPaquete() {
+        return new Paquete();
+    }
+
+    /**
+     * Create an instance of {@link ObtenerConceptosDePaquete }
+     * 
+     */
+    public ObtenerConceptosDePaquete createObtenerConceptosDePaquete() {
+        return new ObtenerConceptosDePaquete();
+    }
+
+    /**
+     * Create an instance of {@link RegistrarConceptoPaquete }
+     * 
+     */
+    public RegistrarConceptoPaquete createRegistrarConceptoPaquete() {
+        return new RegistrarConceptoPaquete();
+    }
+
+    /**
+     * Create an instance of {@link ConceptoPaquete }
+     * 
+     */
+    public ConceptoPaquete createConceptoPaquete() {
+        return new ConceptoPaquete();
+    }
+
+    /**
+     * Create an instance of {@link Conceptos }
+     * 
+     */
+    public Conceptos createConceptos() {
+        return new Conceptos();
+    }
+
+    /**
+     * Create an instance of {@link ObtenerConceptosDePaqueteResponse }
+     * 
+     */
+    public ObtenerConceptosDePaqueteResponse createObtenerConceptosDePaqueteResponse() {
+        return new ObtenerConceptosDePaqueteResponse();
+    }
+
+    /**
+     * Create an instance of {@link RegistrarConceptoPaqueteResponse }
+     * 
+     */
+    public RegistrarConceptoPaqueteResponse createRegistrarConceptoPaqueteResponse() {
+        return new RegistrarConceptoPaqueteResponse();
+    }
+
+    /**
+     * Create an instance of {@link EliminarPaqueteResponse }
+     * 
+     */
+    public EliminarPaqueteResponse createEliminarPaqueteResponse() {
+        return new EliminarPaqueteResponse();
+    }
+
+    /**
+     * Create an instance of {@link ListarPaquetes }
+     * 
+     */
+    public ListarPaquetes createListarPaquetes() {
+        return new ListarPaquetes();
+    }
+
+    /**
+     * Create an instance of {@link ListarPaquetesResponse }
+     * 
+     */
+    public ListarPaquetesResponse createListarPaquetesResponse() {
+        return new ListarPaquetesResponse();
+    }
+
+    /**
+     * Create an instance of {@link EliminarConceptoPaquete }
+     * 
+     */
+    public EliminarConceptoPaquete createEliminarConceptoPaquete() {
+        return new EliminarConceptoPaquete();
+    }
+
+    /**
+     * Create an instance of {@link EliminarPaquete }
+     * 
+     */
+    public EliminarPaquete createEliminarPaquete() {
+        return new EliminarPaquete();
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link ConceptoPaquete }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://servicio.sga.gm.com.mx/", name = "conceptoPaquete")
+    public JAXBElement<ConceptoPaquete> createConceptoPaquete(ConceptoPaquete value) {
+        return new JAXBElement<ConceptoPaquete>(_ConceptoPaquete_QNAME, ConceptoPaquete.class, null, value);
     }
 
     /**
@@ -123,21 +240,120 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ConsentimientoConcepto }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link ObtenerConceptosDePaqueteResponse }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://servicio.sga.gm.com.mx/", name = "consentimientoConcepto")
-    public JAXBElement<ConsentimientoConcepto> createConsentimientoConcepto(ConsentimientoConcepto value) {
-        return new JAXBElement<ConsentimientoConcepto>(_ConsentimientoConcepto_QNAME, ConsentimientoConcepto.class, null, value);
+    @XmlElementDecl(namespace = "http://servicio.sga.gm.com.mx/", name = "obtenerConceptosDePaqueteResponse")
+    public JAXBElement<ObtenerConceptosDePaqueteResponse> createObtenerConceptosDePaqueteResponse(ObtenerConceptosDePaqueteResponse value) {
+        return new JAXBElement<ObtenerConceptosDePaqueteResponse>(_ObtenerConceptosDePaqueteResponse_QNAME, ObtenerConceptosDePaqueteResponse.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link EliminarConsentimientoConcepto }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link ObtenerConceptosDePaquete }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://servicio.sga.gm.com.mx/", name = "eliminarConsentimientoConcepto")
-    public JAXBElement<EliminarConsentimientoConcepto> createEliminarConsentimientoConcepto(EliminarConsentimientoConcepto value) {
-        return new JAXBElement<EliminarConsentimientoConcepto>(_EliminarConsentimientoConcepto_QNAME, EliminarConsentimientoConcepto.class, null, value);
+    @XmlElementDecl(namespace = "http://servicio.sga.gm.com.mx/", name = "obtenerConceptosDePaquete")
+    public JAXBElement<ObtenerConceptosDePaquete> createObtenerConceptosDePaquete(ObtenerConceptosDePaquete value) {
+        return new JAXBElement<ObtenerConceptosDePaquete>(_ObtenerConceptosDePaquete_QNAME, ObtenerConceptosDePaquete.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link RegistrarConceptoPaquete }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://servicio.sga.gm.com.mx/", name = "registrarConceptoPaquete")
+    public JAXBElement<RegistrarConceptoPaquete> createRegistrarConceptoPaquete(RegistrarConceptoPaquete value) {
+        return new JAXBElement<RegistrarConceptoPaquete>(_RegistrarConceptoPaquete_QNAME, RegistrarConceptoPaquete.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link EliminarConceptoPaquete }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://servicio.sga.gm.com.mx/", name = "eliminarConceptoPaquete")
+    public JAXBElement<EliminarConceptoPaquete> createEliminarConceptoPaquete(EliminarConceptoPaquete value) {
+        return new JAXBElement<EliminarConceptoPaquete>(_EliminarConceptoPaquete_QNAME, EliminarConceptoPaquete.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link EliminarPaquete }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://servicio.sga.gm.com.mx/", name = "eliminarPaquete")
+    public JAXBElement<EliminarPaquete> createEliminarPaquete(EliminarPaquete value) {
+        return new JAXBElement<EliminarPaquete>(_EliminarPaquete_QNAME, EliminarPaquete.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link EliminarPaqueteResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://servicio.sga.gm.com.mx/", name = "eliminarPaqueteResponse")
+    public JAXBElement<EliminarPaqueteResponse> createEliminarPaqueteResponse(EliminarPaqueteResponse value) {
+        return new JAXBElement<EliminarPaqueteResponse>(_EliminarPaqueteResponse_QNAME, EliminarPaqueteResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link ListarPaquetes }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://servicio.sga.gm.com.mx/", name = "listarPaquetes")
+    public JAXBElement<ListarPaquetes> createListarPaquetes(ListarPaquetes value) {
+        return new JAXBElement<ListarPaquetes>(_ListarPaquetes_QNAME, ListarPaquetes.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link ListarPaquetesResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://servicio.sga.gm.com.mx/", name = "listarPaquetesResponse")
+    public JAXBElement<ListarPaquetesResponse> createListarPaquetesResponse(ListarPaquetesResponse value) {
+        return new JAXBElement<ListarPaquetesResponse>(_ListarPaquetesResponse_QNAME, ListarPaquetesResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link RegistrarConceptoPaqueteResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://servicio.sga.gm.com.mx/", name = "registrarConceptoPaqueteResponse")
+    public JAXBElement<RegistrarConceptoPaqueteResponse> createRegistrarConceptoPaqueteResponse(RegistrarConceptoPaqueteResponse value) {
+        return new JAXBElement<RegistrarConceptoPaqueteResponse>(_RegistrarConceptoPaqueteResponse_QNAME, RegistrarConceptoPaqueteResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link RegistrarPaqueteResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://servicio.sga.gm.com.mx/", name = "registrarPaqueteResponse")
+    public JAXBElement<RegistrarPaqueteResponse> createRegistrarPaqueteResponse(RegistrarPaqueteResponse value) {
+        return new JAXBElement<RegistrarPaqueteResponse>(_RegistrarPaqueteResponse_QNAME, RegistrarPaqueteResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link EncontrarPaquetePorIdResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://servicio.sga.gm.com.mx/", name = "encontrarPaquetePorIdResponse")
+    public JAXBElement<EncontrarPaquetePorIdResponse> createEncontrarPaquetePorIdResponse(EncontrarPaquetePorIdResponse value) {
+        return new JAXBElement<EncontrarPaquetePorIdResponse>(_EncontrarPaquetePorIdResponse_QNAME, EncontrarPaquetePorIdResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link EncontrarPaquetePorId }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://servicio.sga.gm.com.mx/", name = "encontrarPaquetePorId")
+    public JAXBElement<EncontrarPaquetePorId> createEncontrarPaquetePorId(EncontrarPaquetePorId value) {
+        return new JAXBElement<EncontrarPaquetePorId>(_EncontrarPaquetePorId_QNAME, EncontrarPaquetePorId.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link ModificarPaquete }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://servicio.sga.gm.com.mx/", name = "modificarPaquete")
+    public JAXBElement<ModificarPaquete> createModificarPaquete(ModificarPaquete value) {
+        return new JAXBElement<ModificarPaquete>(_ModificarPaquete_QNAME, ModificarPaquete.class, null, value);
     }
 
     /**
@@ -150,12 +366,12 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link EliminarConsentimientoConceptoResponse }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link Paquete }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://servicio.sga.gm.com.mx/", name = "eliminarConsentimientoConceptoResponse")
-    public JAXBElement<EliminarConsentimientoConceptoResponse> createEliminarConsentimientoConceptoResponse(EliminarConsentimientoConceptoResponse value) {
-        return new JAXBElement<EliminarConsentimientoConceptoResponse>(_EliminarConsentimientoConceptoResponse_QNAME, EliminarConsentimientoConceptoResponse.class, null, value);
+    @XmlElementDecl(namespace = "http://servicio.sga.gm.com.mx/", name = "paquete")
+    public JAXBElement<Paquete> createPaquete(Paquete value) {
+        return new JAXBElement<Paquete>(_Paquete_QNAME, Paquete.class, null, value);
     }
 
     /**
@@ -168,30 +384,30 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link Consentimiento }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link ModificarPaqueteResponse }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://servicio.sga.gm.com.mx/", name = "consentimiento")
-    public JAXBElement<Consentimiento> createConsentimiento(Consentimiento value) {
-        return new JAXBElement<Consentimiento>(_Consentimiento_QNAME, Consentimiento.class, null, value);
+    @XmlElementDecl(namespace = "http://servicio.sga.gm.com.mx/", name = "modificarPaqueteResponse")
+    public JAXBElement<ModificarPaqueteResponse> createModificarPaqueteResponse(ModificarPaqueteResponse value) {
+        return new JAXBElement<ModificarPaqueteResponse>(_ModificarPaqueteResponse_QNAME, ModificarPaqueteResponse.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link RegistrarConsentimientoConcepto }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link RegistrarPaquete }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://servicio.sga.gm.com.mx/", name = "registrarConsentimientoConcepto")
-    public JAXBElement<RegistrarConsentimientoConcepto> createRegistrarConsentimientoConcepto(RegistrarConsentimientoConcepto value) {
-        return new JAXBElement<RegistrarConsentimientoConcepto>(_RegistrarConsentimientoConcepto_QNAME, RegistrarConsentimientoConcepto.class, null, value);
+    @XmlElementDecl(namespace = "http://servicio.sga.gm.com.mx/", name = "registrarPaquete")
+    public JAXBElement<RegistrarPaquete> createRegistrarPaquete(RegistrarPaquete value) {
+        return new JAXBElement<RegistrarPaquete>(_RegistrarPaquete_QNAME, RegistrarPaquete.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link RegistrarConsentimientoConceptoResponse }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link EliminarConceptoPaqueteResponse }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://servicio.sga.gm.com.mx/", name = "registrarConsentimientoConceptoResponse")
-    public JAXBElement<RegistrarConsentimientoConceptoResponse> createRegistrarConsentimientoConceptoResponse(RegistrarConsentimientoConceptoResponse value) {
-        return new JAXBElement<RegistrarConsentimientoConceptoResponse>(_RegistrarConsentimientoConceptoResponse_QNAME, RegistrarConsentimientoConceptoResponse.class, null, value);
+    @XmlElementDecl(namespace = "http://servicio.sga.gm.com.mx/", name = "eliminarConceptoPaqueteResponse")
+    public JAXBElement<EliminarConceptoPaqueteResponse> createEliminarConceptoPaqueteResponse(EliminarConceptoPaqueteResponse value) {
+        return new JAXBElement<EliminarConceptoPaqueteResponse>(_EliminarConceptoPaqueteResponse_QNAME, EliminarConceptoPaqueteResponse.class, null, value);
     }
 
 }
