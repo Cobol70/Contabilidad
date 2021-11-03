@@ -21,7 +21,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *         &lt;element name="fechaFin" type="{http://www.w3.org/2001/XMLSchema}int"/>
  *         &lt;element name="fechaInicio" type="{http://www.w3.org/2001/XMLSchema}dateTime" minOccurs="0"/>
  *         &lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}long" minOccurs="0"/>
- *         &lt;element name="idConcepto" type="{http://servicio.sga.gm.com.mx/}paquete" minOccurs="0"/>
+ *         &lt;element name="idConcepto" type="{http://servicio.sga.gm.com.mx/}conceptos" minOccurs="0"/>
  *         &lt;element name="porcentajeDescuento" type="{http://www.w3.org/2001/XMLSchema}short"/>
  *         &lt;element name="precio" type="{http://www.w3.org/2001/XMLSchema}double"/>
  *         &lt;element name="precioSinDescuento" type="{http://www.w3.org/2001/XMLSchema}double"/>
@@ -49,7 +49,7 @@ public class Paquete {
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar fechaInicio;
     protected Long id;
-    protected Paquete idConcepto;
+    protected Conceptos idConcepto;
     protected short porcentajeDescuento;
     protected double precio;
     protected double precioSinDescuento;
@@ -123,10 +123,10 @@ public class Paquete {
      * 
      * @return
      *     possible object is
-     *     {@link Paquete }
+     *     {@link Conceptos }
      *     
      */
-    public Paquete getIdConcepto() {
+    public Conceptos getIdConcepto() {
         return idConcepto;
     }
 
@@ -135,10 +135,10 @@ public class Paquete {
      * 
      * @param value
      *     allowed object is
-     *     {@link Paquete }
+     *     {@link Conceptos }
      *     
      */
-    public void setIdConcepto(Paquete value) {
+    public void setIdConcepto(Conceptos value) {
         this.idConcepto = value;
     }
 

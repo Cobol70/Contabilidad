@@ -23,6 +23,7 @@ import javax.xml.bind.annotation.XmlType;
  *         &lt;element name="idInstitucion" type="{http://servicio.sga.gm.com.mx/}institucion" minOccurs="0"/>
  *         &lt;element name="idInternoInstitucion" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="limiteDiario" type="{http://www.w3.org/2001/XMLSchema}int"/>
+ *         &lt;element name="nombre" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="pensionesClaveAnterior" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="precio" type="{http://www.w3.org/2001/XMLSchema}double"/>
  *         &lt;element name="precioPublico" type="{http://www.w3.org/2001/XMLSchema}double"/>
@@ -43,6 +44,7 @@ import javax.xml.bind.annotation.XmlType;
     "idInstitucion",
     "idInternoInstitucion",
     "limiteDiario",
+    "nombre",
     "pensionesClaveAnterior",
     "precio",
     "precioPublico"
@@ -56,6 +58,7 @@ public class ConceptosInstitucion {
     protected Institucion idInstitucion;
     protected String idInternoInstitucion;
     protected int limiteDiario;
+    protected String nombre;
     protected String pensionesClaveAnterior;
     protected double precio;
     protected double precioPublico;
@@ -210,6 +213,30 @@ public class ConceptosInstitucion {
      */
     public void setLimiteDiario(int value) {
         this.limiteDiario = value;
+    }
+
+    /**
+     * Obtiene el valor de la propiedad nombre.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getNombre() {
+        return nombre;
+    }
+
+    /**
+     * Define el valor de la propiedad nombre.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setNombre(String value) {
+        this.nombre = value;
     }
 
     /**

@@ -80,6 +80,9 @@ public class NuevoConsentimientoController implements ActionListener, KeyListene
 
     @Override
     public void keyReleased(KeyEvent e) {
+         if (e.getSource() == vista.txtNombre) {
+            vista.txtNombre.setText(vista.txtNombre.getText().toUpperCase());
+        }
     }
 
     private boolean datosValidos() {

@@ -108,24 +108,24 @@
                         </goals>
                         <configuration>
                             <wsdlUrls>
-                                <wsdlUrl>http://172.17.200.61:8080/AreasServiceImplService/AreasServiceImpl?wsdl</wsdlUrl>
-                                <wsdlUrl>http://172.17.200.61:8080/EquipoDicomServiceImplService/EquipoDicomServiceImpl?wsdl</wsdlUrl>
-                                <wsdlUrl>http://172.17.200.61:8080/InstitucionServiceImplService/InstitucionServiceImpl?wsdl</wsdlUrl>
-                                <wsdlUrl>http://172.17.200.61:8080/VentaConceptosServiceImplService/VentaConceptosServiceImpl?wsdl</wsdlUrl>
-                                <wsdlUrl>http://172.17.200.61:8080/ConceptosServiceImplService/ConceptosServiceImpl?wsdl</wsdlUrl>
-                                <wsdlUrl>http://172.17.200.61:8080/PacienteServiceImplService/PacienteServiceImpl?wsdl</wsdlUrl>
-                                <wsdlUrl>http://172.17.200.61:8080/CatalogoFormaPagoServiceImplService/CatalogoFormaPagoServiceImpl?wsdl</wsdlUrl>
-                                <wsdlUrl>http://172.17.200.61:8080/OrdenVentaServiceImplService/OrdenVentaServiceImpl?wsdl</wsdlUrl>
-                                <wsdlUrl>http://172.17.200.61:8080/ConceptosInstitucionServiceImplService/ConceptosInstitucionServiceImpl?wsdl</wsdlUrl>
-                                <wsdlUrl>http://172.17.200.61:8080/MexicoServiceImplService/MexicoServiceImpl?wsdl</wsdlUrl>
-                                <wsdlUrl>http://172.17.200.61:8080/PagoOrdenVentaServiceImplService/PagoOrdenVentaServiceImpl?wsdl</wsdlUrl>
-                                <wsdlUrl>http://172.17.200.61:8080/MovimientoCorteServiceImplService/MovimientoCorteServiceImpl?wsdl</wsdlUrl>
-                                <wsdlUrl>http://172.17.200.61:8080/UsuariosServiceImplService/UsuariosServiceImpl?wsdl</wsdlUrl>
-                                <wsdlUrl>http://172.17.200.61:8080/WorklistServiceImplService/WorklistServiceImpl?wsdl</wsdlUrl>
-                                <wsdlUrl>http://172.17.200.61:8080/InstruccionesServiceImplService/InstruccionesServiceImpl?wsdl</wsdlUrl>
-                                <wsdlUrl>http://172.17.200.61:8080/ConsentimientoServiceImplService/ConsentimientoServiceImpl?wsdl</wsdlUrl>
-                                <wsdlUrl>http://172.17.200.61:8080/ConsentimientoConceptoServiceImplService/ConsentimientoConceptoServiceImpl?wsdl</wsdlUrl>
-                                <wsdlUrl>http://172.17.200.61:8080/PaquetesServiceImplService/PaquetesServiceImpl?wsdl</wsdlUrl>
+                                <wsdlUrl>http://201.116.155.166:9999/AreasServiceImplService/AreasServiceImpl?wsdl</wsdlUrl>
+                                <wsdlUrl>http://201.116.155.166:9999/EquipoDicomServiceImplService/EquipoDicomServiceImpl?wsdl</wsdlUrl>
+                                <wsdlUrl>http://201.116.155.166:9999/InstitucionServiceImplService/InstitucionServiceImpl?wsdl</wsdlUrl>
+                                <wsdlUrl>http://201.116.155.166:9999/VentaConceptosServiceImplService/VentaConceptosServiceImpl?wsdl</wsdlUrl>
+                                <wsdlUrl>http://201.116.155.166:9999/ConceptosServiceImplService/ConceptosServiceImpl?wsdl</wsdlUrl>
+                                <wsdlUrl>http://201.116.155.166:9999/PacienteServiceImplService/PacienteServiceImpl?wsdl</wsdlUrl>
+                                <wsdlUrl>http://201.116.155.166:9999/CatalogoFormaPagoServiceImplService/CatalogoFormaPagoServiceImpl?wsdl</wsdlUrl>
+                                <wsdlUrl>http://201.116.155.166:9999/OrdenVentaServiceImplService/OrdenVentaServiceImpl?wsdl</wsdlUrl>
+                                <wsdlUrl>http://201.116.155.166:9999/ConceptosInstitucionServiceImplService/ConceptosInstitucionServiceImpl?wsdl</wsdlUrl>
+                                <wsdlUrl>http://201.116.155.166:9999/MexicoServiceImplService/MexicoServiceImpl?wsdl</wsdlUrl>
+                                <wsdlUrl>http://201.116.155.166:9999/PagoOrdenVentaServiceImplService/PagoOrdenVentaServiceImpl?wsdl</wsdlUrl>
+                                <wsdlUrl>http://201.116.155.166:9999/MovimientoCorteServiceImplService/MovimientoCorteServiceImpl?wsdl</wsdlUrl>
+                                <wsdlUrl>http://201.116.155.166:9999/UsuariosServiceImplService/UsuariosServiceImpl?wsdl</wsdlUrl>
+                                <wsdlUrl>http://201.116.155.166:9999/WorklistServiceImplService/WorklistServiceImpl?wsdl</wsdlUrl>
+                                <wsdlUrl>http://201.116.155.166:9999/InstruccionesServiceImplService/InstruccionesServiceImpl?wsdl</wsdlUrl>
+                                <wsdlUrl>http://201.116.155.166:9999/ConsentimientoServiceImplService/ConsentimientoServiceImpl?wsdl</wsdlUrl>
+                                <wsdlUrl>http://201.116.155.166:9999/ConsentimientoConceptoServiceImplService/ConsentimientoConceptoServiceImpl?wsdl</wsdlUrl>
+                                <wsdlUrl>http://201.116.155.166:9999/PaquetesServiceImplService/PaquetesServiceImpl?wsdl</wsdlUrl>
                             </wsdlUrls>
                             <packageName>clientews.servicio</packageName>
                             <sourceDestDir>${basedir}/src/main/java</sourceDestDir>

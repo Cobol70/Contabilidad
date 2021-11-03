@@ -42,14 +42,12 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *         &lt;element name="idConvenioVc" type="{http://www.w3.org/2001/XMLSchema}int"/>
  *         &lt;element name="idEquipoDicom" type="{http://servicio.sga.gm.com.mx/}equipoDicom" minOccurs="0"/>
  *         &lt;element name="idInstitucion" type="{http://servicio.sga.gm.com.mx/}institucion" minOccurs="0"/>
- *         &lt;element name="idMedicoRadiologo" type="{http://servicio.sga.gm.com.mx/}medico" minOccurs="0"/>
  *         &lt;element name="idOrdenVenta" type="{http://servicio.sga.gm.com.mx/}ordenVenta" minOccurs="0"/>
  *         &lt;element name="idPacienteVc" type="{http://servicio.sga.gm.com.mx/}pacientes" minOccurs="0"/>
  *         &lt;element name="idPacs" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="idPersonalMedicoVc" type="{http://www.w3.org/2001/XMLSchema}int"/>
  *         &lt;element name="idRadiologoExterno" type="{http://www.w3.org/2001/XMLSchema}int"/>
  *         &lt;element name="idSignosvVc" type="{http://www.w3.org/2001/XMLSchema}integer" minOccurs="0"/>
- *         &lt;element name="idTecnico" type="{http://servicio.sga.gm.com.mx/}tecnico" minOccurs="0"/>
  *         &lt;element name="idUsuarioVc" type="{http://www.w3.org/2001/XMLSchema}int"/>
  *         &lt;element name="idVc" type="{http://www.w3.org/2001/XMLSchema}long" minOccurs="0"/>
  *         &lt;element name="interpretacionVc" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
@@ -104,14 +102,12 @@ import javax.xml.datatype.XMLGregorianCalendar;
     "idConvenioVc",
     "idEquipoDicom",
     "idInstitucion",
-    "idMedicoRadiologo",
     "idOrdenVenta",
     "idPacienteVc",
     "idPacs",
     "idPersonalMedicoVc",
     "idRadiologoExterno",
     "idSignosvVc",
-    "idTecnico",
     "idUsuarioVc",
     "idVc",
     "interpretacionVc",
@@ -172,14 +168,12 @@ public class VentaConceptos {
     protected int idConvenioVc;
     protected EquipoDicom idEquipoDicom;
     protected Institucion idInstitucion;
-    protected Medico idMedicoRadiologo;
     protected OrdenVenta idOrdenVenta;
     protected Pacientes idPacienteVc;
     protected String idPacs;
     protected int idPersonalMedicoVc;
     protected int idRadiologoExterno;
     protected BigInteger idSignosvVc;
-    protected Tecnico idTecnico;
     protected int idUsuarioVc;
     protected Long idVc;
     protected String interpretacionVc;
@@ -698,30 +692,6 @@ public class VentaConceptos {
     }
 
     /**
-     * Obtiene el valor de la propiedad idMedicoRadiologo.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Medico }
-     *     
-     */
-    public Medico getIdMedicoRadiologo() {
-        return idMedicoRadiologo;
-    }
-
-    /**
-     * Define el valor de la propiedad idMedicoRadiologo.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Medico }
-     *     
-     */
-    public void setIdMedicoRadiologo(Medico value) {
-        this.idMedicoRadiologo = value;
-    }
-
-    /**
      * Obtiene el valor de la propiedad idOrdenVenta.
      * 
      * @return
@@ -847,30 +817,6 @@ public class VentaConceptos {
      */
     public void setIdSignosvVc(BigInteger value) {
         this.idSignosvVc = value;
-    }
-
-    /**
-     * Obtiene el valor de la propiedad idTecnico.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Tecnico }
-     *     
-     */
-    public Tecnico getIdTecnico() {
-        return idTecnico;
-    }
-
-    /**
-     * Define el valor de la propiedad idTecnico.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Tecnico }
-     *     
-     */
-    public void setIdTecnico(Tecnico value) {
-        this.idTecnico = value;
     }
 
     /**

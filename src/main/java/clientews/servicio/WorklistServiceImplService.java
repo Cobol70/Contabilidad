@@ -17,7 +17,7 @@ import javax.xml.ws.WebServiceFeature;
  * Generated source version: 2.2
  * 
  */
-@WebServiceClient(name = "WorklistServiceImplService", targetNamespace = "http://servicio.sga.gm.com.mx/", wsdlLocation = "http://172.17.200.61:8080/WorklistServiceImplService/WorklistServiceImpl?wsdl")
+@WebServiceClient(name = "WorklistServiceImplService", targetNamespace = "http://servicio.sga.gm.com.mx/", wsdlLocation = "http://201.116.155.166:9999/WorklistServiceImplService/WorklistServiceImpl?wsdl")
 public class WorklistServiceImplService
     extends Service
 {
@@ -30,7 +30,7 @@ public class WorklistServiceImplService
         URL url = null;
         WebServiceException e = null;
         try {
-            url = new URL("http://172.17.200.61:8080/WorklistServiceImplService/WorklistServiceImpl?wsdl");
+            url = new URL("http://201.116.155.166:9999/WorklistServiceImplService/WorklistServiceImpl?wsdl");
         } catch (MalformedURLException ex) {
             e = new WebServiceException(ex);
         }

@@ -17,7 +17,7 @@ import javax.xml.ws.WebServiceFeature;
  * Generated source version: 2.2
  * 
  */
-@WebServiceClient(name = "AreasServiceImplService", targetNamespace = "http://servicio.sga.gm.com.mx/", wsdlLocation = "http://172.17.200.61:8080/AreasServiceImplService/AreasServiceImpl?wsdl")
+@WebServiceClient(name = "AreasServiceImplService", targetNamespace = "http://servicio.sga.gm.com.mx/", wsdlLocation = "http://201.116.155.166:9999/AreasServiceImplService/AreasServiceImpl?wsdl")
 public class AreasServiceImplService
     extends Service
 {
@@ -30,7 +30,7 @@ public class AreasServiceImplService
         URL url = null;
         WebServiceException e = null;
         try {
-            url = new URL("http://172.17.200.61:8080/AreasServiceImplService/AreasServiceImpl?wsdl");
+            url = new URL("http://201.116.155.166:9999/AreasServiceImplService/AreasServiceImpl?wsdl");
         } catch (MalformedURLException ex) {
             e = new WebServiceException(ex);
         }

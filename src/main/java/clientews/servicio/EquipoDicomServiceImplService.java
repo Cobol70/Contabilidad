@@ -17,7 +17,7 @@ import javax.xml.ws.WebServiceFeature;
  * Generated source version: 2.2
  * 
  */
-@WebServiceClient(name = "EquipoDicomServiceImplService", targetNamespace = "http://servicio.sga.gm.com.mx/", wsdlLocation = "http://172.17.200.61:8080/EquipoDicomServiceImplService/EquipoDicomServiceImpl?wsdl")
+@WebServiceClient(name = "EquipoDicomServiceImplService", targetNamespace = "http://servicio.sga.gm.com.mx/", wsdlLocation = "http://201.116.155.166:9999/EquipoDicomServiceImplService/EquipoDicomServiceImpl?wsdl")
 public class EquipoDicomServiceImplService
     extends Service
 {
@@ -30,7 +30,7 @@ public class EquipoDicomServiceImplService
         URL url = null;
         WebServiceException e = null;
         try {
-            url = new URL("http://172.17.200.61:8080/EquipoDicomServiceImplService/EquipoDicomServiceImpl?wsdl");
+            url = new URL("http://201.116.155.166:9999/EquipoDicomServiceImplService/EquipoDicomServiceImpl?wsdl");
         } catch (MalformedURLException ex) {
             e = new WebServiceException(ex);
         }

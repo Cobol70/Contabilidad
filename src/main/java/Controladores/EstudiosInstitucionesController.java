@@ -5,6 +5,8 @@
  */
 package Controladores;
 
+import DAO.AreasDao;
+import DAO.AreasDaoImpl;
 import DAO.ConceptosDao;
 import DAO.ConceptosInstitucionDao;
 import DAO.ConceptosDaoImp;
@@ -16,6 +18,7 @@ import Tables.TableInstituciones;
 import Utilidades.BarUtil;
 import Vistas.EstudiosInstituciones;
 import Vistas.Menu;
+import clientews.servicio.Areas;
 import clientews.servicio.Conceptos;
 import clientews.servicio.ConceptosInstitucion;
 import clientews.servicio.Institucion;
@@ -26,6 +29,7 @@ import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+import javax.swing.JComboBox;
 import javax.swing.JOptionPane;
 
 /**
@@ -41,6 +45,8 @@ public class EstudiosInstitucionesController implements ActionListener, KeyListe
     private Institucion institucionSeleccionada;
     private Conceptos estudioSeleccionado;
     private ConceptosInstitucion relacionSeleccionada;
+    private Areas areaBusqueda;
+    private AreasDao modeloAreas;
 
     public EstudiosInstitucionesController(EstudiosInstituciones vista) {
         this.vista = vista;
@@ -52,9 +58,11 @@ public class EstudiosInstitucionesController implements ActionListener, KeyListe
         this.vista.btnRegresar.addActionListener(this);
         this.vista.btnCerrar.addActionListener(this);
         this.vista.btnMin.addActionListener(this);
+        this.vista.comboArea.addActionListener(this);
 
         this.vista.txtBuscarEstudio.addKeyListener(this);
         this.vista.txtBuscarInstitucion.addKeyListener(this);
+        this.vista.txtNombreInterno.addKeyListener(this);
 
         this.vista.tableEstudios.addMouseListener(this);
         this.vista.tableInstituciones.addMouseListener(this);
@@ -69,6 +77,7 @@ public class EstudiosInstitucionesController implements ActionListener, KeyListe
         modeloConceptos = new ConceptosDaoImp();
         modeloInstituciones = new InstitucionDaoImp();
         modeloConceptosInstituciones = new ConceptosInstitucionDaoImpl();
+        modeloAreas = new AreasDaoImpl();
 
         vista.txtEstudio.setEditable(false);
         vista.txtInstitucion.setEditable(false);
@@ -76,6 +85,7 @@ public class EstudiosInstitucionesController implements ActionListener, KeyListe
         cargarTablaConceptosVacia();
         cargarTablaInstitucionesVacia();
         cargarTablaInstitucionesConceptosVacia();
+        cargarAreas();
     }
 
     @Override
@@ -90,10 +100,15 @@ public class EstudiosInstitucionesController implements ActionListener, KeyListe
             modificar();
         } else if (e.getSource() == vista.btnRegresar) {
             abrirMenu();
-        }else if (e.getSource() == vista.btnMin) {
+        } else if (e.getSource() == vista.btnMin) {
             BarUtil.minimizar(vista);
         } else if (e.getSource() == vista.btnCerrar) {
             BarUtil.cerrar(vista);
+        } else if (e.getSource() == vista.comboArea) {
+            if (vista.comboArea.getSelectedIndex() != 0) {
+                encontrarAreaBusqueda();
+            }
+            realizarBusqueda();
         }
     }
 
@@ -114,11 +129,9 @@ public class EstudiosInstitucionesController implements ActionListener, KeyListe
                 cargarTablaInstitucionesVacia();
             }
         } else if (e.getSource() == vista.txtBuscarEstudio) {
-            if (!vista.txtBuscarEstudio.getText().equals("")) {
-                cargarTablaConceptosLikeNombre(vista.txtBuscarEstudio.getText());
-            } else {
-                cargarTablaConceptosVacia();
-            }
+            realizarBusqueda();
+        } else if (e.getSource() == vista.txtNombreInterno) {
+            vista.txtNombreInterno.setText(vista.txtNombreInterno.getText().toUpperCase());
         }
     }
 
@@ -284,6 +297,7 @@ public class EstudiosInstitucionesController implements ActionListener, KeyListe
         vista.txtClaveContpaq.setText(relacionSeleccionada.getIdContpaq());
         vista.txtClaveAnteriorPensiones.setText(relacionSeleccionada.getPensionesClaveAnterior());
         vista.checkActivo.setSelected(relacionSeleccionada.isActivo());
+        vista.txtNombreInterno.setText(relacionSeleccionada.getNombre());
     }
 
     private boolean datosValidosGuardar() {
@@ -312,6 +326,9 @@ public class EstudiosInstitucionesController implements ActionListener, KeyListe
                 return false;
             }
         }
+        if (vista.txtNombreInterno.getText().equals("")) {
+            return false;
+        }
         return true;
     }
 
@@ -324,6 +341,7 @@ public class EstudiosInstitucionesController implements ActionListener, KeyListe
         relacionSeleccionada.setIdInternoInstitucion(vista.txtClaveInstitucion.getText());
         relacionSeleccionada.setLimiteDiario(0); //Ya no es límite diario por estudio
         relacionSeleccionada.setPensionesClaveAnterior(vista.txtClaveAnteriorPensiones.getText());
+        relacionSeleccionada.setNombre(vista.txtNombreInterno.getText());
         if (!vista.txtCosto.getText().equals("")) {
             relacionSeleccionada.setPrecio(Double.parseDouble(vista.txtCosto.getText()));
         }
@@ -344,6 +362,7 @@ public class EstudiosInstitucionesController implements ActionListener, KeyListe
         vista.txtClaveContpaq.setText("");
         vista.txtClaveAnteriorPensiones.setText("");
         vista.checkActivo.setSelected(false);
+        vista.txtNombreInterno.setText("");
 
         vista.txtBuscarEstudio.setText("");
         vista.txtBuscarInstitucion.setText("");
@@ -388,6 +407,9 @@ public class EstudiosInstitucionesController implements ActionListener, KeyListe
                 return false;
             }
         }
+        if (vista.txtNombreInterno.getText().equals("")) {
+            return false;
+        }
         return true;
     }
 
@@ -405,6 +427,7 @@ public class EstudiosInstitucionesController implements ActionListener, KeyListe
         relacionSeleccionada.setIdInternoInstitucion(vista.txtClaveInstitucion.getText());
         relacionSeleccionada.setLimiteDiario(0); //Ya no es límite diario por estudio
         relacionSeleccionada.setPensionesClaveAnterior(vista.txtClaveAnteriorPensiones.getText());
+        relacionSeleccionada.setNombre(vista.txtNombreInterno.getText());
         if (!vista.txtCosto.getText().equals("")) {
             relacionSeleccionada.setPrecio(Double.parseDouble(vista.txtCosto.getText()));
         }
@@ -413,6 +436,65 @@ public class EstudiosInstitucionesController implements ActionListener, KeyListe
 
     private void modificarDb() {
         modeloConceptosInstituciones.actualizarConceptosInstitucion(relacionSeleccionada);
+    }
+
+    private void realizarBusqueda() {
+        if (!vista.txtBuscarEstudio.getText().equals("") && vista.comboArea.getSelectedIndex() != 0) { //Buscar por los dos parámetros
+            cargarEstudios(vista.txtBuscarEstudio.getText(), areaBusqueda);
+            System.out.println("Buscando por dos parámetros");
+        } else if (!vista.txtBuscarEstudio.getText().equals("")) { //Buscar solo por nombre
+            cargarEstudios(vista.txtBuscarEstudio.getText());
+            System.out.println("Buscando por nombre");
+        } else if (vista.comboArea.getSelectedIndex() != 0) { //Buscar por area
+            cargarEstudios(areaBusqueda);
+            System.out.println("Buscando por área");
+        } else {
+            cargarEstudios(); //cargar todo
+            System.out.println("Cargando todo");
+        }
+    }
+
+    private void cargarEstudios(String text, Areas paraBuscar) {
+        TableConceptos generadorTabla = new TableConceptos();
+        generadorTabla.cargarTabla(vista.tableEstudios, modeloConceptos.encontrarConceptosPorAreaYNombre(paraBuscar.getIdA(), text));
+    }
+
+    private void cargarEstudios(Areas paraBuscar) {
+        TableConceptos generadorTabla = new TableConceptos();
+        generadorTabla.cargarTabla(vista.tableEstudios, modeloConceptos.encontrarConceptosPorIdArea(paraBuscar.getIdA()));
+    }
+
+    private void cargarEstudios() {
+        TableConceptos generadorTabla = new TableConceptos();
+        generadorTabla.cargarTabla(vista.tableEstudios, modeloConceptos.encontrarTodosConceptos());
+    }
+
+    private void cargarEstudios(String text) {
+        TableConceptos generadorTabla = new TableConceptos();
+        generadorTabla.cargarTabla(vista.tableEstudios, modeloConceptos.encontrarConceptoLikeNombre(text));
+    }
+
+    private void cargarAreas() {
+        try {
+            JComboBox combo = new JComboBox();
+            combo.removeAllItems();
+            combo.addItem("SELECCIONE UNA OPCIÓN");
+            for (Areas areasFor : modeloAreas.listar()) {
+                combo.addItem(areasFor.getNombreA());
+            }
+            vista.comboArea.setModel(combo.getModel());
+        } catch (Exception e) {
+            e.printStackTrace(System.out);
+        }
+    }
+    
+    private void encontrarAreaBusqueda() {
+        try {
+            areaBusqueda = modeloAreas.encontrarPorNombre(vista.comboArea.getSelectedItem().toString());
+            System.out.println(areaBusqueda.getIdA() + " " + areaBusqueda.getNombreA());
+        } catch (Exception e) {
+            System.out.println("No pude encontrar el área para búsqueda");
+        }
     }
 
 }

@@ -17,7 +17,7 @@ import javax.xml.ws.WebServiceFeature;
  * Generated source version: 2.2
  * 
  */
-@WebServiceClient(name = "MovimientoCorteServiceImplService", targetNamespace = "http://servicio.sga.gm.com.mx/", wsdlLocation = "http://172.17.200.61:8080/MovimientoCorteServiceImplService/MovimientoCorteServiceImpl?wsdl")
+@WebServiceClient(name = "MovimientoCorteServiceImplService", targetNamespace = "http://servicio.sga.gm.com.mx/", wsdlLocation = "http://201.116.155.166:9999/MovimientoCorteServiceImplService/MovimientoCorteServiceImpl?wsdl")
 public class MovimientoCorteServiceImplService
     extends Service
 {
@@ -30,7 +30,7 @@ public class MovimientoCorteServiceImplService
         URL url = null;
         WebServiceException e = null;
         try {
-            url = new URL("http://172.17.200.61:8080/MovimientoCorteServiceImplService/MovimientoCorteServiceImpl?wsdl");
+            url = new URL("http://201.116.155.166:9999/MovimientoCorteServiceImplService/MovimientoCorteServiceImpl?wsdl");
         } catch (MalformedURLException ex) {
             e = new WebServiceException(ex);
         }
