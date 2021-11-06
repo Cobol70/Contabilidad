@@ -21,21 +21,16 @@ public class TablePaquetes {
 
         DefaultTableModel dt = new DefaultTableModel();
         dt.addColumn("Nombre");
-        dt.addColumn("Fecha inicio");
-        dt.addColumn("Fecha fin");
-        dt.addColumn("Precio");
+      
         dt.addColumn("Id");
 
        Paquete paquete = new Paquete();
 
         for (int i = 0; i < list.size(); i++) {
-            Object fila[] = new Object[5];
+            Object fila[] = new Object[2];
             paquete = list.get(i);
             fila[0] = paquete.getIdConcepto().getConceptoTo();
-            fila[1] = paquete.getFechaInicio();
-            fila[2] = paquete.getFechaFin();
-            fila[3] = paquete.getPrecio();
-            fila[4] = paquete.getId();
+            fila[1] = paquete.getId();
             
             dt.addRow(fila);
         }
@@ -43,10 +38,7 @@ public class TablePaquetes {
         tabla.setRowHeight(60);
         TableColumnModel columnModel = tabla.getColumnModel();
         columnModel.getColumn(0).setPreferredWidth(200);
-        columnModel.getColumn(1).setPreferredWidth(100);
-        columnModel.getColumn(2).setPreferredWidth(100);
-        columnModel.getColumn(3).setPreferredWidth(70);
-        columnModel.getColumn(4).setPreferredWidth(1);
+        columnModel.getColumn(1).setPreferredWidth(1);
 
     }
 

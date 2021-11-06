@@ -122,9 +122,9 @@ public class MenuController implements ActionListener, MouseListener {
     }
     
     private void abrirPaquetes(){
-       /* vista.dispose();
+        vista.dispose();
         PaquetesController controladorPaquetes = new PaquetesController(new Paquetes());
-        controladorPaquetes.iniciar();*/
+        controladorPaquetes.iniciar();
     }
 
     @Override

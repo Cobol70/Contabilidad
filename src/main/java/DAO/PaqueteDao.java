@@ -6,7 +6,7 @@
 package DAO;
 
 import clientews.servicio.ConceptoPaquete;
-import clientews.servicio.Conceptos;
+import clientews.servicio.ConceptosInstitucion;
 import clientews.servicio.Paquete;
 import java.util.List;
 
@@ -31,6 +31,10 @@ public interface PaqueteDao {
 
     public void eliminarConceptoPaquete(ConceptoPaquete conceptoPaquete);
 
-    public List<Conceptos> obtenerConceptosDePaquete(Long idPaquete);
+    public List<ConceptosInstitucion> obtenerConceptosDePaquete(Long idPaquete);
 
+        public Paquete obtenerPaquetePorNombre(String nombre);
+
+        public List<Paquete> obtenerPaquetesLikeNombre(String nombre);
+    
 }

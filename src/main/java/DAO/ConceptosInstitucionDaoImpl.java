@@ -5,6 +5,7 @@
  */
 package DAO;
 
+import clientews.servicio.Conceptos;
 import clientews.servicio.ConceptosInstitucion;
 import clientews.servicio.ConceptosInstitucionServiceImplService;
 import clientews.servicio.ConceptosInstitucionServiceWs;
@@ -46,7 +47,22 @@ public class ConceptosInstitucionDaoImpl implements ConceptosInstitucionDao{
 
     @Override
     public List<ConceptosInstitucion> obtenerConceptosInstitucionPorIdInstitucion(Long idInstitucion) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return servicio.obtenerConceptosInstitucionPorIdInstitucion(idInstitucion);
+    }
+
+    @Override
+    public List<ConceptosInstitucion> obtenerConceptosLikeNombrePorPorIdInstitucion(String nombre, Long idInstitucion) {
+        return servicio.obtenerConceptosLikeNombrePorPorIdInstitucion(nombre, idInstitucion);
+    }
+
+    @Override
+    public List<ConceptosInstitucion> obtenerConceptosLikeNombrePorPorIdInstitucionPorArea(String nombre, Long idInstitucion, int idArea) {
+        return servicio.obtenerConceptosLikeNombrePorPorIdInstitucionPorArea(nombre, idInstitucion, idArea);
+    }
+
+    @Override
+    public List<ConceptosInstitucion> obtenerConceptosPorPorIdInstitucionPorArea(Long idInstitucion, int idArea) {
+        return servicio.obtenerConceptosPorPorIdInstitucionPorArea(idInstitucion, idArea);
     }
     
 }

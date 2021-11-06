@@ -7,6 +7,7 @@ package Utilidades;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.util.Date;
 
 /**
  *
@@ -45,5 +46,17 @@ public class DateUtil {
             dia += fecha.charAt(i);
         }
         return dia + "/" + mes + "/" + anio;
+    }
+
+    public static Date dateFromSqlString(String sqlDate) {
+        String fecha = "";
+        for(int i=0; i<sqlDate.length(); i++){
+            if(sqlDate.charAt(i) == '-'){
+                fecha += '/';
+            }else{
+                fecha += sqlDate.charAt(i);
+            }
+        }
+        return new Date(fecha);
     }
 }

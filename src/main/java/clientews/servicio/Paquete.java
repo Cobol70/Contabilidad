@@ -3,9 +3,7 @@ package clientews.servicio;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
-import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
@@ -18,8 +16,8 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="fechaFin" type="{http://www.w3.org/2001/XMLSchema}int"/>
- *         &lt;element name="fechaInicio" type="{http://www.w3.org/2001/XMLSchema}dateTime" minOccurs="0"/>
+ *         &lt;element name="fechaFin" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="fechaInicio" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}long" minOccurs="0"/>
  *         &lt;element name="idConcepto" type="{http://servicio.sga.gm.com.mx/}conceptos" minOccurs="0"/>
  *         &lt;element name="porcentajeDescuento" type="{http://www.w3.org/2001/XMLSchema}short"/>
@@ -45,9 +43,8 @@ import javax.xml.datatype.XMLGregorianCalendar;
 })
 public class Paquete {
 
-    protected int fechaFin;
-    @XmlSchemaType(name = "dateTime")
-    protected XMLGregorianCalendar fechaInicio;
+    protected String fechaFin;
+    protected String fechaInicio;
     protected Long id;
     protected Conceptos idConcepto;
     protected short porcentajeDescuento;
@@ -57,16 +54,24 @@ public class Paquete {
     /**
      * Obtiene el valor de la propiedad fechaFin.
      * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public int getFechaFin() {
+    public String getFechaFin() {
         return fechaFin;
     }
 
     /**
      * Define el valor de la propiedad fechaFin.
      * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setFechaFin(int value) {
+    public void setFechaFin(String value) {
         this.fechaFin = value;
     }
 
@@ -75,10 +80,10 @@ public class Paquete {
      * 
      * @return
      *     possible object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public XMLGregorianCalendar getFechaInicio() {
+    public String getFechaInicio() {
         return fechaInicio;
     }
 
@@ -87,10 +92,10 @@ public class Paquete {
      * 
      * @param value
      *     allowed object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public void setFechaInicio(XMLGregorianCalendar value) {
+    public void setFechaInicio(String value) {
         this.fechaInicio = value;
     }
 

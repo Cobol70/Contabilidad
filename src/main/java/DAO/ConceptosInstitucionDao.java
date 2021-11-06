@@ -13,11 +13,19 @@ import java.util.List;
  * @author alanm
  */
 public interface ConceptosInstitucionDao {
-        public void registrarConceptosInstitucion(ConceptosInstitucion conceptoInstitucion);
+
+    public void registrarConceptosInstitucion(ConceptosInstitucion conceptoInstitucion);
 
     public void actualizarConceptosInstitucion(ConceptosInstitucion conceptoInstitucion);
-        public ConceptosInstitucion encontrarConceptoInstitucionPorIdConceptoIdInstitucion(Long idConcepto, Long idInstitucion);
-            public List<ConceptosInstitucion> obtenerConceptosInstitucionPorIdInstitucion(Long idInstitucion);
 
+    public ConceptosInstitucion encontrarConceptoInstitucionPorIdConceptoIdInstitucion(Long idConcepto, Long idInstitucion);
+
+    public List<ConceptosInstitucion> obtenerConceptosInstitucionPorIdInstitucion(Long idInstitucion);
+
+    public List<ConceptosInstitucion> obtenerConceptosLikeNombrePorPorIdInstitucion(String nombre, Long idInstitucion);
+
+    public List<ConceptosInstitucion> obtenerConceptosLikeNombrePorPorIdInstitucionPorArea(String nombre, Long idInstitucion, int idArea);
+
+    public List<ConceptosInstitucion> obtenerConceptosPorPorIdInstitucionPorArea(Long idInstitucion, int idArea);
 
 }

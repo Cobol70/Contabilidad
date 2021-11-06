@@ -7,6 +7,7 @@ package DAO;
 
 import clientews.servicio.ConceptoPaquete;
 import clientews.servicio.Conceptos;
+import clientews.servicio.ConceptosInstitucion;
 import clientews.servicio.Paquete;
 import clientews.servicio.PaquetesServiceImplService;
 import clientews.servicio.PaquetesServiceWs;
@@ -65,8 +66,18 @@ public class PaqueteDaoImpl implements PaqueteDao{
     }
 
     @Override
-    public List<Conceptos> obtenerConceptosDePaquete(Long idPaquete) {
+    public List<ConceptosInstitucion> obtenerConceptosDePaquete(Long idPaquete) {
         return servicio.obtenerConceptosDePaquete(idPaquete);
+    }
+
+    @Override
+    public Paquete obtenerPaquetePorNombre(String nombre) {
+        return servicio.obtenerPaquetePorNombre(nombre);
+    }
+
+    @Override
+    public List<Paquete> obtenerPaquetesLikeNombre(String nombre) {
+        return servicio.obtenerPaquetesLikeNombre(nombre);
     }
     
     

@@ -10,12 +10,12 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Clase Java para obtenerConceptosDePaqueteResponse complex type.
+ * <p>Clase Java para obtenerConceptosLikeNombrePorPorIdInstitucionResponse complex type.
  * 
  * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
  * 
  * <pre>
- * &lt;complexType name="obtenerConceptosDePaqueteResponse">
+ * &lt;complexType name="obtenerConceptosLikeNombrePorPorIdInstitucionResponse">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
@@ -29,10 +29,10 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "obtenerConceptosDePaqueteResponse", propOrder = {
+@XmlType(name = "obtenerConceptosLikeNombrePorPorIdInstitucionResponse", propOrder = {
     "_return"
 })
-public class ObtenerConceptosDePaqueteResponse {
+public class ObtenerConceptosLikeNombrePorPorIdInstitucionResponse {
 
     @XmlElement(name = "return")
     protected List<ConceptosInstitucion> _return;

@@ -2,6 +2,7 @@ clientews\servicio\EncontrarEquipoDicomLikeNombre.class
 clientews\servicio\EncontrarFormaPagoPorId.class
 clientews\servicio\RegistrarInstruccionesResponse.class
 clientews\servicio\ConceptosInstitucion.class
+clientews\servicio\ObtenerPaquetePorNombre.class
 clientews\servicio\ActualizarTotalOrdenVenta.class
 clientews\servicio\RegistrarConsentimientoResponse.class
 Tables\TableVentaConceptos.class
@@ -41,6 +42,7 @@ clientews\servicio\ActualizarIdOrdenVentaResponse.class
 DAO\ConceptosDaoImp.class
 clientews\servicio\ActualizarPacienteResponse.class
 Utilidades\BarUtil.class
+clientews\servicio\ObtenerPaquetePorNombreResponse.class
 clientews\servicio\ObtenerConceptosInstitucionPorIdInstitucionResponse.class
 clientews\servicio\ObtenerOrdenVentaPorId.class
 clientews\servicio\EncontrarConceptoLikeNombreResponse.class
@@ -57,6 +59,7 @@ clientews\servicio\EliminarVentaConceptosPorIdOrdenVenta.class
 clientews\servicio\EsCorrectoLoginResponse.class
 Vistas\Paquetes$6.class
 clientews\servicio\UsuariosServiceWs.class
+clientews\servicio\ObtenerConceptosLikeNombrePorPorIdInstitucionPorArea.class
 clientews\servicio\RegistrarConsentimientoConcepto.class
 clientews\servicio\ObjectFactory.class
 clientews\servicio\EncontrarConceptoPorNombreResponse.class
@@ -103,6 +106,7 @@ clientews\servicio\ObtenerLimiteInstitucion.class
 clientews\servicio\ConsentimientoConceptoServiceWs.class
 clientews\servicio\RegistrarMovimientoCorte.class
 clientews\servicio\ModificarPaquete.class
+clientews\servicio\ObtenerConceptosPorPorIdInstitucionPorAreaResponse.class
 clientews\servicio\ObtenerTodasInstrucciones.class
 DAO\ConsentimientoDao.class
 clientews\servicio\ListarTodasInstitucionesResponse.class
@@ -322,9 +326,11 @@ clientews\servicio\ObtenerAreaPorNombre.class
 clientews\servicio\EliminarPagoOrdenVentaPorIdOrdenVentaResponse.class
 clientews\servicio\EncontrarConceptosPorIdArea.class
 clientews\servicio\RegistrarConsentimiento.class
+Tables\TableConceptosInstitucion.class
 Vistas\Cortes.class
 Vistas\EstudiosInstituciones$2.class
 clientews\servicio\EncontrarVentaConceptosPorInstitucionFechasResponse.class
+clientews\servicio\ObtenerConceptosLikeNombrePorPorIdInstitucionPorAreaResponse.class
 clientews\servicio\ObtenerOrdenVentaConfirmadasPaciente.class
 clientews\servicio\EliminarConsentimientoConceptoResponse.class
 Vistas\Menu$1.class
@@ -349,10 +355,12 @@ clientews\servicio\ObtenerOrdenVentaNoPagadosFechaPaciente.class
 clientews\servicio\ListarPaquetes.class
 clientews\servicio\ObtenerOrdenVentaConfirmadasPagadasPacienteResponse.class
 clientews\servicio\ObtenerTodasInstruccionesResponse.class
+clientews\servicio\ObtenerConceptosLikeNombrePorPorIdInstitucionResponse.class
 clientews\servicio\UsuariosServiceImplService.class
 clientews\servicio\EncontrarEquipoDicomPorModalidad.class
 clientews\servicio\ConsentimientoServiceWs.class
 clientews\servicio\EsCorrectoLogin.class
+clientews\servicio\ObtenerPaquetesLikeNombre.class
 clientews\servicio\EncontrarAgendadosPorAreaEquipoDicomFechaInstitucionResponse.class
 Vistas\Estudios.class
 clientews\servicio\RegistrarConceptosInstitucion.class
@@ -360,6 +368,7 @@ clientews\servicio\Institucion.class
 clientews\servicio\ListarEquiposDicom.class
 clientews\servicio\ObtenerOrdenVentaConfirmadasPagadasEnFecha.class
 clientews\servicio\PagoOrdenVentaServiceWs.class
+clientews\servicio\ObtenerPaquetesLikeNombreResponse.class
 clientews\servicio\EncontrarNumeroVentaConceptosPorEquipoFechaHoraResponse.class
 clientews\servicio\ActualizarEquipoDicomResponse.class
 clientews\servicio\EncontrarFormaPagoPorNombreResponse.class
@@ -371,12 +380,14 @@ clientews\servicio\Consentimiento.class
 clientews\servicio\RegistrarPagoOrdenVentaResponse.class
 clientews\servicio\Areas.class
 clientews\servicio\EncontrarEstadoPorIdResponse.class
+clientews\servicio\ObtenerConceptosPorPorIdInstitucionPorArea.class
 clientews\servicio\EncontrarEquipoDicomPorNombre.class
 clientews\servicio\EsCandidatoParaEliminarConceptosDeOrdenResponse.class
 clientews\servicio\RegistrarConceptoPaqueteResponse.class
 DAO\ConceptosInstitucionDao.class
 clientews\servicio\RegistrarVentaConceptosList.class
 clientews\servicio\Paquete.class
+clientews\servicio\ObtenerConceptosLikeNombrePorPorIdInstitucion.class
 clientews\servicio\EncontrarEquipoDicomPorModalidadResponse.class
 clientews\servicio\ConsentimientoConcepto.class
 clientews\servicio\CatalogoFormaPagoServiceWs.class
