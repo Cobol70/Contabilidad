@@ -76,6 +76,11 @@ public class ConceptosDaoImp implements ConceptosDao{
     public List<Conceptos> encontrarConceptosPorIdInstitucion(Long idInstitucion) {
         return servicio.encontrarConceptosPorIdInstitucion(idInstitucion);
     }
+
+    @Override
+    public void actualizarConcepto(Conceptos concepto) {
+        servicio.actualizarConcepto(concepto);
+    }
     
     
     

@@ -28,6 +28,18 @@ public interface ConceptosServiceWs {
     /**
      * 
      * @param arg0
+     */
+    @WebMethod
+    @RequestWrapper(localName = "actualizarConcepto", targetNamespace = "http://servicio.sga.gm.com.mx/", className = "clientews.servicio.ActualizarConcepto")
+    @ResponseWrapper(localName = "actualizarConceptoResponse", targetNamespace = "http://servicio.sga.gm.com.mx/", className = "clientews.servicio.ActualizarConceptoResponse")
+    @Action(input = "http://servicio.sga.gm.com.mx/ConceptosServiceWs/actualizarConceptoRequest", output = "http://servicio.sga.gm.com.mx/ConceptosServiceWs/actualizarConceptoResponse")
+    public void actualizarConcepto(
+        @WebParam(name = "arg0", targetNamespace = "")
+        Conceptos arg0);
+
+    /**
+     * 
+     * @param arg0
      * @return
      *     returns java.util.List<clientews.servicio.Conceptos>
      */

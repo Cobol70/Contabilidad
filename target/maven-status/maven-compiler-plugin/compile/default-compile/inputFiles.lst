@@ -50,6 +50,7 @@ C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\clientews\s
 C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\clientews\servicio\ObtenerCantidadDeEstudiosHechosEnInstitucionFechaResponse.java
 C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\clientews\servicio\EncontrarPacienteLikeNombreResponse.java
 C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\clientews\servicio\ObtenerUltimaOrdenVentaRegistrada.java
+C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\clientews\servicio\ActualizarConcepto.java
 C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\clientews\servicio\ObtenerOrdenVentaPorId.java
 C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\clientews\servicio\RegistrarVentaConceptosResponse.java
 C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\clientews\servicio\ConsentimientoServiceWs.java
@@ -157,6 +158,7 @@ C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\clientews\s
 C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\clientews\servicio\ObtenerTodasInstrucciones.java
 C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\clientews\servicio\EncontrarConceptosPorIdVentaConceptosResponse.java
 C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\clientews\servicio\ListarEquiposDicom.java
+C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\clientews\servicio\ActualizarConceptoResponse.java
 C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\clientews\servicio\ModificarPaqueteResponse.java
 C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\clientews\servicio\ObtenerOrdenVentaNoPagadosEnFechaResponse.java
 C:\Users\alanm\Documents\NetBeansProjects\Contabilidad\src\main\java\clientews\servicio\RegistrarInstitucionResponse.java

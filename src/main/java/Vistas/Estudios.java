@@ -46,6 +46,7 @@ public class Estudios extends javax.swing.JFrame {
         comboAreaBusqueda = new javax.swing.JComboBox<>();
         btnGuardar = new javax.swing.JButton();
         btnVer = new javax.swing.JButton();
+        btnModificar = new javax.swing.JButton();
         btnCerrar = new javax.swing.JButton();
         btnMinimizar = new javax.swing.JButton();
         jLabel7 = new javax.swing.JLabel();
@@ -127,11 +128,24 @@ public class Estudios extends javax.swing.JFrame {
                 btnGuardarActionPerformed(evt);
             }
         });
-        jPanel2.add(btnGuardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 370, 90, 30));
+        jPanel2.add(btnGuardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 360, 90, 30));
 
         btnVer.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/ver2.png"))); // NOI18N
         btnVer.setContentAreaFilled(false);
         jPanel2.add(btnVer, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 270, 40, -1));
+
+        btnModificar.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        btnModificar.setForeground(new java.awt.Color(0, 0, 51));
+        btnModificar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/guardar2.png"))); // NOI18N
+        btnModificar.setText("Modificar");
+        btnModificar.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btnModificar.setContentAreaFilled(false);
+        btnModificar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnModificarActionPerformed(evt);
+            }
+        });
+        jPanel2.add(btnModificar, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 360, 100, 30));
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 70, 760, 430));
 
@@ -159,6 +173,10 @@ public class Estudios extends javax.swing.JFrame {
     private void btnRegresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegresarActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnRegresarActionPerformed
+
+    private void btnModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModificarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnModificarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -199,6 +217,7 @@ public class Estudios extends javax.swing.JFrame {
     public javax.swing.JButton btnCerrar;
     public javax.swing.JButton btnGuardar;
     public javax.swing.JButton btnMinimizar;
+    public javax.swing.JButton btnModificar;
     public javax.swing.JButton btnNuevasInstrucciones;
     public javax.swing.JButton btnRegresar;
     public javax.swing.JButton btnVer;

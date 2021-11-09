@@ -165,6 +165,7 @@ clientews\servicio\EncontrarPaquetePorIdResponse.class
 clientews\servicio\RegistrarPaqueteResponse.class
 clientews\servicio\ObtenerOrdenVentaNoPagadosPaciente.class
 Controladores\CortesController.class
+Vistas\Estudios$4.class
 Vistas\Paquetes$2.class
 clientews\servicio\RegistrarVentaConceptosListResponse.class
 clientews\servicio\EncontrarPacienteLikeNombre.class
@@ -191,6 +192,7 @@ Controladores\InstruccionesController.class
 Vistas\Instituciones$1.class
 clientews\servicio\Medico.class
 Vistas\Menu.class
+clientews\servicio\ActualizarConceptoResponse.class
 clientews\servicio\ObtenerConsentimientoPorNombreResponse.class
 Utilidades\DateUtil.class
 clientews\servicio\GuardarResponse.class
@@ -293,6 +295,7 @@ clientews\servicio\EncontrarVentaConceptosPorId.class
 clientews\servicio\RegistrarEnWorklistPorOrdenVentaResponse.class
 clientews\servicio\EncontrarConceptoPorNombre.class
 Utilidades\UrlUtil.class
+clientews\servicio\ActualizarConcepto.class
 clientews\servicio\EncontrarPacientePorIdResponse.class
 clientews\servicio\EliminarOrdenVenta.class
 clientews\servicio\VentaConceptosServiceImplService.class

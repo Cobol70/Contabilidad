@@ -42,6 +42,7 @@ public class EstudiosController implements ActionListener, MouseListener, KeyLis
     private ConceptosDao modeloConceptos;
     private AreasDao modeloAreas;
     private InstruccionesDao modeloInstrucciones;
+    private Conceptos estudioSeleccionado;
 
     public EstudiosController(Estudios vista) {
         this.vista = vista;
@@ -55,6 +56,7 @@ public class EstudiosController implements ActionListener, MouseListener, KeyLis
         this.vista.comboAreaBusqueda.addActionListener(this);
         this.vista.btnCerrar.addActionListener(this);
         this.vista.btnMinimizar.addActionListener(this);
+        this.vista.btnModificar.addActionListener(this);
 
         this.vista.txtBuscar.addKeyListener(this);
         this.vista.txtNombre.addKeyListener(this);
@@ -82,10 +84,17 @@ public class EstudiosController implements ActionListener, MouseListener, KeyLis
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == vista.btnGuardar) {
             if (datosValidos() && deseaGuardar() == 0) {
-                generarEstudio();
-                guardar();
-                limpiar();
-                cargarEstudios();
+                try {
+                    generarEstudio();
+                    guardar();
+                } catch (Exception ex) {
+                    JOptionPane.showMessageDialog(null, "No se pudo crear el estudio");
+                    ex.printStackTrace(System.out);
+                } finally {
+                    limpiar();
+                    cargarEstudios();
+                }
+
             }
         } else if (e.getSource() == vista.comboArea) {
             if (vista.comboArea.getSelectedIndex() != 0) {
@@ -104,21 +113,54 @@ public class EstudiosController implements ActionListener, MouseListener, KeyLis
             abrirMenu();
         } else if (e.getSource() == vista.btnNuevasInstrucciones) {
             abrirNuevasInstrucciones();
-        }
-        else if(e.getSource() == vista.btnVer){
-            if(vista.comboInstrucciones.getSelectedIndex()!=0){
+        } else if (e.getSource() == vista.btnVer) {
+            if (vista.comboInstrucciones.getSelectedIndex() != 0) {
                 JOptionPane.showMessageDialog(null, instruccionesSeleccionadas.getTexto());
             }
-        }
-        else if (e.getSource() == vista.btnMinimizar) {
+        } else if (e.getSource() == vista.btnMinimizar) {
             BarUtil.minimizar(vista);
         } else if (e.getSource() == vista.btnCerrar) {
             BarUtil.cerrar(vista);
+        } else if (e.getSource() == vista.btnModificar) {
+            if (deseaModificar() && datosValidos() && vista.tableEstudios.getSelectedRow() != -1 && estudioSeleccionado != null) {
+                try {
+                    obtenerNuevosDatos();
+                    modificar();
+                } catch (Exception ex) {
+                    JOptionPane.showMessageDialog(null, "No se pudo modificar el estudio");
+                    ex.printStackTrace(System.out);
+                } finally {
+                    limpiar();
+                    cargarEstudios();
+                }
+            }
         }
     }
 
     @Override
     public void mouseClicked(MouseEvent e) {
+        if (e.getSource() == vista.tableEstudios) {
+            if (vista.tableEstudios.getSelectedRow() != -1) {
+                int fila = vista.tableEstudios.getSelectedRow();
+                Long id = Long.parseLong(vista.tableEstudios.getValueAt(fila, 2).toString());
+
+                estudioSeleccionado = buscarEstudioPorId(id);
+
+                //LLevar al text
+                vista.txtNombre.setText(estudioSeleccionado.getConceptoTo());
+
+                vista.comboArea.setSelectedItem(estudioSeleccionado.getIdAreaTo().getNombreA());
+
+                vista.comboInstrucciones.setSelectedItem(estudioSeleccionado.getIdInstrucciones().getNombre());
+
+                System.out.println(estudioSeleccionado.getDicom());
+                if (estudioSeleccionado.getDicom() == Short.parseShort("0")) {
+                    vista.checkDicom.setSelected(false);
+                } else {
+                    vista.checkDicom.setSelected(true);
+                }
+            }
+        }
     }
 
     @Override
@@ -170,6 +212,11 @@ public class EstudiosController implements ActionListener, MouseListener, KeyLis
     private int deseaGuardar() {
         int dialog = JOptionPane.YES_NO_OPTION;
         return (JOptionPane.showConfirmDialog(null, "¿Seguro que desea registrar el estudio? ", "Confirmar", dialog));
+    }
+
+    private boolean deseaModificar() {
+        int dialog = JOptionPane.YES_NO_OPTION;
+        return (JOptionPane.showConfirmDialog(null, "¿Seguro que desea modificar el estudio? ", "Confirmar", dialog)) == 0;
     }
 
     private void generarEstudio() {
@@ -356,5 +403,32 @@ public class EstudiosController implements ActionListener, MouseListener, KeyLis
         InstruccionesController instruccionesController = new InstruccionesController(new NuevasInstrucciones(), this);
         instruccionesController.iniciar();
     }
-    
+
+    private Conceptos buscarEstudioPorId(Long id) {
+        Conceptos temporal = new Conceptos();
+        temporal.setIdTo(id);
+        return modeloConceptos.encontrarConceptoPorId(temporal);
+    }
+
+    private void obtenerNuevosDatos() {
+
+        if (vista.checkDicom.isSelected()) {
+            estudioSeleccionado.setDicom(Short.parseShort("1"));
+        } else {
+            estudioSeleccionado.setDicom(Short.parseShort("0"));
+        }
+
+        System.out.println(areaSeleccionada.getIdA());
+        estudioSeleccionado.setIdAreaTo(areaSeleccionada); //El área que se seleccionó
+
+        estudioSeleccionado.setIdInstrucciones(instruccionesSeleccionadas);
+
+        estudioSeleccionado.setConceptoTo(vista.txtNombre.getText());
+      
+    }
+
+    private void modificar() {
+        modeloConceptos.actualizarConcepto(estudioSeleccionado);
+    }
+
 }

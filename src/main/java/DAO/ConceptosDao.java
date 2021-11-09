@@ -33,4 +33,6 @@ public interface ConceptosDao {
     public List<Conceptos> encontrarConceptosPorAreaYNombre(Integer idArea, String name);
     
     public List<Conceptos> encontrarConceptosPorIdInstitucion(Long idInstitucion);
+                public void actualizarConcepto(Conceptos concepto);
+
 }
