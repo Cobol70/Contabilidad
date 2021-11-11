@@ -13,6 +13,8 @@ import DAO.ConceptosDaoImp;
 import DAO.ConceptosInstitucionDaoImpl;
 import DAO.InstitucionDao;
 import DAO.InstitucionDaoImp;
+import DAO.PaqueteDao;
+import DAO.PaqueteDaoImpl;
 import Tables.TableConceptos;
 import Tables.TableInstituciones;
 import Utilidades.BarUtil;
@@ -22,6 +24,7 @@ import clientews.servicio.Areas;
 import clientews.servicio.Conceptos;
 import clientews.servicio.ConceptosInstitucion;
 import clientews.servicio.Institucion;
+import clientews.servicio.Paquete;
 import static java.awt.Frame.ICONIFIED;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -47,7 +50,8 @@ public class EstudiosInstitucionesController implements ActionListener, KeyListe
     private ConceptosInstitucion relacionSeleccionada;
     private Areas areaBusqueda;
     private AreasDao modeloAreas;
-
+    private PaqueteDao modeloPaquetes;
+    
     public EstudiosInstitucionesController(EstudiosInstituciones vista) {
         this.vista = vista;
 
@@ -78,6 +82,7 @@ public class EstudiosInstitucionesController implements ActionListener, KeyListe
         modeloInstituciones = new InstitucionDaoImp();
         modeloConceptosInstituciones = new ConceptosInstitucionDaoImpl();
         modeloAreas = new AreasDaoImpl();
+        modeloPaquetes = new PaqueteDaoImpl();
 
         vista.txtEstudio.setEditable(false);
         vista.txtInstitucion.setEditable(false);
@@ -159,6 +164,12 @@ public class EstudiosInstitucionesController implements ActionListener, KeyListe
                 //LLevar al text
                 vista.txtEstudio.setText(estudioSeleccionado.getConceptoTo());
 
+                if(vista.comboArea.getSelectedItem().toString().equals("PAQUETES")){ //Si se seleccionó un paquete hay que ir a buscarlo para cargar los datos
+                    Paquete paquete = modeloPaquetes.obtenerPaquetePorNombre(estudioSeleccionado.getConceptoTo());
+                    vista.txtNombreInterno.setText(estudioSeleccionado.getConceptoTo());
+                    vista.txtPrecioPublico.setText(paquete.getPrecioSinDescuento() + "");
+                }
+                
             }
         } else if (e.getSource() == vista.tableConceptosInstitucion) {
             if (vista.tableConceptosInstitucion.getSelectedRow() != -1) {
