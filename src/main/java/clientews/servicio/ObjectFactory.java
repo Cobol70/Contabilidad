@@ -24,33 +24,23 @@ import javax.xml.namespace.QName;
 @XmlRegistry
 public class ObjectFactory {
 
-    private final static QName _ConceptoPaquete_QNAME = new QName("http://servicio.sga.gm.com.mx/", "conceptoPaquete");
-    private final static QName _Conceptos_QNAME = new QName("http://servicio.sga.gm.com.mx/", "conceptos");
-    private final static QName _ObtenerConceptosDePaqueteResponse_QNAME = new QName("http://servicio.sga.gm.com.mx/", "obtenerConceptosDePaqueteResponse");
-    private final static QName _ConceptosInstitucion_QNAME = new QName("http://servicio.sga.gm.com.mx/", "conceptosInstitucion");
-    private final static QName _EliminarConceptoPaquete_QNAME = new QName("http://servicio.sga.gm.com.mx/", "eliminarConceptoPaquete");
-    private final static QName _EliminarPaquete_QNAME = new QName("http://servicio.sga.gm.com.mx/", "eliminarPaquete");
-    private final static QName _ListarPaquetes_QNAME = new QName("http://servicio.sga.gm.com.mx/", "listarPaquetes");
-    private final static QName _ListarPaquetesResponse_QNAME = new QName("http://servicio.sga.gm.com.mx/", "listarPaquetesResponse");
-    private final static QName _ObtenerPaquetePorNombre_QNAME = new QName("http://servicio.sga.gm.com.mx/", "obtenerPaquetePorNombre");
-    private final static QName _RegistrarConceptoPaqueteResponse_QNAME = new QName("http://servicio.sga.gm.com.mx/", "registrarConceptoPaqueteResponse");
-    private final static QName _RegistrarPaqueteResponse_QNAME = new QName("http://servicio.sga.gm.com.mx/", "registrarPaqueteResponse");
-    private final static QName _EncontrarPaquetePorIdResponse_QNAME = new QName("http://servicio.sga.gm.com.mx/", "encontrarPaquetePorIdResponse");
-    private final static QName _ModificarPaquete_QNAME = new QName("http://servicio.sga.gm.com.mx/", "modificarPaquete");
-    private final static QName _ObtenerConceptosDePaquete_QNAME = new QName("http://servicio.sga.gm.com.mx/", "obtenerConceptosDePaquete");
-    private final static QName _RegistrarConceptoPaquete_QNAME = new QName("http://servicio.sga.gm.com.mx/", "registrarConceptoPaquete");
-    private final static QName _EliminarPaqueteResponse_QNAME = new QName("http://servicio.sga.gm.com.mx/", "eliminarPaqueteResponse");
-    private final static QName _EncontrarPaquetePorId_QNAME = new QName("http://servicio.sga.gm.com.mx/", "encontrarPaquetePorId");
-    private final static QName _Instrucciones_QNAME = new QName("http://servicio.sga.gm.com.mx/", "instrucciones");
-    private final static QName _Paquete_QNAME = new QName("http://servicio.sga.gm.com.mx/", "paquete");
-    private final static QName _ObtenerPaquetesLikeNombre_QNAME = new QName("http://servicio.sga.gm.com.mx/", "obtenerPaquetesLikeNombre");
-    private final static QName _ObtenerPaquetesLikeNombreResponse_QNAME = new QName("http://servicio.sga.gm.com.mx/", "obtenerPaquetesLikeNombreResponse");
-    private final static QName _ObtenerPaquetePorNombreResponse_QNAME = new QName("http://servicio.sga.gm.com.mx/", "obtenerPaquetePorNombreResponse");
-    private final static QName _Areas_QNAME = new QName("http://servicio.sga.gm.com.mx/", "areas");
-    private final static QName _ModificarPaqueteResponse_QNAME = new QName("http://servicio.sga.gm.com.mx/", "modificarPaqueteResponse");
-    private final static QName _RegistrarPaquete_QNAME = new QName("http://servicio.sga.gm.com.mx/", "registrarPaquete");
-    private final static QName _EliminarConceptoPaqueteResponse_QNAME = new QName("http://servicio.sga.gm.com.mx/", "eliminarConceptoPaqueteResponse");
-    private final static QName _Institucion_QNAME = new QName("http://servicio.sga.gm.com.mx/", "institucion");
+    private final static QName _ModificarDatosFacturacion_QNAME = new QName("http://servicio.sga.gm.com.mx/", "modificarDatosFacturacion");
+    private final static QName _CatalogoFormaPago_QNAME = new QName("http://servicio.sga.gm.com.mx/", "catalogoFormaPago");
+    private final static QName _RegistrarDatosFacturacionResponse_QNAME = new QName("http://servicio.sga.gm.com.mx/", "registrarDatosFacturacionResponse");
+    private final static QName _ObtenerDatosFacturacionPorIdOrdenVenta_QNAME = new QName("http://servicio.sga.gm.com.mx/", "obtenerDatosFacturacionPorIdOrdenVenta");
+    private final static QName _ObtenerDatosFacturacionPorIdOrdenVentaResponse_QNAME = new QName("http://servicio.sga.gm.com.mx/", "obtenerDatosFacturacionPorIdOrdenVentaResponse");
+    private final static QName _DatosFacturacion_QNAME = new QName("http://servicio.sga.gm.com.mx/", "datosFacturacion");
+    private final static QName _OrdenVenta_QNAME = new QName("http://servicio.sga.gm.com.mx/", "ordenVenta");
+    private final static QName _Pacientes_QNAME = new QName("http://servicio.sga.gm.com.mx/", "pacientes");
+    private final static QName _ObtenerDatosFacturacionPorPagoOrdenVenta_QNAME = new QName("http://servicio.sga.gm.com.mx/", "obtenerDatosFacturacionPorPagoOrdenVenta");
+    private final static QName _Cfdi_QNAME = new QName("http://servicio.sga.gm.com.mx/", "cfdi");
+    private final static QName _ObtenerDatosFacturacionPorIdResponse_QNAME = new QName("http://servicio.sga.gm.com.mx/", "obtenerDatosFacturacionPorIdResponse");
+    private final static QName _ObtenerDatosFacturacionPorId_QNAME = new QName("http://servicio.sga.gm.com.mx/", "obtenerDatosFacturacionPorId");
+    private final static QName _ModificarDatosFacturacionResponse_QNAME = new QName("http://servicio.sga.gm.com.mx/", "modificarDatosFacturacionResponse");
+    private final static QName _PagoOrdenVenta_QNAME = new QName("http://servicio.sga.gm.com.mx/", "pagoOrdenVenta");
+    private final static QName _Firma_QNAME = new QName("http://servicio.sga.gm.com.mx/", "firma");
+    private final static QName _ObtenerDatosFacturacionPorPagoOrdenVentaResponse_QNAME = new QName("http://servicio.sga.gm.com.mx/", "obtenerDatosFacturacionPorPagoOrdenVentaResponse");
+    private final static QName _RegistrarDatosFacturacion_QNAME = new QName("http://servicio.sga.gm.com.mx/", "registrarDatosFacturacion");
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: clientews.servicio
@@ -60,462 +50,292 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link Instrucciones }
+     * Create an instance of {@link ModificarDatosFacturacionResponse }
      * 
      */
-    public Instrucciones createInstrucciones() {
-        return new Instrucciones();
+    public ModificarDatosFacturacionResponse createModificarDatosFacturacionResponse() {
+        return new ModificarDatosFacturacionResponse();
     }
 
     /**
-     * Create an instance of {@link EncontrarPaquetePorId }
+     * Create an instance of {@link PagoOrdenVenta }
      * 
      */
-    public EncontrarPaquetePorId createEncontrarPaquetePorId() {
-        return new EncontrarPaquetePorId();
+    public PagoOrdenVenta createPagoOrdenVenta() {
+        return new PagoOrdenVenta();
     }
 
     /**
-     * Create an instance of {@link EliminarConceptoPaqueteResponse }
+     * Create an instance of {@link ObtenerDatosFacturacionPorId }
      * 
      */
-    public EliminarConceptoPaqueteResponse createEliminarConceptoPaqueteResponse() {
-        return new EliminarConceptoPaqueteResponse();
+    public ObtenerDatosFacturacionPorId createObtenerDatosFacturacionPorId() {
+        return new ObtenerDatosFacturacionPorId();
     }
 
     /**
-     * Create an instance of {@link Institucion }
+     * Create an instance of {@link Cfdi }
      * 
      */
-    public Institucion createInstitucion() {
-        return new Institucion();
+    public Cfdi createCfdi() {
+        return new Cfdi();
     }
 
     /**
-     * Create an instance of {@link RegistrarPaquete }
+     * Create an instance of {@link ObtenerDatosFacturacionPorIdResponse }
      * 
      */
-    public RegistrarPaquete createRegistrarPaquete() {
-        return new RegistrarPaquete();
+    public ObtenerDatosFacturacionPorIdResponse createObtenerDatosFacturacionPorIdResponse() {
+        return new ObtenerDatosFacturacionPorIdResponse();
     }
 
     /**
-     * Create an instance of {@link Areas }
+     * Create an instance of {@link ObtenerDatosFacturacionPorPagoOrdenVenta }
      * 
      */
-    public Areas createAreas() {
-        return new Areas();
+    public ObtenerDatosFacturacionPorPagoOrdenVenta createObtenerDatosFacturacionPorPagoOrdenVenta() {
+        return new ObtenerDatosFacturacionPorPagoOrdenVenta();
     }
 
     /**
-     * Create an instance of {@link ModificarPaqueteResponse }
+     * Create an instance of {@link RegistrarDatosFacturacion }
      * 
      */
-    public ModificarPaqueteResponse createModificarPaqueteResponse() {
-        return new ModificarPaqueteResponse();
+    public RegistrarDatosFacturacion createRegistrarDatosFacturacion() {
+        return new RegistrarDatosFacturacion();
     }
 
     /**
-     * Create an instance of {@link ObtenerPaquetePorNombreResponse }
+     * Create an instance of {@link ObtenerDatosFacturacionPorPagoOrdenVentaResponse }
      * 
      */
-    public ObtenerPaquetePorNombreResponse createObtenerPaquetePorNombreResponse() {
-        return new ObtenerPaquetePorNombreResponse();
+    public ObtenerDatosFacturacionPorPagoOrdenVentaResponse createObtenerDatosFacturacionPorPagoOrdenVentaResponse() {
+        return new ObtenerDatosFacturacionPorPagoOrdenVentaResponse();
     }
 
     /**
-     * Create an instance of {@link ObtenerPaquetesLikeNombre }
+     * Create an instance of {@link Firma }
      * 
      */
-    public ObtenerPaquetesLikeNombre createObtenerPaquetesLikeNombre() {
-        return new ObtenerPaquetesLikeNombre();
+    public Firma createFirma() {
+        return new Firma();
     }
 
     /**
-     * Create an instance of {@link ObtenerPaquetesLikeNombreResponse }
+     * Create an instance of {@link ObtenerDatosFacturacionPorIdOrdenVenta }
      * 
      */
-    public ObtenerPaquetesLikeNombreResponse createObtenerPaquetesLikeNombreResponse() {
-        return new ObtenerPaquetesLikeNombreResponse();
+    public ObtenerDatosFacturacionPorIdOrdenVenta createObtenerDatosFacturacionPorIdOrdenVenta() {
+        return new ObtenerDatosFacturacionPorIdOrdenVenta();
     }
 
     /**
-     * Create an instance of {@link Paquete }
+     * Create an instance of {@link ObtenerDatosFacturacionPorIdOrdenVentaResponse }
      * 
      */
-    public Paquete createPaquete() {
-        return new Paquete();
+    public ObtenerDatosFacturacionPorIdOrdenVentaResponse createObtenerDatosFacturacionPorIdOrdenVentaResponse() {
+        return new ObtenerDatosFacturacionPorIdOrdenVentaResponse();
     }
 
     /**
-     * Create an instance of {@link ObtenerConceptosDePaquete }
+     * Create an instance of {@link CatalogoFormaPago }
      * 
      */
-    public ObtenerConceptosDePaquete createObtenerConceptosDePaquete() {
-        return new ObtenerConceptosDePaquete();
+    public CatalogoFormaPago createCatalogoFormaPago() {
+        return new CatalogoFormaPago();
     }
 
     /**
-     * Create an instance of {@link RegistrarConceptoPaquete }
+     * Create an instance of {@link RegistrarDatosFacturacionResponse }
      * 
      */
-    public RegistrarConceptoPaquete createRegistrarConceptoPaquete() {
-        return new RegistrarConceptoPaquete();
+    public RegistrarDatosFacturacionResponse createRegistrarDatosFacturacionResponse() {
+        return new RegistrarDatosFacturacionResponse();
     }
 
     /**
-     * Create an instance of {@link EliminarPaqueteResponse }
+     * Create an instance of {@link ModificarDatosFacturacion }
      * 
      */
-    public EliminarPaqueteResponse createEliminarPaqueteResponse() {
-        return new EliminarPaqueteResponse();
+    public ModificarDatosFacturacion createModificarDatosFacturacion() {
+        return new ModificarDatosFacturacion();
     }
 
     /**
-     * Create an instance of {@link ModificarPaquete }
+     * Create an instance of {@link Pacientes }
      * 
      */
-    public ModificarPaquete createModificarPaquete() {
-        return new ModificarPaquete();
+    public Pacientes createPacientes() {
+        return new Pacientes();
     }
 
     /**
-     * Create an instance of {@link EncontrarPaquetePorIdResponse }
+     * Create an instance of {@link OrdenVenta }
      * 
      */
-    public EncontrarPaquetePorIdResponse createEncontrarPaquetePorIdResponse() {
-        return new EncontrarPaquetePorIdResponse();
+    public OrdenVenta createOrdenVenta() {
+        return new OrdenVenta();
     }
 
     /**
-     * Create an instance of {@link RegistrarPaqueteResponse }
+     * Create an instance of {@link DatosFacturacion }
      * 
      */
-    public RegistrarPaqueteResponse createRegistrarPaqueteResponse() {
-        return new RegistrarPaqueteResponse();
+    public DatosFacturacion createDatosFacturacion() {
+        return new DatosFacturacion();
     }
 
     /**
-     * Create an instance of {@link ConceptosInstitucion }
+     * Create an instance of {@link JAXBElement }{@code <}{@link ModificarDatosFacturacion }{@code >}}
      * 
      */
-    public ConceptosInstitucion createConceptosInstitucion() {
-        return new ConceptosInstitucion();
+    @XmlElementDecl(namespace = "http://servicio.sga.gm.com.mx/", name = "modificarDatosFacturacion")
+    public JAXBElement<ModificarDatosFacturacion> createModificarDatosFacturacion(ModificarDatosFacturacion value) {
+        return new JAXBElement<ModificarDatosFacturacion>(_ModificarDatosFacturacion_QNAME, ModificarDatosFacturacion.class, null, value);
     }
 
     /**
-     * Create an instance of {@link ConceptoPaquete }
+     * Create an instance of {@link JAXBElement }{@code <}{@link CatalogoFormaPago }{@code >}}
      * 
      */
-    public ConceptoPaquete createConceptoPaquete() {
-        return new ConceptoPaquete();
+    @XmlElementDecl(namespace = "http://servicio.sga.gm.com.mx/", name = "catalogoFormaPago")
+    public JAXBElement<CatalogoFormaPago> createCatalogoFormaPago(CatalogoFormaPago value) {
+        return new JAXBElement<CatalogoFormaPago>(_CatalogoFormaPago_QNAME, CatalogoFormaPago.class, null, value);
     }
 
     /**
-     * Create an instance of {@link Conceptos }
+     * Create an instance of {@link JAXBElement }{@code <}{@link RegistrarDatosFacturacionResponse }{@code >}}
      * 
      */
-    public Conceptos createConceptos() {
-        return new Conceptos();
+    @XmlElementDecl(namespace = "http://servicio.sga.gm.com.mx/", name = "registrarDatosFacturacionResponse")
+    public JAXBElement<RegistrarDatosFacturacionResponse> createRegistrarDatosFacturacionResponse(RegistrarDatosFacturacionResponse value) {
+        return new JAXBElement<RegistrarDatosFacturacionResponse>(_RegistrarDatosFacturacionResponse_QNAME, RegistrarDatosFacturacionResponse.class, null, value);
     }
 
     /**
-     * Create an instance of {@link ObtenerConceptosDePaqueteResponse }
+     * Create an instance of {@link JAXBElement }{@code <}{@link ObtenerDatosFacturacionPorIdOrdenVenta }{@code >}}
      * 
      */
-    public ObtenerConceptosDePaqueteResponse createObtenerConceptosDePaqueteResponse() {
-        return new ObtenerConceptosDePaqueteResponse();
+    @XmlElementDecl(namespace = "http://servicio.sga.gm.com.mx/", name = "obtenerDatosFacturacionPorIdOrdenVenta")
+    public JAXBElement<ObtenerDatosFacturacionPorIdOrdenVenta> createObtenerDatosFacturacionPorIdOrdenVenta(ObtenerDatosFacturacionPorIdOrdenVenta value) {
+        return new JAXBElement<ObtenerDatosFacturacionPorIdOrdenVenta>(_ObtenerDatosFacturacionPorIdOrdenVenta_QNAME, ObtenerDatosFacturacionPorIdOrdenVenta.class, null, value);
     }
 
     /**
-     * Create an instance of {@link ObtenerPaquetePorNombre }
+     * Create an instance of {@link JAXBElement }{@code <}{@link ObtenerDatosFacturacionPorIdOrdenVentaResponse }{@code >}}
      * 
      */
-    public ObtenerPaquetePorNombre createObtenerPaquetePorNombre() {
-        return new ObtenerPaquetePorNombre();
+    @XmlElementDecl(namespace = "http://servicio.sga.gm.com.mx/", name = "obtenerDatosFacturacionPorIdOrdenVentaResponse")
+    public JAXBElement<ObtenerDatosFacturacionPorIdOrdenVentaResponse> createObtenerDatosFacturacionPorIdOrdenVentaResponse(ObtenerDatosFacturacionPorIdOrdenVentaResponse value) {
+        return new JAXBElement<ObtenerDatosFacturacionPorIdOrdenVentaResponse>(_ObtenerDatosFacturacionPorIdOrdenVentaResponse_QNAME, ObtenerDatosFacturacionPorIdOrdenVentaResponse.class, null, value);
     }
 
     /**
-     * Create an instance of {@link RegistrarConceptoPaqueteResponse }
+     * Create an instance of {@link JAXBElement }{@code <}{@link DatosFacturacion }{@code >}}
      * 
      */
-    public RegistrarConceptoPaqueteResponse createRegistrarConceptoPaqueteResponse() {
-        return new RegistrarConceptoPaqueteResponse();
+    @XmlElementDecl(namespace = "http://servicio.sga.gm.com.mx/", name = "datosFacturacion")
+    public JAXBElement<DatosFacturacion> createDatosFacturacion(DatosFacturacion value) {
+        return new JAXBElement<DatosFacturacion>(_DatosFacturacion_QNAME, DatosFacturacion.class, null, value);
     }
 
     /**
-     * Create an instance of {@link ListarPaquetes }
+     * Create an instance of {@link JAXBElement }{@code <}{@link OrdenVenta }{@code >}}
      * 
      */
-    public ListarPaquetes createListarPaquetes() {
-        return new ListarPaquetes();
+    @XmlElementDecl(namespace = "http://servicio.sga.gm.com.mx/", name = "ordenVenta")
+    public JAXBElement<OrdenVenta> createOrdenVenta(OrdenVenta value) {
+        return new JAXBElement<OrdenVenta>(_OrdenVenta_QNAME, OrdenVenta.class, null, value);
     }
 
     /**
-     * Create an instance of {@link ListarPaquetesResponse }
+     * Create an instance of {@link JAXBElement }{@code <}{@link Pacientes }{@code >}}
      * 
      */
-    public ListarPaquetesResponse createListarPaquetesResponse() {
-        return new ListarPaquetesResponse();
+    @XmlElementDecl(namespace = "http://servicio.sga.gm.com.mx/", name = "pacientes")
+    public JAXBElement<Pacientes> createPacientes(Pacientes value) {
+        return new JAXBElement<Pacientes>(_Pacientes_QNAME, Pacientes.class, null, value);
     }
 
     /**
-     * Create an instance of {@link EliminarConceptoPaquete }
+     * Create an instance of {@link JAXBElement }{@code <}{@link ObtenerDatosFacturacionPorPagoOrdenVenta }{@code >}}
      * 
      */
-    public EliminarConceptoPaquete createEliminarConceptoPaquete() {
-        return new EliminarConceptoPaquete();
+    @XmlElementDecl(namespace = "http://servicio.sga.gm.com.mx/", name = "obtenerDatosFacturacionPorPagoOrdenVenta")
+    public JAXBElement<ObtenerDatosFacturacionPorPagoOrdenVenta> createObtenerDatosFacturacionPorPagoOrdenVenta(ObtenerDatosFacturacionPorPagoOrdenVenta value) {
+        return new JAXBElement<ObtenerDatosFacturacionPorPagoOrdenVenta>(_ObtenerDatosFacturacionPorPagoOrdenVenta_QNAME, ObtenerDatosFacturacionPorPagoOrdenVenta.class, null, value);
     }
 
     /**
-     * Create an instance of {@link EliminarPaquete }
+     * Create an instance of {@link JAXBElement }{@code <}{@link Cfdi }{@code >}}
      * 
      */
-    public EliminarPaquete createEliminarPaquete() {
-        return new EliminarPaquete();
+    @XmlElementDecl(namespace = "http://servicio.sga.gm.com.mx/", name = "cfdi")
+    public JAXBElement<Cfdi> createCfdi(Cfdi value) {
+        return new JAXBElement<Cfdi>(_Cfdi_QNAME, Cfdi.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ConceptoPaquete }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link ObtenerDatosFacturacionPorIdResponse }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://servicio.sga.gm.com.mx/", name = "conceptoPaquete")
-    public JAXBElement<ConceptoPaquete> createConceptoPaquete(ConceptoPaquete value) {
-        return new JAXBElement<ConceptoPaquete>(_ConceptoPaquete_QNAME, ConceptoPaquete.class, null, value);
+    @XmlElementDecl(namespace = "http://servicio.sga.gm.com.mx/", name = "obtenerDatosFacturacionPorIdResponse")
+    public JAXBElement<ObtenerDatosFacturacionPorIdResponse> createObtenerDatosFacturacionPorIdResponse(ObtenerDatosFacturacionPorIdResponse value) {
+        return new JAXBElement<ObtenerDatosFacturacionPorIdResponse>(_ObtenerDatosFacturacionPorIdResponse_QNAME, ObtenerDatosFacturacionPorIdResponse.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link Conceptos }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link ObtenerDatosFacturacionPorId }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://servicio.sga.gm.com.mx/", name = "conceptos")
-    public JAXBElement<Conceptos> createConceptos(Conceptos value) {
-        return new JAXBElement<Conceptos>(_Conceptos_QNAME, Conceptos.class, null, value);
+    @XmlElementDecl(namespace = "http://servicio.sga.gm.com.mx/", name = "obtenerDatosFacturacionPorId")
+    public JAXBElement<ObtenerDatosFacturacionPorId> createObtenerDatosFacturacionPorId(ObtenerDatosFacturacionPorId value) {
+        return new JAXBElement<ObtenerDatosFacturacionPorId>(_ObtenerDatosFacturacionPorId_QNAME, ObtenerDatosFacturacionPorId.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ObtenerConceptosDePaqueteResponse }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link ModificarDatosFacturacionResponse }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://servicio.sga.gm.com.mx/", name = "obtenerConceptosDePaqueteResponse")
-    public JAXBElement<ObtenerConceptosDePaqueteResponse> createObtenerConceptosDePaqueteResponse(ObtenerConceptosDePaqueteResponse value) {
-        return new JAXBElement<ObtenerConceptosDePaqueteResponse>(_ObtenerConceptosDePaqueteResponse_QNAME, ObtenerConceptosDePaqueteResponse.class, null, value);
+    @XmlElementDecl(namespace = "http://servicio.sga.gm.com.mx/", name = "modificarDatosFacturacionResponse")
+    public JAXBElement<ModificarDatosFacturacionResponse> createModificarDatosFacturacionResponse(ModificarDatosFacturacionResponse value) {
+        return new JAXBElement<ModificarDatosFacturacionResponse>(_ModificarDatosFacturacionResponse_QNAME, ModificarDatosFacturacionResponse.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ConceptosInstitucion }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link PagoOrdenVenta }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://servicio.sga.gm.com.mx/", name = "conceptosInstitucion")
-    public JAXBElement<ConceptosInstitucion> createConceptosInstitucion(ConceptosInstitucion value) {
-        return new JAXBElement<ConceptosInstitucion>(_ConceptosInstitucion_QNAME, ConceptosInstitucion.class, null, value);
+    @XmlElementDecl(namespace = "http://servicio.sga.gm.com.mx/", name = "pagoOrdenVenta")
+    public JAXBElement<PagoOrdenVenta> createPagoOrdenVenta(PagoOrdenVenta value) {
+        return new JAXBElement<PagoOrdenVenta>(_PagoOrdenVenta_QNAME, PagoOrdenVenta.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link EliminarConceptoPaquete }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link Firma }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://servicio.sga.gm.com.mx/", name = "eliminarConceptoPaquete")
-    public JAXBElement<EliminarConceptoPaquete> createEliminarConceptoPaquete(EliminarConceptoPaquete value) {
-        return new JAXBElement<EliminarConceptoPaquete>(_EliminarConceptoPaquete_QNAME, EliminarConceptoPaquete.class, null, value);
+    @XmlElementDecl(namespace = "http://servicio.sga.gm.com.mx/", name = "firma")
+    public JAXBElement<Firma> createFirma(Firma value) {
+        return new JAXBElement<Firma>(_Firma_QNAME, Firma.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link EliminarPaquete }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link ObtenerDatosFacturacionPorPagoOrdenVentaResponse }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://servicio.sga.gm.com.mx/", name = "eliminarPaquete")
-    public JAXBElement<EliminarPaquete> createEliminarPaquete(EliminarPaquete value) {
-        return new JAXBElement<EliminarPaquete>(_EliminarPaquete_QNAME, EliminarPaquete.class, null, value);
+    @XmlElementDecl(namespace = "http://servicio.sga.gm.com.mx/", name = "obtenerDatosFacturacionPorPagoOrdenVentaResponse")
+    public JAXBElement<ObtenerDatosFacturacionPorPagoOrdenVentaResponse> createObtenerDatosFacturacionPorPagoOrdenVentaResponse(ObtenerDatosFacturacionPorPagoOrdenVentaResponse value) {
+        return new JAXBElement<ObtenerDatosFacturacionPorPagoOrdenVentaResponse>(_ObtenerDatosFacturacionPorPagoOrdenVentaResponse_QNAME, ObtenerDatosFacturacionPorPagoOrdenVentaResponse.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ListarPaquetes }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link RegistrarDatosFacturacion }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://servicio.sga.gm.com.mx/", name = "listarPaquetes")
-    public JAXBElement<ListarPaquetes> createListarPaquetes(ListarPaquetes value) {
-        return new JAXBElement<ListarPaquetes>(_ListarPaquetes_QNAME, ListarPaquetes.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ListarPaquetesResponse }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://servicio.sga.gm.com.mx/", name = "listarPaquetesResponse")
-    public JAXBElement<ListarPaquetesResponse> createListarPaquetesResponse(ListarPaquetesResponse value) {
-        return new JAXBElement<ListarPaquetesResponse>(_ListarPaquetesResponse_QNAME, ListarPaquetesResponse.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ObtenerPaquetePorNombre }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://servicio.sga.gm.com.mx/", name = "obtenerPaquetePorNombre")
-    public JAXBElement<ObtenerPaquetePorNombre> createObtenerPaquetePorNombre(ObtenerPaquetePorNombre value) {
-        return new JAXBElement<ObtenerPaquetePorNombre>(_ObtenerPaquetePorNombre_QNAME, ObtenerPaquetePorNombre.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link RegistrarConceptoPaqueteResponse }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://servicio.sga.gm.com.mx/", name = "registrarConceptoPaqueteResponse")
-    public JAXBElement<RegistrarConceptoPaqueteResponse> createRegistrarConceptoPaqueteResponse(RegistrarConceptoPaqueteResponse value) {
-        return new JAXBElement<RegistrarConceptoPaqueteResponse>(_RegistrarConceptoPaqueteResponse_QNAME, RegistrarConceptoPaqueteResponse.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link RegistrarPaqueteResponse }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://servicio.sga.gm.com.mx/", name = "registrarPaqueteResponse")
-    public JAXBElement<RegistrarPaqueteResponse> createRegistrarPaqueteResponse(RegistrarPaqueteResponse value) {
-        return new JAXBElement<RegistrarPaqueteResponse>(_RegistrarPaqueteResponse_QNAME, RegistrarPaqueteResponse.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link EncontrarPaquetePorIdResponse }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://servicio.sga.gm.com.mx/", name = "encontrarPaquetePorIdResponse")
-    public JAXBElement<EncontrarPaquetePorIdResponse> createEncontrarPaquetePorIdResponse(EncontrarPaquetePorIdResponse value) {
-        return new JAXBElement<EncontrarPaquetePorIdResponse>(_EncontrarPaquetePorIdResponse_QNAME, EncontrarPaquetePorIdResponse.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ModificarPaquete }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://servicio.sga.gm.com.mx/", name = "modificarPaquete")
-    public JAXBElement<ModificarPaquete> createModificarPaquete(ModificarPaquete value) {
-        return new JAXBElement<ModificarPaquete>(_ModificarPaquete_QNAME, ModificarPaquete.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ObtenerConceptosDePaquete }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://servicio.sga.gm.com.mx/", name = "obtenerConceptosDePaquete")
-    public JAXBElement<ObtenerConceptosDePaquete> createObtenerConceptosDePaquete(ObtenerConceptosDePaquete value) {
-        return new JAXBElement<ObtenerConceptosDePaquete>(_ObtenerConceptosDePaquete_QNAME, ObtenerConceptosDePaquete.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link RegistrarConceptoPaquete }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://servicio.sga.gm.com.mx/", name = "registrarConceptoPaquete")
-    public JAXBElement<RegistrarConceptoPaquete> createRegistrarConceptoPaquete(RegistrarConceptoPaquete value) {
-        return new JAXBElement<RegistrarConceptoPaquete>(_RegistrarConceptoPaquete_QNAME, RegistrarConceptoPaquete.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link EliminarPaqueteResponse }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://servicio.sga.gm.com.mx/", name = "eliminarPaqueteResponse")
-    public JAXBElement<EliminarPaqueteResponse> createEliminarPaqueteResponse(EliminarPaqueteResponse value) {
-        return new JAXBElement<EliminarPaqueteResponse>(_EliminarPaqueteResponse_QNAME, EliminarPaqueteResponse.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link EncontrarPaquetePorId }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://servicio.sga.gm.com.mx/", name = "encontrarPaquetePorId")
-    public JAXBElement<EncontrarPaquetePorId> createEncontrarPaquetePorId(EncontrarPaquetePorId value) {
-        return new JAXBElement<EncontrarPaquetePorId>(_EncontrarPaquetePorId_QNAME, EncontrarPaquetePorId.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link Instrucciones }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://servicio.sga.gm.com.mx/", name = "instrucciones")
-    public JAXBElement<Instrucciones> createInstrucciones(Instrucciones value) {
-        return new JAXBElement<Instrucciones>(_Instrucciones_QNAME, Instrucciones.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link Paquete }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://servicio.sga.gm.com.mx/", name = "paquete")
-    public JAXBElement<Paquete> createPaquete(Paquete value) {
-        return new JAXBElement<Paquete>(_Paquete_QNAME, Paquete.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ObtenerPaquetesLikeNombre }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://servicio.sga.gm.com.mx/", name = "obtenerPaquetesLikeNombre")
-    public JAXBElement<ObtenerPaquetesLikeNombre> createObtenerPaquetesLikeNombre(ObtenerPaquetesLikeNombre value) {
-        return new JAXBElement<ObtenerPaquetesLikeNombre>(_ObtenerPaquetesLikeNombre_QNAME, ObtenerPaquetesLikeNombre.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ObtenerPaquetesLikeNombreResponse }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://servicio.sga.gm.com.mx/", name = "obtenerPaquetesLikeNombreResponse")
-    public JAXBElement<ObtenerPaquetesLikeNombreResponse> createObtenerPaquetesLikeNombreResponse(ObtenerPaquetesLikeNombreResponse value) {
-        return new JAXBElement<ObtenerPaquetesLikeNombreResponse>(_ObtenerPaquetesLikeNombreResponse_QNAME, ObtenerPaquetesLikeNombreResponse.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ObtenerPaquetePorNombreResponse }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://servicio.sga.gm.com.mx/", name = "obtenerPaquetePorNombreResponse")
-    public JAXBElement<ObtenerPaquetePorNombreResponse> createObtenerPaquetePorNombreResponse(ObtenerPaquetePorNombreResponse value) {
-        return new JAXBElement<ObtenerPaquetePorNombreResponse>(_ObtenerPaquetePorNombreResponse_QNAME, ObtenerPaquetePorNombreResponse.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link Areas }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://servicio.sga.gm.com.mx/", name = "areas")
-    public JAXBElement<Areas> createAreas(Areas value) {
-        return new JAXBElement<Areas>(_Areas_QNAME, Areas.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ModificarPaqueteResponse }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://servicio.sga.gm.com.mx/", name = "modificarPaqueteResponse")
-    public JAXBElement<ModificarPaqueteResponse> createModificarPaqueteResponse(ModificarPaqueteResponse value) {
-        return new JAXBElement<ModificarPaqueteResponse>(_ModificarPaqueteResponse_QNAME, ModificarPaqueteResponse.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link RegistrarPaquete }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://servicio.sga.gm.com.mx/", name = "registrarPaquete")
-    public JAXBElement<RegistrarPaquete> createRegistrarPaquete(RegistrarPaquete value) {
-        return new JAXBElement<RegistrarPaquete>(_RegistrarPaquete_QNAME, RegistrarPaquete.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link EliminarConceptoPaqueteResponse }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://servicio.sga.gm.com.mx/", name = "eliminarConceptoPaqueteResponse")
-    public JAXBElement<EliminarConceptoPaqueteResponse> createEliminarConceptoPaqueteResponse(EliminarConceptoPaqueteResponse value) {
-        return new JAXBElement<EliminarConceptoPaqueteResponse>(_EliminarConceptoPaqueteResponse_QNAME, EliminarConceptoPaqueteResponse.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link Institucion }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://servicio.sga.gm.com.mx/", name = "institucion")
-    public JAXBElement<Institucion> createInstitucion(Institucion value) {
-        return new JAXBElement<Institucion>(_Institucion_QNAME, Institucion.class, null, value);
+    @XmlElementDecl(namespace = "http://servicio.sga.gm.com.mx/", name = "registrarDatosFacturacion")
+    public JAXBElement<RegistrarDatosFacturacion> createRegistrarDatosFacturacion(RegistrarDatosFacturacion value) {
+        return new JAXBElement<RegistrarDatosFacturacion>(_RegistrarDatosFacturacion_QNAME, RegistrarDatosFacturacion.class, null, value);
     }
 
 }
