@@ -3,7 +3,9 @@ package clientews.servicio;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
+import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
@@ -18,7 +20,7 @@ import javax.xml.bind.annotation.XmlType;
  *       &lt;sequence>
  *         &lt;element name="apellidos" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="correo" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
- *         &lt;element name="fechaNacimiento" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="fechaNacimiento" type="{http://www.w3.org/2001/XMLSchema}dateTime" minOccurs="0"/>
  *         &lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
  *         &lt;element name="nombres" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="telefono" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
@@ -43,7 +45,8 @@ public class Tecnico {
 
     protected String apellidos;
     protected String correo;
-    protected String fechaNacimiento;
+    @XmlSchemaType(name = "dateTime")
+    protected XMLGregorianCalendar fechaNacimiento;
     protected Integer id;
     protected String nombres;
     protected String telefono;
@@ -101,10 +104,10 @@ public class Tecnico {
      * 
      * @return
      *     possible object is
-     *     {@link String }
+     *     {@link XMLGregorianCalendar }
      *     
      */
-    public String getFechaNacimiento() {
+    public XMLGregorianCalendar getFechaNacimiento() {
         return fechaNacimiento;
     }
 
@@ -113,10 +116,10 @@ public class Tecnico {
      * 
      * @param value
      *     allowed object is
-     *     {@link String }
+     *     {@link XMLGregorianCalendar }
      *     
      */
-    public void setFechaNacimiento(String value) {
+    public void setFechaNacimiento(XMLGregorianCalendar value) {
         this.fechaNacimiento = value;
     }
 

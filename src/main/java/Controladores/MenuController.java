@@ -5,7 +5,6 @@
  */
 package Controladores;
 
-
 import Utilidades.BarUtil;
 import Vistas.AreasVista;
 import Vistas.Consentimientos;
@@ -35,13 +34,13 @@ public class MenuController implements ActionListener, MouseListener {
         MenuController menu = new MenuController(vista);
         menu.iniciar();
     }
-    
+
     public void iniciar() {
         vista.setTitle("Menú");
         vista.setLocationRelativeTo(null);
         vista.setVisible(true);
     }
-    
+
     public MenuController(Menu vista) {
         this.vista = vista;
         this.vista.btnAreas.addActionListener(this);
@@ -52,7 +51,7 @@ public class MenuController implements ActionListener, MouseListener {
         this.vista.btnConsentimientos.addActionListener(this);
         this.vista.btnEquipoDicom.addActionListener(this);
         this.vista.btnPaquetes.addActionListener(this);
-        
+
         this.vista.jLCerrar.addMouseListener(this);
         this.vista.jLMinimizar.addMouseListener(this);
     }
@@ -65,21 +64,20 @@ public class MenuController implements ActionListener, MouseListener {
             abrirInstituciones();
         } else if (e.getSource() == this.vista.btnEstudios) {
             abrirEstudios();
-        } else if(e.getSource() == this.vista.btnCortes){
+        } else if (e.getSource() == this.vista.btnCortes) {
             abrirCortes();
-        }else if(e.getSource() == this.vista.btnEstudiosInstituciones){
+        } else if (e.getSource() == this.vista.btnEstudiosInstituciones) {
             abrirEstudiosInstituciones();
-        }else if(e.getSource() == this.vista.btnConsentimientos){
+        } else if (e.getSource() == this.vista.btnConsentimientos) {
             abrirConsentimientos();
-        }else if(e.getSource() == this.vista.btnEquipoDicom){
+        } else if (e.getSource() == this.vista.btnEquipoDicom) {
             abrirEquipoDicom();
-        }
-        else if(e.getSource() == this.vista.btnPaquetes){
+        } else if (e.getSource() == this.vista.btnPaquetes) {
             abrirPaquetes();
         }
     }
 
-    private void abrirAreas(){
+    private void abrirAreas() {
         vista.dispose();
         AreasController controladorAreas = new AreasController(new AreasVista());
         controladorAreas.iniciar();
@@ -104,7 +102,7 @@ public class MenuController implements ActionListener, MouseListener {
     }
 
     private void abrirEstudiosInstituciones() {
-       vista.dispose();
+        vista.dispose();
         EstudiosInstitucionesController ediosInes = new EstudiosInstitucionesController(new EstudiosInstituciones());
         ediosInes.iniciar();
     }
@@ -120,8 +118,8 @@ public class MenuController implements ActionListener, MouseListener {
         EquipoDicomController controladorEquipoDicom = new EquipoDicomController(new EquipoDicomVista());
         controladorEquipoDicom.iniciar();
     }
-    
-    private void abrirPaquetes(){
+
+    private void abrirPaquetes() {
         vista.dispose();
         PaquetesController controladorPaquetes = new PaquetesController(new Paquetes());
         controladorPaquetes.iniciar();
@@ -129,10 +127,9 @@ public class MenuController implements ActionListener, MouseListener {
 
     @Override
     public void mouseClicked(MouseEvent e) {
-        if(e.getSource() == vista.jLMinimizar){
+        if (e.getSource() == vista.jLMinimizar) {
             BarUtil.minimizar(vista);
-        }
-        else if(e.getSource() == vista.jLCerrar){
+        } else if (e.getSource() == vista.jLCerrar) {
             BarUtil.cerrar(vista);
         }
     }

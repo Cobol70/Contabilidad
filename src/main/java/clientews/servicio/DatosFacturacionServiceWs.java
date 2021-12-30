@@ -30,10 +30,10 @@ public interface DatosFacturacionServiceWs {
      * @param arg0
      */
     @WebMethod
-    @RequestWrapper(localName = "modificarDatosFacturacion", targetNamespace = "http://servicio.sga.gm.com.mx/", className = "clientews.servicio.ModificarDatosFacturacion")
-    @ResponseWrapper(localName = "modificarDatosFacturacionResponse", targetNamespace = "http://servicio.sga.gm.com.mx/", className = "clientews.servicio.ModificarDatosFacturacionResponse")
-    @Action(input = "http://servicio.sga.gm.com.mx/DatosFacturacionServiceWs/modificarDatosFacturacionRequest", output = "http://servicio.sga.gm.com.mx/DatosFacturacionServiceWs/modificarDatosFacturacionResponse")
-    public void modificarDatosFacturacion(
+    @RequestWrapper(localName = "registrarDatosFacturacion", targetNamespace = "http://servicio.sga.gm.com.mx/", className = "clientews.servicio.RegistrarDatosFacturacion")
+    @ResponseWrapper(localName = "registrarDatosFacturacionResponse", targetNamespace = "http://servicio.sga.gm.com.mx/", className = "clientews.servicio.RegistrarDatosFacturacionResponse")
+    @Action(input = "http://servicio.sga.gm.com.mx/DatosFacturacionServiceWs/registrarDatosFacturacionRequest", output = "http://servicio.sga.gm.com.mx/DatosFacturacionServiceWs/registrarDatosFacturacionResponse")
+    public void registrarDatosFacturacion(
         @WebParam(name = "arg0", targetNamespace = "")
         DatosFacturacion arg0);
 
@@ -42,10 +42,10 @@ public interface DatosFacturacionServiceWs {
      * @param arg0
      */
     @WebMethod
-    @RequestWrapper(localName = "registrarDatosFacturacion", targetNamespace = "http://servicio.sga.gm.com.mx/", className = "clientews.servicio.RegistrarDatosFacturacion")
-    @ResponseWrapper(localName = "registrarDatosFacturacionResponse", targetNamespace = "http://servicio.sga.gm.com.mx/", className = "clientews.servicio.RegistrarDatosFacturacionResponse")
-    @Action(input = "http://servicio.sga.gm.com.mx/DatosFacturacionServiceWs/registrarDatosFacturacionRequest", output = "http://servicio.sga.gm.com.mx/DatosFacturacionServiceWs/registrarDatosFacturacionResponse")
-    public void registrarDatosFacturacion(
+    @RequestWrapper(localName = "modificarDatosFacturacion", targetNamespace = "http://servicio.sga.gm.com.mx/", className = "clientews.servicio.ModificarDatosFacturacion")
+    @ResponseWrapper(localName = "modificarDatosFacturacionResponse", targetNamespace = "http://servicio.sga.gm.com.mx/", className = "clientews.servicio.ModificarDatosFacturacionResponse")
+    @Action(input = "http://servicio.sga.gm.com.mx/DatosFacturacionServiceWs/modificarDatosFacturacionRequest", output = "http://servicio.sga.gm.com.mx/DatosFacturacionServiceWs/modificarDatosFacturacionResponse")
+    public void modificarDatosFacturacion(
         @WebParam(name = "arg0", targetNamespace = "")
         DatosFacturacion arg0);
 
@@ -72,10 +72,10 @@ public interface DatosFacturacionServiceWs {
      */
     @WebMethod
     @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "obtenerDatosFacturacionPorId", targetNamespace = "http://servicio.sga.gm.com.mx/", className = "clientews.servicio.ObtenerDatosFacturacionPorId")
-    @ResponseWrapper(localName = "obtenerDatosFacturacionPorIdResponse", targetNamespace = "http://servicio.sga.gm.com.mx/", className = "clientews.servicio.ObtenerDatosFacturacionPorIdResponse")
-    @Action(input = "http://servicio.sga.gm.com.mx/DatosFacturacionServiceWs/obtenerDatosFacturacionPorIdRequest", output = "http://servicio.sga.gm.com.mx/DatosFacturacionServiceWs/obtenerDatosFacturacionPorIdResponse")
-    public DatosFacturacion obtenerDatosFacturacionPorId(
+    @RequestWrapper(localName = "obtenerDatosFacturacionPorPagoOrdenVenta", targetNamespace = "http://servicio.sga.gm.com.mx/", className = "clientews.servicio.ObtenerDatosFacturacionPorPagoOrdenVenta")
+    @ResponseWrapper(localName = "obtenerDatosFacturacionPorPagoOrdenVentaResponse", targetNamespace = "http://servicio.sga.gm.com.mx/", className = "clientews.servicio.ObtenerDatosFacturacionPorPagoOrdenVentaResponse")
+    @Action(input = "http://servicio.sga.gm.com.mx/DatosFacturacionServiceWs/obtenerDatosFacturacionPorPagoOrdenVentaRequest", output = "http://servicio.sga.gm.com.mx/DatosFacturacionServiceWs/obtenerDatosFacturacionPorPagoOrdenVentaResponse")
+    public DatosFacturacion obtenerDatosFacturacionPorPagoOrdenVenta(
         @WebParam(name = "arg0", targetNamespace = "")
         Long arg0);
 
@@ -87,10 +87,10 @@ public interface DatosFacturacionServiceWs {
      */
     @WebMethod
     @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "obtenerDatosFacturacionPorPagoOrdenVenta", targetNamespace = "http://servicio.sga.gm.com.mx/", className = "clientews.servicio.ObtenerDatosFacturacionPorPagoOrdenVenta")
-    @ResponseWrapper(localName = "obtenerDatosFacturacionPorPagoOrdenVentaResponse", targetNamespace = "http://servicio.sga.gm.com.mx/", className = "clientews.servicio.ObtenerDatosFacturacionPorPagoOrdenVentaResponse")
-    @Action(input = "http://servicio.sga.gm.com.mx/DatosFacturacionServiceWs/obtenerDatosFacturacionPorPagoOrdenVentaRequest", output = "http://servicio.sga.gm.com.mx/DatosFacturacionServiceWs/obtenerDatosFacturacionPorPagoOrdenVentaResponse")
-    public DatosFacturacion obtenerDatosFacturacionPorPagoOrdenVenta(
+    @RequestWrapper(localName = "obtenerDatosFacturacionPorId", targetNamespace = "http://servicio.sga.gm.com.mx/", className = "clientews.servicio.ObtenerDatosFacturacionPorId")
+    @ResponseWrapper(localName = "obtenerDatosFacturacionPorIdResponse", targetNamespace = "http://servicio.sga.gm.com.mx/", className = "clientews.servicio.ObtenerDatosFacturacionPorIdResponse")
+    @Action(input = "http://servicio.sga.gm.com.mx/DatosFacturacionServiceWs/obtenerDatosFacturacionPorIdRequest", output = "http://servicio.sga.gm.com.mx/DatosFacturacionServiceWs/obtenerDatosFacturacionPorIdResponse")
+    public DatosFacturacion obtenerDatosFacturacionPorId(
         @WebParam(name = "arg0", targetNamespace = "")
         Long arg0);
 

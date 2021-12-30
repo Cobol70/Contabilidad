@@ -29,8 +29,6 @@ public class Estudios extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         btnRegresar = new javax.swing.JButton();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        tableEstudios = new javax.swing.JTable();
         jPanel2 = new javax.swing.JPanel();
         comboInstrucciones = new javax.swing.JComboBox<>();
         jLabel2 = new javax.swing.JLabel();
@@ -47,6 +45,14 @@ public class Estudios extends javax.swing.JFrame {
         btnGuardar = new javax.swing.JButton();
         btnVer = new javax.swing.JButton();
         btnModificar = new javax.swing.JButton();
+        checkRequiereAntecedentes = new javax.swing.JCheckBox();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        tableEstudios = new javax.swing.JTable();
+        comboAntecedentes = new javax.swing.JComboBox<>();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        tableAntecedentes = new javax.swing.JTable();
+        btnQuitarAntecedente = new javax.swing.JButton();
+        btnNuevoAntecedente = new javax.swing.JButton();
         btnCerrar = new javax.swing.JButton();
         btnMinimizar = new javax.swing.JButton();
         jLabel7 = new javax.swing.JLabel();
@@ -69,25 +75,21 @@ public class Estudios extends javax.swing.JFrame {
         });
         jPanel1.add(btnRegresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 40, 40));
 
-        jScrollPane1.setViewportView(tableEstudios);
-
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(342, 140, 440, 330));
-
         jPanel2.setBackground(new java.awt.Color(204, 204, 255));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        jPanel2.add(comboInstrucciones, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 240, 240, -1));
+        jPanel2.add(comboInstrucciones, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 190, 240, -1));
 
         jLabel2.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jLabel2.setText("Instrucciones");
-        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 220, -1, -1));
+        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 170, -1, -1));
 
         checkDicom.setBackground(new java.awt.Color(204, 204, 255));
         checkDicom.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         checkDicom.setText("Dicom");
-        jPanel2.add(checkDicom, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 320, -1, -1));
+        jPanel2.add(checkDicom, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 510, -1, -1));
 
         comboArea.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        jPanel2.add(comboArea, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 150, 240, -1));
+        jPanel2.add(comboArea, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 130, 240, -1));
 
         jLabel4.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jLabel4.setText("Área");
@@ -105,7 +107,7 @@ public class Estudios extends javax.swing.JFrame {
         btnNuevasInstrucciones.setText("Nuevas instrucciones");
         btnNuevasInstrucciones.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnNuevasInstrucciones.setContentAreaFilled(false);
-        jPanel2.add(btnNuevasInstrucciones, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 270, 140, 30));
+        jPanel2.add(btnNuevasInstrucciones, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 220, 140, 30));
         jPanel2.add(txtBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 40, 230, -1));
 
         jLabel3.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
@@ -114,7 +116,7 @@ public class Estudios extends javax.swing.JFrame {
 
         jLabel5.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jLabel5.setText("Área");
-        jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 130, -1, -1));
+        jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 110, -1, -1));
         jPanel2.add(comboAreaBusqueda, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 40, 190, -1));
 
         btnGuardar.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
@@ -128,11 +130,11 @@ public class Estudios extends javax.swing.JFrame {
                 btnGuardarActionPerformed(evt);
             }
         });
-        jPanel2.add(btnGuardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 360, 90, 30));
+        jPanel2.add(btnGuardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 550, 90, 30));
 
         btnVer.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/ver2.png"))); // NOI18N
         btnVer.setContentAreaFilled(false);
-        jPanel2.add(btnVer, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 270, 40, -1));
+        jPanel2.add(btnVer, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 220, 40, -1));
 
         btnModificar.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         btnModificar.setForeground(new java.awt.Color(0, 0, 51));
@@ -145,9 +147,28 @@ public class Estudios extends javax.swing.JFrame {
                 btnModificarActionPerformed(evt);
             }
         });
-        jPanel2.add(btnModificar, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 360, 100, 30));
+        jPanel2.add(btnModificar, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 550, 100, 30));
 
-        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 70, 760, 430));
+        checkRequiereAntecedentes.setBackground(new java.awt.Color(204, 204, 255));
+        checkRequiereAntecedentes.setText("Requiere saber antecedentes");
+        jPanel2.add(checkRequiereAntecedentes, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 270, -1, -1));
+
+        jScrollPane1.setViewportView(tableEstudios);
+
+        jPanel2.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 70, 440, 510));
+        jPanel2.add(comboAntecedentes, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 300, 240, -1));
+
+        jScrollPane2.setViewportView(tableAntecedentes);
+
+        jPanel2.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 360, 240, 140));
+
+        btnQuitarAntecedente.setText("Quitar");
+        jPanel2.add(btnQuitarAntecedente, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 510, -1, -1));
+
+        btnNuevoAntecedente.setText("Nuevo antecedente");
+        jPanel2.add(btnNuevoAntecedente, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 330, -1, -1));
+
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 70, 780, 600));
 
         btnCerrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/CerrarSecundario.png"))); // NOI18N
         btnCerrar.setContentAreaFilled(false);
@@ -161,7 +182,7 @@ public class Estudios extends javax.swing.JFrame {
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/imagotipo.png"))); // NOI18N
         jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 0, 70, 70));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 852, 530));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 852, 700));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -219,9 +240,13 @@ public class Estudios extends javax.swing.JFrame {
     public javax.swing.JButton btnMinimizar;
     public javax.swing.JButton btnModificar;
     public javax.swing.JButton btnNuevasInstrucciones;
+    public javax.swing.JButton btnNuevoAntecedente;
+    public javax.swing.JButton btnQuitarAntecedente;
     public javax.swing.JButton btnRegresar;
     public javax.swing.JButton btnVer;
     public javax.swing.JCheckBox checkDicom;
+    public javax.swing.JCheckBox checkRequiereAntecedentes;
+    public javax.swing.JComboBox<String> comboAntecedentes;
     public javax.swing.JComboBox<String> comboArea;
     public javax.swing.JComboBox<String> comboAreaBusqueda;
     public javax.swing.JComboBox<String> comboInstrucciones;
@@ -234,6 +259,8 @@ public class Estudios extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    public javax.swing.JTable tableAntecedentes;
     public javax.swing.JTable tableEstudios;
     public javax.swing.JTextField txtBuscar;
     public javax.swing.JTextField txtNombre;

@@ -27,6 +27,45 @@ public interface PaquetesServiceWs {
 
     /**
      * 
+     * @return
+     *     returns java.util.List<clientews.servicio.Paquete>
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "listarPaquetes", targetNamespace = "http://servicio.sga.gm.com.mx/", className = "clientews.servicio.ListarPaquetes")
+    @ResponseWrapper(localName = "listarPaquetesResponse", targetNamespace = "http://servicio.sga.gm.com.mx/", className = "clientews.servicio.ListarPaquetesResponse")
+    @Action(input = "http://servicio.sga.gm.com.mx/PaquetesServiceWs/listarPaquetesRequest", output = "http://servicio.sga.gm.com.mx/PaquetesServiceWs/listarPaquetesResponse")
+    public List<Paquete> listarPaquetes();
+
+    /**
+     * 
+     * @param arg0
+     * @return
+     *     returns clientews.servicio.Paquete
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "encontrarPaquetePorId", targetNamespace = "http://servicio.sga.gm.com.mx/", className = "clientews.servicio.EncontrarPaquetePorId")
+    @ResponseWrapper(localName = "encontrarPaquetePorIdResponse", targetNamespace = "http://servicio.sga.gm.com.mx/", className = "clientews.servicio.EncontrarPaquetePorIdResponse")
+    @Action(input = "http://servicio.sga.gm.com.mx/PaquetesServiceWs/encontrarPaquetePorIdRequest", output = "http://servicio.sga.gm.com.mx/PaquetesServiceWs/encontrarPaquetePorIdResponse")
+    public Paquete encontrarPaquetePorId(
+        @WebParam(name = "arg0", targetNamespace = "")
+        Long arg0);
+
+    /**
+     * 
+     * @param arg0
+     */
+    @WebMethod
+    @RequestWrapper(localName = "registrarPaquete", targetNamespace = "http://servicio.sga.gm.com.mx/", className = "clientews.servicio.RegistrarPaquete")
+    @ResponseWrapper(localName = "registrarPaqueteResponse", targetNamespace = "http://servicio.sga.gm.com.mx/", className = "clientews.servicio.RegistrarPaqueteResponse")
+    @Action(input = "http://servicio.sga.gm.com.mx/PaquetesServiceWs/registrarPaqueteRequest", output = "http://servicio.sga.gm.com.mx/PaquetesServiceWs/registrarPaqueteResponse")
+    public void registrarPaquete(
+        @WebParam(name = "arg0", targetNamespace = "")
+        Paquete arg0);
+
+    /**
+     * 
      * @param arg0
      */
     @WebMethod
@@ -51,27 +90,33 @@ public interface PaquetesServiceWs {
 
     /**
      * 
+     * @param arg0
+     * @return
+     *     returns clientews.servicio.Paquete
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "obtenerPaquetePorNombre", targetNamespace = "http://servicio.sga.gm.com.mx/", className = "clientews.servicio.ObtenerPaquetePorNombre")
+    @ResponseWrapper(localName = "obtenerPaquetePorNombreResponse", targetNamespace = "http://servicio.sga.gm.com.mx/", className = "clientews.servicio.ObtenerPaquetePorNombreResponse")
+    @Action(input = "http://servicio.sga.gm.com.mx/PaquetesServiceWs/obtenerPaquetePorNombreRequest", output = "http://servicio.sga.gm.com.mx/PaquetesServiceWs/obtenerPaquetePorNombreResponse")
+    public Paquete obtenerPaquetePorNombre(
+        @WebParam(name = "arg0", targetNamespace = "")
+        String arg0);
+
+    /**
+     * 
+     * @param arg0
      * @return
      *     returns java.util.List<clientews.servicio.Paquete>
      */
     @WebMethod
     @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "listarPaquetes", targetNamespace = "http://servicio.sga.gm.com.mx/", className = "clientews.servicio.ListarPaquetes")
-    @ResponseWrapper(localName = "listarPaquetesResponse", targetNamespace = "http://servicio.sga.gm.com.mx/", className = "clientews.servicio.ListarPaquetesResponse")
-    @Action(input = "http://servicio.sga.gm.com.mx/PaquetesServiceWs/listarPaquetesRequest", output = "http://servicio.sga.gm.com.mx/PaquetesServiceWs/listarPaquetesResponse")
-    public List<Paquete> listarPaquetes();
-
-    /**
-     * 
-     * @param arg0
-     */
-    @WebMethod
-    @RequestWrapper(localName = "registrarPaquete", targetNamespace = "http://servicio.sga.gm.com.mx/", className = "clientews.servicio.RegistrarPaquete")
-    @ResponseWrapper(localName = "registrarPaqueteResponse", targetNamespace = "http://servicio.sga.gm.com.mx/", className = "clientews.servicio.RegistrarPaqueteResponse")
-    @Action(input = "http://servicio.sga.gm.com.mx/PaquetesServiceWs/registrarPaqueteRequest", output = "http://servicio.sga.gm.com.mx/PaquetesServiceWs/registrarPaqueteResponse")
-    public void registrarPaquete(
+    @RequestWrapper(localName = "obtenerPaquetesLikeNombre", targetNamespace = "http://servicio.sga.gm.com.mx/", className = "clientews.servicio.ObtenerPaquetesLikeNombre")
+    @ResponseWrapper(localName = "obtenerPaquetesLikeNombreResponse", targetNamespace = "http://servicio.sga.gm.com.mx/", className = "clientews.servicio.ObtenerPaquetesLikeNombreResponse")
+    @Action(input = "http://servicio.sga.gm.com.mx/PaquetesServiceWs/obtenerPaquetesLikeNombreRequest", output = "http://servicio.sga.gm.com.mx/PaquetesServiceWs/obtenerPaquetesLikeNombreResponse")
+    public List<Paquete> obtenerPaquetesLikeNombre(
         @WebParam(name = "arg0", targetNamespace = "")
-        Paquete arg0);
+        String arg0);
 
     /**
      * 
@@ -111,50 +156,5 @@ public interface PaquetesServiceWs {
     public List<ConceptosInstitucion> obtenerConceptosDePaquete(
         @WebParam(name = "arg0", targetNamespace = "")
         Long arg0);
-
-    /**
-     * 
-     * @param arg0
-     * @return
-     *     returns clientews.servicio.Paquete
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "encontrarPaquetePorId", targetNamespace = "http://servicio.sga.gm.com.mx/", className = "clientews.servicio.EncontrarPaquetePorId")
-    @ResponseWrapper(localName = "encontrarPaquetePorIdResponse", targetNamespace = "http://servicio.sga.gm.com.mx/", className = "clientews.servicio.EncontrarPaquetePorIdResponse")
-    @Action(input = "http://servicio.sga.gm.com.mx/PaquetesServiceWs/encontrarPaquetePorIdRequest", output = "http://servicio.sga.gm.com.mx/PaquetesServiceWs/encontrarPaquetePorIdResponse")
-    public Paquete encontrarPaquetePorId(
-        @WebParam(name = "arg0", targetNamespace = "")
-        Long arg0);
-
-    /**
-     * 
-     * @param arg0
-     * @return
-     *     returns clientews.servicio.Paquete
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "obtenerPaquetePorNombre", targetNamespace = "http://servicio.sga.gm.com.mx/", className = "clientews.servicio.ObtenerPaquetePorNombre")
-    @ResponseWrapper(localName = "obtenerPaquetePorNombreResponse", targetNamespace = "http://servicio.sga.gm.com.mx/", className = "clientews.servicio.ObtenerPaquetePorNombreResponse")
-    @Action(input = "http://servicio.sga.gm.com.mx/PaquetesServiceWs/obtenerPaquetePorNombreRequest", output = "http://servicio.sga.gm.com.mx/PaquetesServiceWs/obtenerPaquetePorNombreResponse")
-    public Paquete obtenerPaquetePorNombre(
-        @WebParam(name = "arg0", targetNamespace = "")
-        String arg0);
-
-    /**
-     * 
-     * @param arg0
-     * @return
-     *     returns java.util.List<clientews.servicio.Paquete>
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "obtenerPaquetesLikeNombre", targetNamespace = "http://servicio.sga.gm.com.mx/", className = "clientews.servicio.ObtenerPaquetesLikeNombre")
-    @ResponseWrapper(localName = "obtenerPaquetesLikeNombreResponse", targetNamespace = "http://servicio.sga.gm.com.mx/", className = "clientews.servicio.ObtenerPaquetesLikeNombreResponse")
-    @Action(input = "http://servicio.sga.gm.com.mx/PaquetesServiceWs/obtenerPaquetesLikeNombreRequest", output = "http://servicio.sga.gm.com.mx/PaquetesServiceWs/obtenerPaquetesLikeNombreResponse")
-    public List<Paquete> obtenerPaquetesLikeNombre(
-        @WebParam(name = "arg0", targetNamespace = "")
-        String arg0);
 
 }

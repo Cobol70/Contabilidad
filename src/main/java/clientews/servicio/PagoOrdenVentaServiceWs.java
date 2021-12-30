@@ -1,8 +1,10 @@
 
 package clientews.servicio;
 
+import java.util.List;
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
+import javax.jws.WebResult;
 import javax.jws.WebService;
 import javax.xml.bind.annotation.XmlSeeAlso;
 import javax.xml.ws.Action;
@@ -34,6 +36,21 @@ public interface PagoOrdenVentaServiceWs {
     public void registrarPagoOrdenVenta(
         @WebParam(name = "arg0", targetNamespace = "")
         PagoOrdenVenta arg0);
+
+    /**
+     * 
+     * @param arg0
+     * @return
+     *     returns java.util.List<clientews.servicio.PagoOrdenVenta>
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "obtenerPagosDeOrdenVenta", targetNamespace = "http://servicio.sga.gm.com.mx/", className = "clientews.servicio.ObtenerPagosDeOrdenVenta")
+    @ResponseWrapper(localName = "obtenerPagosDeOrdenVentaResponse", targetNamespace = "http://servicio.sga.gm.com.mx/", className = "clientews.servicio.ObtenerPagosDeOrdenVentaResponse")
+    @Action(input = "http://servicio.sga.gm.com.mx/PagoOrdenVentaServiceWs/obtenerPagosDeOrdenVentaRequest", output = "http://servicio.sga.gm.com.mx/PagoOrdenVentaServiceWs/obtenerPagosDeOrdenVentaResponse")
+    public List<PagoOrdenVenta> obtenerPagosDeOrdenVenta(
+        @WebParam(name = "arg0", targetNamespace = "")
+        OrdenVenta arg0);
 
     /**
      * 

@@ -27,6 +27,30 @@ public interface ConceptosInstitucionServiceWs {
 
     /**
      * 
+     * @param arg0
+     */
+    @WebMethod
+    @RequestWrapper(localName = "registrarConceptosInstitucion", targetNamespace = "http://servicio.sga.gm.com.mx/", className = "clientews.servicio.RegistrarConceptosInstitucion")
+    @ResponseWrapper(localName = "registrarConceptosInstitucionResponse", targetNamespace = "http://servicio.sga.gm.com.mx/", className = "clientews.servicio.RegistrarConceptosInstitucionResponse")
+    @Action(input = "http://servicio.sga.gm.com.mx/ConceptosInstitucionServiceWs/registrarConceptosInstitucionRequest", output = "http://servicio.sga.gm.com.mx/ConceptosInstitucionServiceWs/registrarConceptosInstitucionResponse")
+    public void registrarConceptosInstitucion(
+        @WebParam(name = "arg0", targetNamespace = "")
+        ConceptosInstitucion arg0);
+
+    /**
+     * 
+     * @param arg0
+     */
+    @WebMethod
+    @RequestWrapper(localName = "actualizarConceptosInstitucion", targetNamespace = "http://servicio.sga.gm.com.mx/", className = "clientews.servicio.ActualizarConceptosInstitucion")
+    @ResponseWrapper(localName = "actualizarConceptosInstitucionResponse", targetNamespace = "http://servicio.sga.gm.com.mx/", className = "clientews.servicio.ActualizarConceptosInstitucionResponse")
+    @Action(input = "http://servicio.sga.gm.com.mx/ConceptosInstitucionServiceWs/actualizarConceptosInstitucionRequest", output = "http://servicio.sga.gm.com.mx/ConceptosInstitucionServiceWs/actualizarConceptosInstitucionResponse")
+    public void actualizarConceptosInstitucion(
+        @WebParam(name = "arg0", targetNamespace = "")
+        ConceptosInstitucion arg0);
+
+    /**
+     * 
      * @param arg1
      * @param arg0
      * @return
@@ -42,6 +66,21 @@ public interface ConceptosInstitucionServiceWs {
         Long arg0,
         @WebParam(name = "arg1", targetNamespace = "")
         Long arg1);
+
+    /**
+     * 
+     * @param arg0
+     * @return
+     *     returns java.util.List<clientews.servicio.ConceptosInstitucion>
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "obtenerConceptosInstitucionPorIdInstitucion", targetNamespace = "http://servicio.sga.gm.com.mx/", className = "clientews.servicio.ObtenerConceptosInstitucionPorIdInstitucion")
+    @ResponseWrapper(localName = "obtenerConceptosInstitucionPorIdInstitucionResponse", targetNamespace = "http://servicio.sga.gm.com.mx/", className = "clientews.servicio.ObtenerConceptosInstitucionPorIdInstitucionResponse")
+    @Action(input = "http://servicio.sga.gm.com.mx/ConceptosInstitucionServiceWs/obtenerConceptosInstitucionPorIdInstitucionRequest", output = "http://servicio.sga.gm.com.mx/ConceptosInstitucionServiceWs/obtenerConceptosInstitucionPorIdInstitucionResponse")
+    public List<ConceptosInstitucion> obtenerConceptosInstitucionPorIdInstitucion(
+        @WebParam(name = "arg0", targetNamespace = "")
+        Long arg0);
 
     /**
      * 
@@ -99,44 +138,5 @@ public interface ConceptosInstitucionServiceWs {
         Long arg0,
         @WebParam(name = "arg1", targetNamespace = "")
         int arg1);
-
-    /**
-     * 
-     * @param arg0
-     * @return
-     *     returns java.util.List<clientews.servicio.ConceptosInstitucion>
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "obtenerConceptosInstitucionPorIdInstitucion", targetNamespace = "http://servicio.sga.gm.com.mx/", className = "clientews.servicio.ObtenerConceptosInstitucionPorIdInstitucion")
-    @ResponseWrapper(localName = "obtenerConceptosInstitucionPorIdInstitucionResponse", targetNamespace = "http://servicio.sga.gm.com.mx/", className = "clientews.servicio.ObtenerConceptosInstitucionPorIdInstitucionResponse")
-    @Action(input = "http://servicio.sga.gm.com.mx/ConceptosInstitucionServiceWs/obtenerConceptosInstitucionPorIdInstitucionRequest", output = "http://servicio.sga.gm.com.mx/ConceptosInstitucionServiceWs/obtenerConceptosInstitucionPorIdInstitucionResponse")
-    public List<ConceptosInstitucion> obtenerConceptosInstitucionPorIdInstitucion(
-        @WebParam(name = "arg0", targetNamespace = "")
-        Long arg0);
-
-    /**
-     * 
-     * @param arg0
-     */
-    @WebMethod
-    @RequestWrapper(localName = "registrarConceptosInstitucion", targetNamespace = "http://servicio.sga.gm.com.mx/", className = "clientews.servicio.RegistrarConceptosInstitucion")
-    @ResponseWrapper(localName = "registrarConceptosInstitucionResponse", targetNamespace = "http://servicio.sga.gm.com.mx/", className = "clientews.servicio.RegistrarConceptosInstitucionResponse")
-    @Action(input = "http://servicio.sga.gm.com.mx/ConceptosInstitucionServiceWs/registrarConceptosInstitucionRequest", output = "http://servicio.sga.gm.com.mx/ConceptosInstitucionServiceWs/registrarConceptosInstitucionResponse")
-    public void registrarConceptosInstitucion(
-        @WebParam(name = "arg0", targetNamespace = "")
-        ConceptosInstitucion arg0);
-
-    /**
-     * 
-     * @param arg0
-     */
-    @WebMethod
-    @RequestWrapper(localName = "actualizarConceptosInstitucion", targetNamespace = "http://servicio.sga.gm.com.mx/", className = "clientews.servicio.ActualizarConceptosInstitucion")
-    @ResponseWrapper(localName = "actualizarConceptosInstitucionResponse", targetNamespace = "http://servicio.sga.gm.com.mx/", className = "clientews.servicio.ActualizarConceptosInstitucionResponse")
-    @Action(input = "http://servicio.sga.gm.com.mx/ConceptosInstitucionServiceWs/actualizarConceptosInstitucionRequest", output = "http://servicio.sga.gm.com.mx/ConceptosInstitucionServiceWs/actualizarConceptosInstitucionResponse")
-    public void actualizarConceptosInstitucion(
-        @WebParam(name = "arg0", targetNamespace = "")
-        ConceptosInstitucion arg0);
 
 }

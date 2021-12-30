@@ -5,6 +5,8 @@
  */
 package Controladores;
 
+import DAO.AntecedentesDao;
+import DAO.AntecedentesDaoImpl;
 import DAO.AreasDao;
 import DAO.AreasDaoImpl;
 import DAO.ConceptosDao;
@@ -16,6 +18,9 @@ import Utilidades.BarUtil;
 import Vistas.Estudios;
 import Vistas.Menu;
 import Vistas.NuevasInstrucciones;
+import Vistas.NuevoAntecedente;
+import clientews.servicio.AntecedenteConceptoIds;
+import clientews.servicio.Antecedentes;
 import clientews.servicio.Areas;
 import clientews.servicio.Conceptos;
 import clientews.servicio.Instrucciones;
@@ -25,8 +30,12 @@ import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+import java.util.ArrayList;
+import java.util.List;
 import javax.swing.JComboBox;
 import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableColumnModel;
 
 /**
  *
@@ -43,6 +52,7 @@ public class EstudiosController implements ActionListener, MouseListener, KeyLis
     private AreasDao modeloAreas;
     private InstruccionesDao modeloInstrucciones;
     private Conceptos estudioSeleccionado;
+    private AntecedentesDao modeloAntecedentes;
 
     public EstudiosController(Estudios vista) {
         this.vista = vista;
@@ -57,6 +67,11 @@ public class EstudiosController implements ActionListener, MouseListener, KeyLis
         this.vista.btnCerrar.addActionListener(this);
         this.vista.btnMinimizar.addActionListener(this);
         this.vista.btnModificar.addActionListener(this);
+        this.vista.checkRequiereAntecedentes.addActionListener(this);
+        this.vista.comboAntecedentes.addActionListener(this);
+
+        this.vista.btnNuevoAntecedente.addActionListener(this);
+        this.vista.btnQuitarAntecedente.addActionListener(this);
 
         this.vista.txtBuscar.addKeyListener(this);
         this.vista.txtNombre.addKeyListener(this);
@@ -73,11 +88,17 @@ public class EstudiosController implements ActionListener, MouseListener, KeyLis
         modeloConceptos = new ConceptosDaoImp();
         modeloAreas = new AreasDaoImpl();
         modeloInstrucciones = new InstruccionesDaoImpl();
+        modeloAntecedentes = new AntecedentesDaoImpl();
 
         cargarAreas();
         cargarAreasBusqueda();
         cargarInstrucciones();
         cargarEstudios();
+        cargarAntecedentes();
+
+        activarAntecedentes(false);
+        cargarTablaAntecedentes();
+
     }
 
     @Override
@@ -87,6 +108,9 @@ public class EstudiosController implements ActionListener, MouseListener, KeyLis
                 try {
                     generarEstudio();
                     guardar();
+                    estudio = modeloConceptos.obtenerUltimoConceptoRegistrado();
+                    System.out.println(estudio.getConceptoTo());
+                    vincularAntecedentes(estudio.getIdTo());
                 } catch (Exception ex) {
                     JOptionPane.showMessageDialog(null, "No se pudo crear el estudio");
                     ex.printStackTrace(System.out);
@@ -125,6 +149,8 @@ public class EstudiosController implements ActionListener, MouseListener, KeyLis
             if (deseaModificar() && datosValidos() && vista.tableEstudios.getSelectedRow() != -1 && estudioSeleccionado != null) {
                 try {
                     obtenerNuevosDatos();
+                    eliminarRelacionAntecedentes();
+                    vincularAntecedentes(estudioSeleccionado.getIdTo());
                     modificar();
                 } catch (Exception ex) {
                     JOptionPane.showMessageDialog(null, "No se pudo modificar el estudio");
@@ -133,6 +159,24 @@ public class EstudiosController implements ActionListener, MouseListener, KeyLis
                     limpiar();
                     cargarEstudios();
                 }
+            }
+        } else if (e.getSource() == vista.checkRequiereAntecedentes) {
+            activarAntecedentes(vista.checkRequiereAntecedentes.isSelected());
+        } else if (e.getSource() == vista.btnNuevoAntecedente) {
+            abrirCrearNuevoAntecedente();
+        } else if (e.getSource() == vista.comboAntecedentes) {
+            if (vista.comboAntecedentes.getSelectedIndex() != 0) {
+                Antecedentes antecedente = modeloAntecedentes.encontrarAntecedentePorNombre(vista.comboAntecedentes.getSelectedItem().toString());
+                if (noEstaEnLaTabla(antecedente)) {
+                    agregarAntecedenteATabla(antecedente);
+                }
+            }
+        } else if (e.getSource() == vista.btnQuitarAntecedente) {
+            if (vista.tableAntecedentes.getRowCount() != 0 && vista.tableAntecedentes.getSelectedRow() != -1) {
+
+                //Simplemente hay que quitarlo de la tabla
+                DefaultTableModel dt = (DefaultTableModel) vista.tableAntecedentes.getModel();
+                dt.removeRow(vista.tableAntecedentes.getSelectedRow());
             }
         }
     }
@@ -159,6 +203,8 @@ public class EstudiosController implements ActionListener, MouseListener, KeyLis
                 } else {
                     vista.checkDicom.setSelected(true);
                 }
+
+                cargarAntecedentes(estudioSeleccionado.getIdTo());
             }
         }
     }
@@ -273,6 +319,8 @@ public class EstudiosController implements ActionListener, MouseListener, KeyLis
 
         estudio.setUsuarioTo(3); //Porque sí
 
+        estudio.setRequiereSaberAntecedentes(vista.checkRequiereAntecedentes.isSelected());
+
     }
 
     private void guardar() {
@@ -287,6 +335,7 @@ public class EstudiosController implements ActionListener, MouseListener, KeyLis
         vista.comboAreaBusqueda.setSelectedIndex(0);
         vista.comboInstrucciones.setSelectedIndex(0);
         vista.checkDicom.setSelected(false);
+
     }
 
     private void encontrarArea() {
@@ -424,11 +473,116 @@ public class EstudiosController implements ActionListener, MouseListener, KeyLis
         estudioSeleccionado.setIdInstrucciones(instruccionesSeleccionadas);
 
         estudioSeleccionado.setConceptoTo(vista.txtNombre.getText());
-      
+        estudioSeleccionado.setRequiereSaberAntecedentes(vista.checkRequiereAntecedentes.isSelected());
+
     }
 
     private void modificar() {
         modeloConceptos.actualizarConcepto(estudioSeleccionado);
     }
+
+    public void cargarAntecedentes() {
+        try {
+            JComboBox combo = new JComboBox();
+            combo.removeAllItems();
+            combo.addItem("SELECCIONE UNA OPCIÓN");
+            for (Antecedentes antecedentesFor : modeloAntecedentes.listarAntecedentes()) {
+                combo.addItem(antecedentesFor.getNombre());
+            }
+            vista.comboAntecedentes.setModel(combo.getModel());
+        } catch (Exception e) {
+            e.printStackTrace(System.out);
+        }
+    }
+
+    private void activarAntecedentes(boolean b) {
+        vista.comboAntecedentes.setEnabled(b);
+        vista.btnNuevoAntecedente.setEnabled(b);
+        vista.tableAntecedentes.setEnabled(b);
+        vista.btnQuitarAntecedente.setEnabled(b);
+    }
+
+    private void abrirCrearNuevoAntecedente() {
+        NuevoAntecedenteController controladorNuevoAntecedente = new NuevoAntecedenteController(new NuevoAntecedente(), this);
+        controladorNuevoAntecedente.iniciar();
+    }
+
+    private boolean noEstaEnLaTabla(Antecedentes antecedente) {
+        for (int i = 0; i < vista.tableAntecedentes.getRowCount(); i++) {
+            int id = Integer.parseInt(vista.tableAntecedentes.getValueAt(i, 1).toString());
+            if (id == antecedente.getId()) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    private void agregarAntecedenteATabla(Antecedentes antecedente) {
+        DefaultTableModel dt = (DefaultTableModel) vista.tableAntecedentes.getModel();
+        Object fila[] = new Object[2];
+        fila[0] = antecedente.getNombre();
+        fila[1] = antecedente.getId();
+        dt.addRow(fila);
+    }
+
+    private void cargarTablaAntecedentes() {
+        DefaultTableModel dt = new DefaultTableModel();
+        dt.addColumn("Nombre");
+        dt.addColumn("Id");
+        vista.tableAntecedentes.setModel(dt);
+        vista.tableAntecedentes.setRowHeight(40);
+        TableColumnModel columnModel = vista.tableAntecedentes.getColumnModel();
+        columnModel.getColumn(0).setPreferredWidth(300);
+        columnModel.getColumn(1).setPreferredWidth(1);
+    }
+
+    private void vincularAntecedentes(Long idConcepto) {
+        if (vista.checkRequiereAntecedentes.isSelected()) {
+
+            List antecedentes = new ArrayList<>();
+            for (int i = 0; i < vista.tableAntecedentes.getRowCount(); i++) {
+                AntecedenteConceptoIds temporal = new AntecedenteConceptoIds();
+                Long idAntecedente = (Long.parseLong(vista.tableAntecedentes.getValueAt(i, 1).toString()));
+                temporal.setIdAntecedente(idAntecedente);
+                temporal.setIdConcepto(idConcepto);
+                antecedentes.add(temporal);
+            }
+            antecedentes.forEach(a -> {
+                System.out.println("a");
+            });
+            modeloAntecedentes.registrarAntecedentesConcepto(antecedentes);
+        }
+    }
+
+    private void cargarAntecedentes(Long id) {
+        limpiarTablaAntecedentes();
+        vista.checkRequiereAntecedentes.setSelected(false);
+        activarAntecedentes(false);
+        DefaultTableModel dt = (DefaultTableModel) vista.tableAntecedentes.getModel();
+        modeloAntecedentes.encontrarAntecedentesPorConcepto(id).forEach(antecedente -> {
+            if (!vista.checkRequiereAntecedentes.isSelected() && estudioSeleccionado.isRequiereSaberAntecedentes()) {
+                vista.checkRequiereAntecedentes.setSelected(true);
+                activarAntecedentes(true);
+            }
+            Object fila[] = new Object[2];
+            fila[0] = antecedente.getNombre();
+            fila[1] = antecedente.getId();
+            System.out.println(antecedente.getNombre());
+            dt.addRow(fila);
+        });
+    }
+
+    private void limpiarTablaAntecedentes() {
+        DefaultTableModel dt = (DefaultTableModel) vista.tableAntecedentes.getModel();
+        for (int i = dt.getRowCount() - 1; i >= 0; i--) {
+            dt.removeRow(i);
+        }
+    }
+
+    private void eliminarRelacionAntecedentes() {
+        modeloAntecedentes.eliminarTodosAntecedentesConcepto(estudioSeleccionado.getIdTo());
+    }
+
+    
 
 }

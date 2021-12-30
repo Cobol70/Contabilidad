@@ -31,8 +31,11 @@ public interface ConceptosDao {
     public List<Conceptos> encontrarConceptoLikeNombre(String nombre);
 
     public List<Conceptos> encontrarConceptosPorAreaYNombre(Integer idArea, String name);
-    
+
     public List<Conceptos> encontrarConceptosPorIdInstitucion(Long idInstitucion);
-                public void actualizarConcepto(Conceptos concepto);
+
+    public void actualizarConcepto(Conceptos concepto);
+
+    public Conceptos obtenerUltimoConceptoRegistrado();
 
 }

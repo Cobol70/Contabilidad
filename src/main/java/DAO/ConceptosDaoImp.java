@@ -81,6 +81,11 @@ public class ConceptosDaoImp implements ConceptosDao{
     public void actualizarConcepto(Conceptos concepto) {
         servicio.actualizarConcepto(concepto);
     }
+
+    @Override
+    public Conceptos obtenerUltimoConceptoRegistrado() {
+        return servicio.obtenerUltimoConceptoRegistrado();
+    }
     
     
     

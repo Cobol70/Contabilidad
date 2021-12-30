@@ -28,6 +28,18 @@ public interface DevolucionServiceWs {
     /**
      * 
      * @param arg0
+     */
+    @WebMethod
+    @RequestWrapper(localName = "registrarDevolucion", targetNamespace = "http://servicio.sga.gm.com.mx/", className = "clientews.servicio.RegistrarDevolucion")
+    @ResponseWrapper(localName = "registrarDevolucionResponse", targetNamespace = "http://servicio.sga.gm.com.mx/", className = "clientews.servicio.RegistrarDevolucionResponse")
+    @Action(input = "http://servicio.sga.gm.com.mx/DevolucionServiceWs/registrarDevolucionRequest", output = "http://servicio.sga.gm.com.mx/DevolucionServiceWs/registrarDevolucionResponse")
+    public void registrarDevolucion(
+        @WebParam(name = "arg0", targetNamespace = "")
+        Devolucion arg0);
+
+    /**
+     * 
+     * @param arg0
      * @return
      *     returns java.util.List<clientews.servicio.Devolucion>
      */
@@ -59,21 +71,6 @@ public interface DevolucionServiceWs {
      * 
      * @param arg0
      * @return
-     *     returns clientews.servicio.Devolucion
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "obtenerDevolucionPorIdPagoOrdenVenta", targetNamespace = "http://servicio.sga.gm.com.mx/", className = "clientews.servicio.ObtenerDevolucionPorIdPagoOrdenVenta")
-    @ResponseWrapper(localName = "obtenerDevolucionPorIdPagoOrdenVentaResponse", targetNamespace = "http://servicio.sga.gm.com.mx/", className = "clientews.servicio.ObtenerDevolucionPorIdPagoOrdenVentaResponse")
-    @Action(input = "http://servicio.sga.gm.com.mx/DevolucionServiceWs/obtenerDevolucionPorIdPagoOrdenVentaRequest", output = "http://servicio.sga.gm.com.mx/DevolucionServiceWs/obtenerDevolucionPorIdPagoOrdenVentaResponse")
-    public Devolucion obtenerDevolucionPorIdPagoOrdenVenta(
-        @WebParam(name = "arg0", targetNamespace = "")
-        Long arg0);
-
-    /**
-     * 
-     * @param arg0
-     * @return
      *     returns java.util.List<clientews.servicio.Devolucion>
      */
     @WebMethod
@@ -88,13 +85,16 @@ public interface DevolucionServiceWs {
     /**
      * 
      * @param arg0
+     * @return
+     *     returns clientews.servicio.Devolucion
      */
     @WebMethod
-    @RequestWrapper(localName = "registrarDevolucion", targetNamespace = "http://servicio.sga.gm.com.mx/", className = "clientews.servicio.RegistrarDevolucion")
-    @ResponseWrapper(localName = "registrarDevolucionResponse", targetNamespace = "http://servicio.sga.gm.com.mx/", className = "clientews.servicio.RegistrarDevolucionResponse")
-    @Action(input = "http://servicio.sga.gm.com.mx/DevolucionServiceWs/registrarDevolucionRequest", output = "http://servicio.sga.gm.com.mx/DevolucionServiceWs/registrarDevolucionResponse")
-    public void registrarDevolucion(
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "obtenerDevolucionPorIdPagoOrdenVenta", targetNamespace = "http://servicio.sga.gm.com.mx/", className = "clientews.servicio.ObtenerDevolucionPorIdPagoOrdenVenta")
+    @ResponseWrapper(localName = "obtenerDevolucionPorIdPagoOrdenVentaResponse", targetNamespace = "http://servicio.sga.gm.com.mx/", className = "clientews.servicio.ObtenerDevolucionPorIdPagoOrdenVentaResponse")
+    @Action(input = "http://servicio.sga.gm.com.mx/DevolucionServiceWs/obtenerDevolucionPorIdPagoOrdenVentaRequest", output = "http://servicio.sga.gm.com.mx/DevolucionServiceWs/obtenerDevolucionPorIdPagoOrdenVentaResponse")
+    public Devolucion obtenerDevolucionPorIdPagoOrdenVenta(
         @WebParam(name = "arg0", targetNamespace = "")
-        Devolucion arg0);
+        Long arg0);
 
 }

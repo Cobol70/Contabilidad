@@ -48,6 +48,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *         &lt;element name="precioMu" type="{http://www.w3.org/2001/XMLSchema}float"/>
  *         &lt;element name="precioTo" type="{http://www.w3.org/2001/XMLSchema}float"/>
  *         &lt;element name="precioUrgenciaTo" type="{http://www.w3.org/2001/XMLSchema}float"/>
+ *         &lt;element name="requiereSaberAntecedentes" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
  *         &lt;element name="usuarioTo" type="{http://www.w3.org/2001/XMLSchema}int"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
@@ -89,6 +90,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
     "precioMu",
     "precioTo",
     "precioUrgenciaTo",
+    "requiereSaberAntecedentes",
     "usuarioTo"
 })
 public class Conceptos {
@@ -124,6 +126,7 @@ public class Conceptos {
     protected float precioMu;
     protected float precioTo;
     protected float precioUrgenciaTo;
+    protected boolean requiereSaberAntecedentes;
     protected int usuarioTo;
 
     /**
@@ -788,6 +791,22 @@ public class Conceptos {
      */
     public void setPrecioUrgenciaTo(float value) {
         this.precioUrgenciaTo = value;
+    }
+
+    /**
+     * Obtiene el valor de la propiedad requiereSaberAntecedentes.
+     * 
+     */
+    public boolean isRequiereSaberAntecedentes() {
+        return requiereSaberAntecedentes;
+    }
+
+    /**
+     * Define el valor de la propiedad requiereSaberAntecedentes.
+     * 
+     */
+    public void setRequiereSaberAntecedentes(boolean value) {
+        this.requiereSaberAntecedentes = value;
     }
 
     /**
