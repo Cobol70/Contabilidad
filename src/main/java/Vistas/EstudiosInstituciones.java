@@ -67,7 +67,6 @@ public class EstudiosInstituciones extends javax.swing.JFrame {
         tableConceptosInstitucion = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(0, 51, 102));
@@ -99,7 +98,7 @@ public class EstudiosInstituciones extends javax.swing.JFrame {
 
         jScrollPane1.setViewportView(tableInstituciones);
 
-        jPanel3.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, 240, 150));
+        jPanel3.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, 240, 430));
         jPanel3.add(txtBuscarInstitucion, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 20, 170, -1));
 
         jLabel1.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
@@ -113,10 +112,10 @@ public class EstudiosInstituciones extends javax.swing.JFrame {
 
         jScrollPane2.setViewportView(tableEstudios);
 
-        jPanel3.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 50, 620, 150));
+        jPanel3.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 50, 620, 430));
         jPanel3.add(comboArea, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 20, 190, -1));
 
-        jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 70, 920, 210));
+        jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 70, 920, 500));
 
         jPanel5.setBackground(new java.awt.Color(204, 204, 255));
         jPanel5.setBorder(javax.swing.BorderFactory.createTitledBorder("Registrar/modificar"));
@@ -137,6 +136,7 @@ public class EstudiosInstituciones extends javax.swing.JFrame {
         jPanel5.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 110, -1, -1));
 
         txtPrecioPublico.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        txtPrecioPublico.setNextFocusableComponent(txtCosto);
         jPanel5.add(txtPrecioPublico, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 130, 130, -1));
 
         jLabel9.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
@@ -144,26 +144,34 @@ public class EstudiosInstituciones extends javax.swing.JFrame {
         jPanel5.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 110, -1, -1));
 
         txtCosto.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        txtCosto.setNextFocusableComponent(txtClaveInstitucion);
         jPanel5.add(txtCosto, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 130, 100, -1));
 
         jLabel6.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jLabel6.setText("Clave que usa institución");
         jPanel5.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 190, -1, -1));
+
+        txtClaveInstitucion.setNextFocusableComponent(txtClaveAnteriorPensiones);
         jPanel5.add(txtClaveInstitucion, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 210, 240, -1));
 
         jLabel7.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jLabel7.setText("Clave anterior pensiones");
         jPanel5.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 190, -1, -1));
+
+        txtClaveAnteriorPensiones.setNextFocusableComponent(txtClaveContpaq);
         jPanel5.add(txtClaveAnteriorPensiones, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 210, 240, -1));
 
         jLabel8.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jLabel8.setText("Nombre que usa la institución ");
         jPanel5.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 110, -1, -1));
+
+        txtClaveContpaq.setNextFocusableComponent(checkActivo);
         jPanel5.add(txtClaveContpaq, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 290, 240, -1));
 
         checkActivo.setBackground(new java.awt.Color(204, 204, 255));
         checkActivo.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         checkActivo.setText("Activo");
+        checkActivo.setNextFocusableComponent(btnGuardar);
         jPanel5.add(checkActivo, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 290, -1, -1));
 
         btnGuardar.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
@@ -186,13 +194,15 @@ public class EstudiosInstituciones extends javax.swing.JFrame {
         btnModificar.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnModificar.setContentAreaFilled(false);
         jPanel5.add(btnModificar, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 340, 100, 30));
+
+        txtNombreInterno.setNextFocusableComponent(txtPrecioPublico);
         jPanel5.add(txtNombreInterno, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 130, 240, -1));
 
         jLabel12.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jLabel12.setText("Clave contpaq");
         jPanel5.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 270, -1, -1));
 
-        jPanel1.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 280, 550, 400));
+        jPanel1.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 570, 550, 400));
 
         jPanel4.setBackground(new java.awt.Color(204, 204, 255));
         jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder("Asignados"));
@@ -202,9 +212,9 @@ public class EstudiosInstituciones extends javax.swing.JFrame {
 
         jPanel4.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 340, 350));
 
-        jPanel1.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 280, 370, 400));
+        jPanel1.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 570, 370, 400));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1000, 705));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1000, 1000));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

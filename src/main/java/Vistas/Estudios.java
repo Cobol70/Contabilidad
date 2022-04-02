@@ -77,6 +77,8 @@ public class Estudios extends javax.swing.JFrame {
 
         jPanel2.setBackground(new java.awt.Color(204, 204, 255));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        comboInstrucciones.setNextFocusableComponent(checkDicom);
         jPanel2.add(comboInstrucciones, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 190, 240, -1));
 
         jLabel2.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
@@ -86,20 +88,23 @@ public class Estudios extends javax.swing.JFrame {
         checkDicom.setBackground(new java.awt.Color(204, 204, 255));
         checkDicom.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         checkDicom.setText("Dicom");
+        checkDicom.setNextFocusableComponent(btnGuardar);
         jPanel2.add(checkDicom, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 510, -1, -1));
 
         comboArea.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        comboArea.setNextFocusableComponent(comboInstrucciones);
         jPanel2.add(comboArea, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 130, 240, -1));
 
         jLabel4.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jLabel4.setText("Área");
-        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 20, -1, -1));
+        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 20, -1, -1));
 
         jLabel1.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jLabel1.setText("Nombre");
         jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 40, -1, -1));
 
         txtNombre.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        txtNombre.setNextFocusableComponent(comboArea);
         jPanel2.add(txtNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 70, 240, -1));
 
         btnNuevasInstrucciones.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
@@ -108,7 +113,7 @@ public class Estudios extends javax.swing.JFrame {
         btnNuevasInstrucciones.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnNuevasInstrucciones.setContentAreaFilled(false);
         jPanel2.add(btnNuevasInstrucciones, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 220, 140, 30));
-        jPanel2.add(txtBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 40, 230, -1));
+        jPanel2.add(txtBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 40, 400, -1));
 
         jLabel3.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jLabel3.setText("Buscar");
@@ -117,7 +122,7 @@ public class Estudios extends javax.swing.JFrame {
         jLabel5.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jLabel5.setText("Área");
         jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 110, -1, -1));
-        jPanel2.add(comboAreaBusqueda, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 40, 190, -1));
+        jPanel2.add(comboAreaBusqueda, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 40, 190, -1));
 
         btnGuardar.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         btnGuardar.setForeground(new java.awt.Color(0, 0, 51));
@@ -125,6 +130,7 @@ public class Estudios extends javax.swing.JFrame {
         btnGuardar.setText("Guardar");
         btnGuardar.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnGuardar.setContentAreaFilled(false);
+        btnGuardar.setNextFocusableComponent(txtNombre);
         btnGuardar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnGuardarActionPerformed(evt);
@@ -155,7 +161,7 @@ public class Estudios extends javax.swing.JFrame {
 
         jScrollPane1.setViewportView(tableEstudios);
 
-        jPanel2.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 70, 440, 510));
+        jPanel2.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 70, 610, 510));
         jPanel2.add(comboAntecedentes, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 300, 240, -1));
 
         jScrollPane2.setViewportView(tableAntecedentes);
@@ -168,21 +174,21 @@ public class Estudios extends javax.swing.JFrame {
         btnNuevoAntecedente.setText("Nuevo antecedente");
         jPanel2.add(btnNuevoAntecedente, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 330, -1, -1));
 
-        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 70, 780, 600));
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 70, 930, 600));
 
         btnCerrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/CerrarSecundario.png"))); // NOI18N
         btnCerrar.setContentAreaFilled(false);
-        jPanel1.add(btnCerrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 0, 40, 30));
+        jPanel1.add(btnCerrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(960, 0, 40, 30));
 
         btnMinimizar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/minSecundario.png"))); // NOI18N
         btnMinimizar.setContentAreaFilled(false);
-        jPanel1.add(btnMinimizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(783, 0, 30, 30));
+        jPanel1.add(btnMinimizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 0, 30, 30));
 
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/imagotipo.png"))); // NOI18N
         jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 0, 70, 70));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 852, 700));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1000, 700));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

@@ -37,9 +37,9 @@ public class TableConceptos {
         tabla.setModel(dt);
         tabla.setRowHeight(40);
         TableColumnModel columnModel = tabla.getColumnModel();
-        columnModel.getColumn(0).setPreferredWidth(150);
+        columnModel.getColumn(0).setPreferredWidth(100);
         columnModel.getColumn(1).setPreferredWidth(300);
-        columnModel.getColumn(2).setPreferredWidth(10);
+        columnModel.getColumn(2).setPreferredWidth(1);
 
     }
 
@@ -53,9 +53,9 @@ public class TableConceptos {
         tabla.setModel(dt);
         tabla.setRowHeight(40);
         TableColumnModel columnModel = tabla.getColumnModel();
-        columnModel.getColumn(0).setPreferredWidth(150);
+        columnModel.getColumn(0).setPreferredWidth(100);
         columnModel.getColumn(1).setPreferredWidth(300);
-        columnModel.getColumn(2).setPreferredWidth(10);
+        columnModel.getColumn(2).setPreferredWidth(1);
 
     }
 }

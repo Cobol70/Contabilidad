@@ -67,7 +67,9 @@ public class EstudiosInstitucionesController implements ActionListener, KeyListe
         this.vista.txtBuscarEstudio.addKeyListener(this);
         this.vista.txtBuscarInstitucion.addKeyListener(this);
         this.vista.txtNombreInterno.addKeyListener(this);
-
+        this.vista.btnGuardar.addKeyListener(this);
+        
+        
         this.vista.tableEstudios.addMouseListener(this);
         this.vista.tableInstituciones.addMouseListener(this);
         this.vista.tableConceptosInstitucion.addMouseListener(this);
@@ -137,6 +139,12 @@ public class EstudiosInstitucionesController implements ActionListener, KeyListe
             realizarBusqueda();
         } else if (e.getSource() == vista.txtNombreInterno) {
             vista.txtNombreInterno.setText(vista.txtNombreInterno.getText().toUpperCase());
+        }
+        else if(e.getSource() == vista.btnGuardar){
+            if(e.getKeyCode() == KeyEvent.VK_ENTER){
+                System.out.println("presionada guardar con enter");
+                guardar();
+            }
         }
     }
 
@@ -377,6 +385,8 @@ public class EstudiosInstitucionesController implements ActionListener, KeyListe
 
         vista.txtBuscarEstudio.setText("");
         vista.txtBuscarInstitucion.setText("");
+        
+        vista.txtInstitucion.requestFocus();
     }
 
     private void persistirDb() {

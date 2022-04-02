@@ -76,6 +76,7 @@ public class EstudiosController implements ActionListener, MouseListener, KeyLis
         this.vista.txtBuscar.addKeyListener(this);
         this.vista.txtNombre.addKeyListener(this);
 
+        this.vista.btnGuardar.addKeyListener(this);
         this.vista.tableEstudios.addMouseListener(this);
 
     }
@@ -239,6 +240,25 @@ public class EstudiosController implements ActionListener, MouseListener, KeyLis
             realizarBusqueda();
         } else if (e.getSource() == vista.txtNombre) {
             vista.txtNombre.setText(vista.txtNombre.getText().toUpperCase());
+        }else if(e.getSource() == vista.btnGuardar){
+            if(e.getKeyCode() == KeyEvent.VK_ENTER){
+                 if (datosValidos() && deseaGuardar() == 0) {
+                try {
+                    generarEstudio();
+                    guardar();
+                    estudio = modeloConceptos.obtenerUltimoConceptoRegistrado();
+                    System.out.println(estudio.getConceptoTo());
+                    vincularAntecedentes(estudio.getIdTo());
+                } catch (Exception ex) {
+                    JOptionPane.showMessageDialog(null, "No se pudo crear el estudio");
+                    ex.printStackTrace(System.out);
+                } finally {
+                    limpiar();
+                    cargarEstudios();
+                }
+
+            }
+            }
         }
     }
 
@@ -335,7 +355,7 @@ public class EstudiosController implements ActionListener, MouseListener, KeyLis
         vista.comboAreaBusqueda.setSelectedIndex(0);
         vista.comboInstrucciones.setSelectedIndex(0);
         vista.checkDicom.setSelected(false);
-
+        vista.txtNombre.requestFocus();
     }
 
     private void encontrarArea() {

@@ -36,7 +36,7 @@ import javax.xml.bind.annotation.XmlType;
  *         &lt;element name="idOv" type="{http://www.w3.org/2001/XMLSchema}long" minOccurs="0"/>
  *         &lt;element name="idPacienteOv" type="{http://servicio.sga.gm.com.mx/}pacientes" minOccurs="0"/>
  *         &lt;element name="ivaOv" type="{http://www.w3.org/2001/XMLSchema}float"/>
- *         &lt;element name="medicoCOv" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
+ *         &lt;element name="medicoCOv" type="{http://servicio.sga.gm.com.mx/}medico" minOccurs="0"/>
  *         &lt;element name="medicoEiOv" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
  *         &lt;element name="medicoElOv" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
  *         &lt;element name="motivoCOv" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
@@ -171,7 +171,7 @@ public class OrdenVenta {
     protected Long idOv;
     protected Pacientes idPacienteOv;
     protected float ivaOv;
-    protected Integer medicoCOv;
+    protected Medico medicoCOv;
     protected Integer medicoEiOv;
     protected Integer medicoElOv;
     protected String motivoCOv;
@@ -613,10 +613,10 @@ public class OrdenVenta {
      * 
      * @return
      *     possible object is
-     *     {@link Integer }
+     *     {@link Medico }
      *     
      */
-    public Integer getMedicoCOv() {
+    public Medico getMedicoCOv() {
         return medicoCOv;
     }
 
@@ -625,10 +625,10 @@ public class OrdenVenta {
      * 
      * @param value
      *     allowed object is
-     *     {@link Integer }
+     *     {@link Medico }
      *     
      */
-    public void setMedicoCOv(Integer value) {
+    public void setMedicoCOv(Medico value) {
         this.medicoCOv = value;
     }
 
